@@ -4,9 +4,9 @@ import logging
 from dotenv import load_dotenv
 
 from gmail_operations_agent.auth import authenticate_google
-from gmail_operations_agent.gmail_client import GmailClient
-from gmail_operations_agent.notion_client import NotionAgentClient
-from gmail_operations_agent.sheets_client import SheetsClient
+from gmail_operations_agent.gmail_manager import GmailClient
+from gmail_operations_agent.notion_manager import NotionAgentClient
+from gmail_operations_agent.sheets_manager import SheetsClient
 from gmail_operations_agent.ai_analyzer import AIAnalyzer
 
 # Configure logging
@@ -39,74 +39,81 @@ async def process_emails():
     notion = NotionAgentClient()
     ai = AIAnalyzer()
 
-    logger.info("Fetching unread emails...")
-    emails = gmail.get_unread_emails(max_results=10)
-    
-    if not emails:
-        logger.info("No unread emails found.")
-        return
-
-    logger.info(f"Found {len(emails)} unread email(s). Processing...")
-
-    for email in emails:
-        msg_id = email['id']
-        subject = email['subject']
-        sender = email['sender']
-        body = email['body']
-        thread_id = email['threadId']
-        msg_id_header = email['message_id_header']
-
-        logger.info(f"--- Analyzing Email: '{subject}' from '{sender}' ---")
-        
-        # 1. Analyze with AI
-        analysis = await ai.analyze_email(subject, sender, body)
-        
-        if not analysis:
-            logger.error(f"Failed to analyze email {msg_id}. Skipping.")
-            continue
+    logger.info("Starting email monitoring loop...")
+    while True:
+        try:
+            logger.info("Fetching unread emails...")
+            emails = gmail.get_unread_emails(max_results=10)
             
-        logger.info(f"Analysis complete. Important: {analysis.is_important}")
+            if not emails:
+                logger.info("No unread emails found. Waiting 60 seconds...")
+            else:
+                logger.info(f"Found {len(emails)} unread email(s). Processing...")
 
-        # 2. Create Notion Task if required
-        if analysis.task_required and notion_db_id:
-            title = analysis.task_title or f"Task from {sender}"
-            desc = analysis.task_description or "No description provided."
-            priority = "High" if analysis.is_important else "Medium"
+                for email in emails:
+                    msg_id = email['id']
+                    subject = email['subject']
+                    sender = email['sender']
+                    body = email['body']
+                    thread_id = email['threadId']
+                    msg_id_header = email['message_id_header']
+
+                    logger.info(f"--- Analyzing Email: '{subject}' from '{sender}' ---")
+                    
+                    # 1. Analyze with AI
+                    analysis = await ai.analyze_email(subject, sender, body)
+                    
+                    if not analysis:
+                        logger.error(f"Failed to analyze email {msg_id}. Skipping.")
+                        continue
+                        
+                    logger.info(f"Analysis complete. Important: {analysis.is_important}")
+
+                    # 2. Create Notion Task if required
+                    if analysis.task_required and notion_db_id:
+                        title = analysis.task_title or f"Task from {sender}"
+                        desc = analysis.task_description or "No description provided."
+                        
+                        logger.info(f"Creating Notion Task: {title}")
+                        notion.create_task(notion_db_id, title, desc, analysis.priority)
+
+                    # 3. Log to Google Sheets
+                    if sheets_id:
+                        # We construct a simple row: [Sender, Subject, Category, Summary, Importance]
+                        row_data = [
+                            sender,
+                            subject,
+                            analysis.category or "General",
+                            analysis.summary,
+                            analysis.priority
+                        ]
+                        logger.info(f"Appending data to Google Sheets: {row_data}")
+                        sheets.append_row(sheets_id, sheets_range, row_data)
+
+                    # 4. Create Draft Reply if required
+                    if analysis.draft_reply_required and analysis.draft_reply:
+                        logger.info("Creating Gmail draft reply...")
+                        gmail.create_draft_reply(
+                            thread_id=thread_id,
+                            original_msg_id_header=msg_id_header,
+                            to=sender,
+                            subject=subject,
+                            body=analysis.draft_reply
+                        )
+
+                    # 5. Mark as read
+                    logger.info("Marking email as read...")
+                    gmail.mark_as_read(msg_id)
+                    
+                    logger.info("--- Finished Processing Email ---\n")
+
+                logger.info("Finished processing batch.")
+                
+        except Exception as e:
+            logger.error(f"An error occurred in the monitoring loop: {e}")
             
-            logger.info(f"Creating Notion Task: {title}")
-            notion.create_task(notion_db_id, title, desc, priority)
-
-        # 3. Log to Google Sheets if there's table data
-        if analysis.has_table_data and sheets_id:
-            # We construct a simple row: [Sender, Subject, Category, Summary, Importance]
-            row_data = [
-                sender,
-                subject,
-                analysis.category or "General",
-                analysis.table_data_summary or "No summary",
-                "High" if analysis.is_important else "Normal"
-            ]
-            logger.info(f"Appending data to Google Sheets: {row_data}")
-            sheets.append_row(sheets_id, sheets_range, row_data)
-
-        # 4. Create Draft Reply if required
-        if analysis.draft_reply_required and analysis.draft_reply:
-            logger.info("Creating Gmail draft reply...")
-            gmail.create_draft_reply(
-                thread_id=thread_id,
-                original_msg_id_header=msg_id_header,
-                to=sender,
-                subject=subject,
-                body=analysis.draft_reply
-            )
-
-        # 5. Mark as read
-        logger.info("Marking email as read...")
-        gmail.mark_as_read(msg_id)
-        
-        logger.info("--- Finished Processing Email ---\n")
-
-    logger.info("All emails processed successfully.")
+        logger.info("Sleeping for 60 seconds before next check...")
+        await asyncio.sleep(60)
 
 def main():
     """Entry point for the application."""

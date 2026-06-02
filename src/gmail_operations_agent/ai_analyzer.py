@@ -9,11 +9,11 @@ logger = logging.getLogger(__name__)
 class EmailAnalysis(BaseModel):
     """Schema for extracting actionable data from an email."""
     is_important: bool = Field(description="True if the email contains critical information, urgent requests, or important news.")
+    priority: str = Field(description="Priority level of the email: 'Low', 'Medium', or 'High'.")
     task_required: bool = Field(description="True if the email contains an actionable item that requires creating a task.")
     task_title: Optional[str] = Field(None, description="A concise, descriptive title for the task (if task_required is True).")
     task_description: Optional[str] = Field(None, description="Detailed description of the task based on the email content.")
-    has_table_data: bool = Field(description="True if there is structured data (e.g., invoices, leads, contact info, expenses) that should be logged in a spreadsheet.")
-    table_data_summary: Optional[str] = Field(None, description="A short summary of the data to log (if has_table_data is True).")
+    summary: str = Field(description="A short 1-2 sentence summary of the email content.")
     category: Optional[str] = Field(None, description="Category of the email (e.g., 'Lead', 'Invoice', 'Newsletter', 'Personal').")
     draft_reply_required: bool = Field(description="True if the email explicitly asks a question or requires a response.")
     draft_reply: Optional[str] = Field(None, description="A polite, context-aware draft reply (if draft_reply_required is True).")
