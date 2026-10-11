@@ -1,19 +1,67 @@
 [project]
 name = "gmail-operations-agent"
-version = "0.1.0"
-description = "AI-powered email assistant"
+version = "0.2.0"
+description = "Gmail triage agent: LLM classification with structured outputs, Notion tasks, a Sheets log and reply drafts, with retries, idempotent actions and human review."
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.12"
 dependencies = [
-    "pydantic>=2.0",
-    "openai>=1.0",
-    "notion-client>=2.2.0",
-    "google-api-python-client>=2.0.0",
-    "google-auth-httplib2>=0.2.0",
-    "google-auth-oauthlib>=1.2.0",
-    "python-dotenv>=1.0.0"
+    "beautifulsoup4>=4.15",
+    "google-api-python-client>=2.201",
+    "google-auth>=2.61",
+    "google-auth-httplib2>=0.4.4",
+    "google-auth-oauthlib>=1.5",
+    "notion-client>=3.1",
+    "openai>=3.29",
+    "pydantic>=2.14",
+    "pydantic-settings>=2.15",
+]
+
+[project.scripts]
+gmail-agent = "gmail_operations_agent.main:main"
+
+[dependency-groups]
+dev = [
+    "google-api-python-client-stubs>=1.40",
+    "mypy>=2.4",
+    "pytest>=9.1",
+    "pytest-asyncio>=1.4",
+    "ruff>=0.17",
 ]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E", "W", "F",  # pycodestyle, pyflakes
+    "I",            # import order
+    "UP",           # modern syntax
+    "B",            # likely bugs
+    "SIM",          # simplifications
+    "RUF",          # ruff-specific
+    "ASYNC",        # blocking calls inside async code
+    "LOG", "G",     # logging misuse (f-strings in log calls, etc.)
+    "PT",           # pytest style
+]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["gmail_operations_agent"]
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = ["google_auth_oauthlib.*", "google_auth_httplib2"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
