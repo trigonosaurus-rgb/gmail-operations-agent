@@ -1,0 +1,25 @@
+# `docker compose up --build`, then open http://localhost:8000
+# The public demo: a synthetic inbox that replays recorded model runs. No Google account and
+# no API keys are needed. With OPENAI_API_KEY in .env, test emails you write are triaged live.
+
+services:
+  demo:
+    build: .
+    image: gmail-operations-agent
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # The container listens on all its interfaces; .env values made for a local run
+      # must not override these.
+      API_HOST: 0.0.0.0
+      API_PORT: 8000
+      DEMO_DB_PATH: /app/data/demo.sqlite3
+    volumes:
+      - demo-data:/app/data # quotas and the monthly budget survive restarts
+    restart: unless-stopped
+
+volumes:
+  demo-data:

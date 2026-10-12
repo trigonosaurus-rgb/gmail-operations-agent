@@ -1,0 +1,14 @@
+# Only what the Dockerfile copies: frontend/, src/, pyproject.toml, uv.lock, README.md.
+*
+!frontend/
+!src/
+!pyproject.toml
+!uv.lock
+!README.md
+
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+**/__pycache__/
+**/*.py[cod]
