@@ -1,0 +1,47 @@
+{
+  "case": "client-es-approval",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Lucía Martín has approved the proposal as submitted and asks Alex to send the contract and first invoice so work can start on Monday.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Send Lucía the contract and first invoice",
+      "description": "Lucía Martín at Casa Martín has approved the proposal without changes. Send her the contract and first invoice, and confirm availability for the requested Monday start.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "es",
+      "body": "Hola Lucía,\n\nGracias por aprobar la propuesta. Os enviaré el contrato y la primera factura [fecha de envío]. Empezar el lunes [me va bien].\n\nUn saludo,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Lucía Martín has approved the proposal as submitted and asks Alex to send the contract and first invoice so work can start on Monday.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Send Lucía the contract and first invoice",
+      "description": "Lucía Martín at Casa Martín has approved the proposal without changes. Send her the contract and first invoice, and confirm availability for the requested Monday start.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "es",
+      "body": "Hola Lucía,\n\nGracias por aprobar la propuesta. Os enviaré el contrato y la primera factura [fecha de envío]. Empezar el lunes [me va bien].\n\nUn saludo,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1390,
+    "cached_tokens": 1280,
+    "output_tokens": 420,
+    "latency_ms": 9380,
+    "cost_usd": 0.004548
+  }
+}

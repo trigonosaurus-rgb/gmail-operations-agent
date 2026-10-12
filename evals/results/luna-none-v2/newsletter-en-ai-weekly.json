@@ -1,0 +1,33 @@
+{
+  "case": "newsletter-en-ai-weekly",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "AI Weekly sends a digest about a new open-weight model, startup evaluation workflows, and building agents with tool use.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "AI Weekly sends a digest about a new open-weight model, startup evaluation workflows, and building agents with tool use.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1402,
+    "cached_tokens": 1280,
+    "output_tokens": 59,
+    "latency_ms": 1459,
+    "cost_usd": 5.45e-05
+  }
+}

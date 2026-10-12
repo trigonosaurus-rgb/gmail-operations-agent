@@ -1,0 +1,47 @@
+{
+  "case": "client-ru-edits",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Olga Kim says the Flowerbox bot incorrectly describes regional delivery as free; it should be free for orders over 3,000 rubles. She also wants the bot to offer promo code FLOWER10 at the end of conversations and asks whether Alex can make the changes by the end of the week.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Update the Flowerbox bot’s delivery and promo messaging",
+      "description": "Olga Kim asks Alex to change the Flowerbox bot so regional delivery is described as free for orders over 3,000 rubles, and so it offers promo code FLOWER10 at the end of conversations. She asks if the changes can be done by the end of the week.",
+      "due_date": "2026-10-16"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Ольга, привет! Спасибо, понял правки. По сроку до конца недели — [успею].\n\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Olga Kim says the Flowerbox bot incorrectly describes regional delivery as free; it should be free for orders over 3,000 rubles. She also wants the bot to offer promo code FLOWER10 at the end of conversations and asks whether Alex can make the changes by the end of the week.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Update the Flowerbox bot’s delivery and promo messaging",
+      "description": "Olga Kim asks Alex to change the Flowerbox bot so regional delivery is described as free for orders over 3,000 rubles, and so it offers promo code FLOWER10 at the end of conversations. She asks if the changes can be done by the end of the week.",
+      "due_date": "2026-10-16"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Ольга, привет! Спасибо, понял правки. По сроку до конца недели — [успею].\n\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1429,
+    "cached_tokens": 1280,
+    "output_tokens": 213,
+    "latency_ms": 3338,
+    "cost_usd": 0.00013419999999999998
+  }
+}

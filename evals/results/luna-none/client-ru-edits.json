@@ -1,0 +1,47 @@
+{
+  "case": "client-ru-edits",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Olga Kim says the bot looks good and requests two changes: state that regional delivery is free only for orders from 3,000 RUB, and offer promo code FLOWER10 at the end of the conversation. She asks whether Alex can finish by the end of the week.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Update the bot’s delivery and promo-code messaging",
+      "description": "Olga Kim requests two changes to the bot: clarify that regional delivery is free for orders from 3,000 RUB, and offer promo code FLOWER10 at the end of the conversation. She asks for completion by the end of the week.",
+      "due_date": "2026-10-16"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Привет, Ольга! Да, внесу обе правки к концу недели."
+    }
+  },
+  "final": {
+    "summary": "Olga Kim says the bot looks good and requests two changes: state that regional delivery is free only for orders from 3,000 RUB, and offer promo code FLOWER10 at the end of the conversation. She asks whether Alex can finish by the end of the week.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Update the bot’s delivery and promo-code messaging",
+      "description": "Olga Kim requests two changes to the bot: clarify that regional delivery is free for orders from 3,000 RUB, and offer promo code FLOWER10 at the end of the conversation. She asks for completion by the end of the week.",
+      "due_date": "2026-10-16"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Привет, Ольга! Да, внесу обе правки к концу недели."
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1246,
+    "cached_tokens": 1097,
+    "output_tokens": 190,
+    "latency_ms": 2493,
+    "cost_usd": 0.00012087
+  }
+}

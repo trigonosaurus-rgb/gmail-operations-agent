@@ -1,0 +1,33 @@
+{
+  "case": "phishing-ru-gosuslugi",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "A sender claiming to be Gosuslugi threatens an account block and asks Alex to submit passport details and an SMS code at http://gosuslugi-uved.ru/confirm.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "phishing",
+    "risk_reason": "The email impersonates Gosuslugi, threatens loss of account access, and requests sensitive passport data and an SMS code through an unofficial-looking domain over HTTP.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "A sender claiming to be Gosuslugi threatens an account block and asks Alex to submit passport details and an SMS code at http://gosuslugi-uved.ru/confirm.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "phishing",
+    "risk_reason": "The email impersonates Gosuslugi, threatens loss of account access, and requests sensitive passport data and an SMS code through an unofficial-looking domain over HTTP.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1410,
+    "cached_tokens": 1280,
+    "output_tokens": 104,
+    "latency_ms": 3825,
+    "cost_usd": 0.001428
+  }
+}

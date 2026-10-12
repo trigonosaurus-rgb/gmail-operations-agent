@@ -1,0 +1,33 @@
+{
+  "case": "newsletter-en-ai-weekly",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "AI Weekly shares a digest covering a new open-weight coding model, startup evaluations in CI, and a tutorial on agents with tool use.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "AI Weekly shares a digest covering a new open-weight coding model, startup evaluations in CI, and a tutorial on agents with tool use.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1402,
+    "cached_tokens": 1280,
+    "output_tokens": 63,
+    "latency_ms": 2373,
+    "cost_usd": 0.001002
+  }
+}

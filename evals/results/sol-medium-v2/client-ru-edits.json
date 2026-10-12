@@ -1,0 +1,47 @@
+{
+  "case": "client-ru-edits",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Olga Kim requests two changes to the Flowerbox bot: correct regional delivery pricing from “free” to “from 3,000 RUB” and offer promo code FLOWER10 at the end of conversations. She asks whether both changes can be completed by the end of this week.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review Flowerbox bot changes and confirm the completion date",
+      "description": "Olga Kim at Flowerbox asks to correct the bot's regional delivery answer from “free” to “from 3,000 RUB” and add an offer of promo code FLOWER10 at the end of conversations. Review both changes and reply about whether they can be completed by the end of this week.",
+      "due_date": "2026-10-18"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Ольга, привет!\n\nСпасибо за обратную связь! Проверю ответ про доставку в область и добавление промокода FLOWER10 в конце диалога. Смогу внести обе правки к [дата].\n\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Olga Kim requests two changes to the Flowerbox bot: correct regional delivery pricing from “free” to “from 3,000 RUB” and offer promo code FLOWER10 at the end of conversations. She asks whether both changes can be completed by the end of this week.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review Flowerbox bot changes and confirm the completion date",
+      "description": "Olga Kim at Flowerbox asks to correct the bot's regional delivery answer from “free” to “from 3,000 RUB” and add an offer of promo code FLOWER10 at the end of conversations. Review both changes and reply about whether they can be completed by the end of this week.",
+      "due_date": "2026-10-18"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Ольга, привет!\n\nСпасибо за обратную связь! Проверю ответ про доставку в область и добавление промокода FLOWER10 в конце диалога. Смогу внести обе правки к [дата].\n\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1429,
+    "cached_tokens": 1280,
+    "output_tokens": 411,
+    "latency_ms": 8207,
+    "cost_usd": 0.004536
+  }
+}

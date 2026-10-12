@@ -1,0 +1,33 @@
+{
+  "case": "notification-en-delivery",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Amazon reports that Alex’s USB-C hub package was delivered today at 14:05 and left at the front door.",
+    "category": "notification",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Amazon reports that Alex’s USB-C hub package was delivered today at 14:05 and left at the front door.",
+    "category": "notification",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1370,
+    "cached_tokens": 1280,
+    "output_tokens": 110,
+    "latency_ms": 2070,
+    "cost_usd": 7.68e-05
+  }
+}

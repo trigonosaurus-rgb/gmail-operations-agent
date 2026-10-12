@@ -1,0 +1,47 @@
+{
+  "case": "other-ru-cold-partner",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Ekaterina Smirnova from a digital agency asks whether Alex is interested in taking chatbot projects as a subcontractor and discussing terms.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Discuss chatbot subcontracting with Ekaterina",
+      "description": "Reply to Ekaterina Smirnova at ek@digital-agency.ru about whether Alex is interested in taking chatbot projects from her digital agency as a subcontractor, and discuss possible terms.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Екатерина, добрый день!\n\nСпасибо за предложение. Мне интересно обсудить сотрудничество по проектам чат-ботов. Расскажите, пожалуйста, какие задачи обычно приходят от ваших клиентов и какие условия субподряда вы рассматриваете.\n\nС уважением,\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Ekaterina Smirnova from a digital agency asks whether Alex is interested in taking chatbot projects as a subcontractor and discussing terms.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Discuss chatbot subcontracting with Ekaterina",
+      "description": "Reply to Ekaterina Smirnova at ek@digital-agency.ru about whether Alex is interested in taking chatbot projects from her digital agency as a subcontractor, and discuss possible terms.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Екатерина, добрый день!\n\nСпасибо за предложение. Мне интересно обсудить сотрудничество по проектам чат-ботов. Расскажите, пожалуйста, какие задачи обычно приходят от ваших клиентов и какие условия субподряда вы рассматриваете.\n\nС уважением,\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1227,
+    "cached_tokens": 1097,
+    "output_tokens": 259,
+    "latency_ms": 4067,
+    "cost_usd": 0.00015347
+  }
+}

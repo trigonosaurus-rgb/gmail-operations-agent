@@ -1,0 +1,47 @@
+{
+  "case": "support-en-user-question",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Kevin Moore from QuickFit asks where in the admin panel to update the bot’s weekend opening hours for next month; he could not find the instructions in the guide.",
+    "category": "support",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Explain how to update the bot’s opening hours",
+      "description": "Reply to Kevin Moore at QuickFit with directions for updating weekend opening hours in the admin panel so the bot gives the correct answer. Kevin could not find the instructions in the guide.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Kevin,\n\nThanks for checking the guide. I’ll look into where you can update the weekend opening hours in the admin panel and get back to you.\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Kevin Moore from QuickFit asks where in the admin panel to update the bot’s weekend opening hours for next month; he could not find the instructions in the guide.",
+    "category": "support",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Explain how to update the bot’s opening hours",
+      "description": "Reply to Kevin Moore at QuickFit with directions for updating weekend opening hours in the admin panel so the bot gives the correct answer. Kevin could not find the instructions in the guide.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Kevin,\n\nThanks for checking the guide. I’ll look into where you can update the weekend opening hours in the admin panel and get back to you.\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1402,
+    "cached_tokens": 1280,
+    "output_tokens": 163,
+    "latency_ms": 2214,
+    "cost_usd": 0.0001065
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "case": "notification-en-billing-alert",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "AWS reports Alex's monthly budget is over 90%: the $50 budget has $46.12 in actual spend as of Oct 12, with $71.40 forecast.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review AWS spending",
+      "description": "Review the AWS Billing console: the $50 monthly budget has $46.12 actual spend as of Oct 12, and the forecast is $71.40.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "AWS reports Alex's monthly budget is over 90%: the $50 budget has $46.12 in actual spend as of Oct 12, with $71.40 forecast.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review AWS spending",
+      "description": "Review the AWS Billing console: the $50 monthly budget has $46.12 actual spend as of Oct 12, and the forecast is $71.40.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1410,
+    "cached_tokens": 1280,
+    "output_tokens": 225,
+    "latency_ms": 2804,
+    "cost_usd": 0.0001383
+  }
+}

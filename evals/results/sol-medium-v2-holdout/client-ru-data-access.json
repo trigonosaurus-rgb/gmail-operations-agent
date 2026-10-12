@@ -1,0 +1,47 @@
+{
+  "case": "client-ru-data-access",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Sergey Lebedev says the warehouse API key is available in the shared 1Password folder “Подрядчики” and asks Alex to confirm access and provide an ETA for the first integration version.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check warehouse API access and send an integration ETA",
+      "description": "Sergey Lebedev at autoparts-msk.ru asks you to confirm access to the warehouse API key in the shared 1Password folder “Подрядчики” and say when the first integration version will be ready. Check access and reply with the status and an estimated delivery date.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Сергей, добрый день.\n\nСпасибо. Доступ к ключу в папке «Подрядчики» [подтверждаю]. Первую версию интеграции планирую подготовить к [дата].\n\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Sergey Lebedev says the warehouse API key is available in the shared 1Password folder “Подрядчики” and asks Alex to confirm access and provide an ETA for the first integration version.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check warehouse API access and send an integration ETA",
+      "description": "Sergey Lebedev at autoparts-msk.ru asks you to confirm access to the warehouse API key in the shared 1Password folder “Подрядчики” and say when the first integration version will be ready. Check access and reply with the status and an estimated delivery date.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Сергей, добрый день.\n\nСпасибо. Доступ к ключу в папке «Подрядчики» [подтверждаю]. Первую версию интеграции планирую подготовить к [дата].\n\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1415,
+    "cached_tokens": 1280,
+    "output_tokens": 246,
+    "latency_ms": 4513,
+    "cost_usd": 0.002858
+  }
+}

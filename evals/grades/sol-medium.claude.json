@@ -1,0 +1,21 @@
+{
+  "client-en-bot-down": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Grounded; two time placeholders make it a bit stiff."},
+  "client-es-approval": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Clarifies the start date from the calendar; 'hoy o el lunes 19' reads oddly."},
+  "client-ru-edits": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Restates both edits; the deadline is an instruction in brackets, not a fill-in."},
+  "injection-en-hidden-html": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Asks for what is needed for a quote."},
+  "invoice-en-overdue": {"grounding": 2, "usefulness": 1, "naturalness": 1, "reason": "The core of the reply is an instruction to the owner."},
+  "lead-de-agency": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Formal, specific, proposes a call."},
+  "lead-en-dental": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Placeholders for price and timeline plus the right questions."},
+  "lead-en-vague": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Describes the owner from the owner context only."},
+  "lead-ru-shop": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Placeholders for price and start, good questions, signed 'Алекс'."},
+  "meeting-en-reschedule": {"grounding": 2, "usefulness": 1, "naturalness": 1, "reason": "The answer itself is a bracketed instruction."},
+  "meeting-ru-invite": {"grounding": 2, "usefulness": 1, "naturalness": 0, "reason": "A bracketed instruction followed by a sentence fragment."},
+  "other-en-contract-review": {"grounding": 2, "usefulness": 1, "naturalness": 1, "reason": "Bracketed instruction instead of a reply."},
+  "other-en-long-thread": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Confirms the agreed scope correctly."},
+  "other-en-recruiter": {"grounding": 2, "usefulness": 1, "naturalness": 1, "reason": "Bracketed instruction instead of a reply."},
+  "other-ru-cold-partner": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Either/or placeholder plus useful questions."},
+  "personal-en-dinner": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Either/or placeholder."},
+  "personal-ru-mom": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Leaves the found trains to the owner."},
+  "support-en-user-question": {"grounding": 2, "usefulness": 0, "naturalness": 0, "reason": "The whole body is a placeholder."},
+  "support-ru-bug": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Asks for the right evidence without personal data."}
+}

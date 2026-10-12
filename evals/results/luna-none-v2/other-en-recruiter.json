@@ -1,0 +1,47 @@
+{
+  "case": "other-en-recruiter",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Jessica Taylor of TalentBridge is recruiting for a remote full-time Senior AI Engineer role at a Series B fintech, paying $160–190k, and asks whether Alex is open to a quick chat this week.",
+    "category": "lead",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Respond to Jessica about the AI Engineer role",
+      "description": "Jessica Taylor of TalentBridge asks if Alex is open to a quick chat this week about a remote full-time Senior AI Engineer role at a Series B fintech, paying $160–190k.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Jessica,\n\nThanks for reaching out. I’d be open to a quick chat this week [if you’re interested].\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Jessica Taylor of TalentBridge is recruiting for a remote full-time Senior AI Engineer role at a Series B fintech, paying $160–190k, and asks whether Alex is open to a quick chat this week.",
+    "category": "lead",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Respond to Jessica about the AI Engineer role",
+      "description": "Jessica Taylor of TalentBridge asks if Alex is open to a quick chat this week about a remote full-time Senior AI Engineer role at a Series B fintech, paying $160–190k.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Jessica,\n\nThanks for reaching out. I’d be open to a quick chat this week [if you’re interested].\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1405,
+    "cached_tokens": 1280,
+    "output_tokens": 167,
+    "latency_ms": 2258,
+    "cost_usd": 0.0001088
+  }
+}

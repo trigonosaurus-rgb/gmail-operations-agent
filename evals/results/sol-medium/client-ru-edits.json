@@ -1,0 +1,47 @@
+{
+  "case": "client-ru-edits",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Olga Kim from Flowerbox requests two chatbot changes by the end of the week: correct regional delivery pricing from free to starting at RUB 3,000, and offer promo code FLOWER10 at the end of each conversation.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Update Flowerbox chatbot pricing and promo code behavior",
+      "description": "Olga Kim (olga@flowerbox.ru) asks to correct the chatbot's regional delivery answer: delivery starts at RUB 3,000, rather than being free. Add an offer of promo code FLOWER10 at the end of each conversation. Confirm whether both changes can be completed by the end of this week.",
+      "due_date": "2026-10-18"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Ольга, привет! Спасибо за обратную связь. Правки понятны: доставка в область — от 3000 руб., в конце диалога — предложение промокода FLOWER10. По срокам до конца недели: [подтвердить возможность или предложить другой срок]."
+    }
+  },
+  "final": {
+    "summary": "Olga Kim from Flowerbox requests two chatbot changes by the end of the week: correct regional delivery pricing from free to starting at RUB 3,000, and offer promo code FLOWER10 at the end of each conversation.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Update Flowerbox chatbot pricing and promo code behavior",
+      "description": "Olga Kim (olga@flowerbox.ru) asks to correct the chatbot's regional delivery answer: delivery starts at RUB 3,000, rather than being free. Add an offer of promo code FLOWER10 at the end of each conversation. Confirm whether both changes can be completed by the end of this week.",
+      "due_date": "2026-10-18"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Ольга, привет! Спасибо за обратную связь. Правки понятны: доставка в область — от 3000 руб., в конце диалога — предложение промокода FLOWER10. По срокам до конца недели: [подтвердить возможность или предложить другой срок]."
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1246,
+    "cached_tokens": 1097,
+    "output_tokens": 423,
+    "latency_ms": 8564,
+    "cost_usd": 0.0046377
+  }
+}

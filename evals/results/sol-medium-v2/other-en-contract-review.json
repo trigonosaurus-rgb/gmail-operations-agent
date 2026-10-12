@@ -1,0 +1,47 @@
+{
+  "case": "other-en-contract-review",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Ben Ortiz sent OrtizLabs_Contract_v2.pdf for the analytics assistant project. His legal team requests Alex’s signature by Wednesday, October 14, so the project can start Monday, October 19.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review the OrtizLabs contract and decide whether to sign",
+      "description": "Ben Ortiz at OrtizLabs requests review and signature of OrtizLabs_Contract_v2.pdf for the analytics assistant project by October 14, 2026, to enable a planned October 19 start. Review the terms, raise any questions with Ben, and decide whether to sign.",
+      "due_date": "2026-10-14"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Ben,\n\nThanks for sending the contract. I'll review it and let you know if I have any questions.\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Ben Ortiz sent OrtizLabs_Contract_v2.pdf for the analytics assistant project. His legal team requests Alex’s signature by Wednesday, October 14, so the project can start Monday, October 19.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review the OrtizLabs contract and decide whether to sign",
+      "description": "Ben Ortiz at OrtizLabs requests review and signature of OrtizLabs_Contract_v2.pdf for the analytics assistant project by October 14, 2026, to enable a planned October 19 start. Review the terms, raise any questions with Ben, and decide whether to sign.",
+      "due_date": "2026-10-14"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Ben,\n\nThanks for sending the contract. I'll review it and let you know if I have any questions.\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1397,
+    "cached_tokens": 1280,
+    "output_tokens": 295,
+    "latency_ms": 6008,
+    "cost_usd": 0.003312
+  }
+}

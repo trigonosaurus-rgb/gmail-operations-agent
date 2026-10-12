@@ -1,0 +1,47 @@
+{
+  "case": "support-ru-bug",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Anna Belyaeva from TeaWorld reports that today two customers saw another customer's order status because their order numbers differ by one digit. She asks Alex to investigate as soon as possible.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate incorrect order status exposure",
+      "description": "Anna Belyaeva from TeaWorld reports that today two customers were shown the status of someone else's order; the order numbers differ by one digit. Investigate the chatbot's order lookup as soon as possible.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте. Проверю обработку поиска по номеру заказа как можно скорее и сообщу, когда выясню причину. Пока, пожалуйста, отключите показ статусов через бота, если это возможно."
+    }
+  },
+  "final": {
+    "summary": "Anna Belyaeva from TeaWorld reports that today two customers saw another customer's order status because their order numbers differ by one digit. She asks Alex to investigate as soon as possible.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate incorrect order status exposure",
+      "description": "Anna Belyaeva from TeaWorld reports that today two customers were shown the status of someone else's order; the order numbers differ by one digit. Investigate the chatbot's order lookup as soon as possible.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте. Проверю обработку поиска по номеру заказа как можно скорее и сообщу, когда выясню причину. Пока, пожалуйста, отключите показ статусов через бота, если это возможно."
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1228,
+    "cached_tokens": 1097,
+    "output_tokens": 185,
+    "latency_ms": 3256,
+    "cost_usd": 0.00011656999999999999
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "case": "other-en-recruiter",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Jessica Taylor of TalentBridge is recruiting for a remote full-time Senior AI Engineer role at a Series B fintech, with a $160–190k salary range, and asks whether Alex is open to a quick chat this week.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Jessica about the AI Engineer role",
+      "description": "Jessica Taylor at TalentBridge asks whether Alex is open to a quick chat this week about a remote full-time Senior AI Engineer role at a Series B fintech, paying $160–190k. Reply with interest level and, if appropriate, availability.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Jessica,\n\nThanks for reaching out. I’m [interested / not looking at the moment]. If interested: I’m available [proposed time] for a quick chat this week.\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Jessica Taylor of TalentBridge is recruiting for a remote full-time Senior AI Engineer role at a Series B fintech, with a $160–190k salary range, and asks whether Alex is open to a quick chat this week.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Jessica about the AI Engineer role",
+      "description": "Jessica Taylor at TalentBridge asks whether Alex is open to a quick chat this week about a remote full-time Senior AI Engineer role at a Series B fintech, paying $160–190k. Reply with interest level and, if appropriate, availability.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Jessica,\n\nThanks for reaching out. I’m [interested / not looking at the moment]. If interested: I’m available [proposed time] for a quick chat this week.\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1222,
+    "cached_tokens": 1097,
+    "output_tokens": 317,
+    "latency_ms": 4437,
+    "cost_usd": 0.00018197
+  }
+}

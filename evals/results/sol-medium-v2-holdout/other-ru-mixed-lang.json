@@ -1,0 +1,47 @@
+{
+  "case": "other-ru-mixed-lang",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Alina wants help building an MVP AI assistant for HR in two weeks for an investor demo day on October 30. A budget is available, with the amount to be discussed.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Discuss scope, budget and timing for Alina's HR assistant MVP",
+      "description": "Reply to Alina at alina@startup-hub.io about building an HR AI assistant prototype in two weeks for an investor demo on October 30, 2026. Clarify required demo features, available data and budget, then assess availability and feasibility.",
+      "due_date": "2026-10-30"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Привет, Алина! Спасибо, что написала. С прототипом за две недели [смогу помочь]. Какие функции хотите показать инвесторам 30 октября? Есть ли уже данные для прототипа и ориентир по бюджету? Это поможет оценить объём и сроки.\n\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Alina wants help building an MVP AI assistant for HR in two weeks for an investor demo day on October 30. A budget is available, with the amount to be discussed.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Discuss scope, budget and timing for Alina's HR assistant MVP",
+      "description": "Reply to Alina at alina@startup-hub.io about building an HR AI assistant prototype in two weeks for an investor demo on October 30, 2026. Clarify required demo features, available data and budget, then assess availability and feasibility.",
+      "due_date": "2026-10-30"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Привет, Алина! Спасибо, что написала. С прототипом за две недели [смогу помочь]. Какие функции хотите показать инвесторам 30 октября? Есть ли уже данные для прототипа и ориентир по бюджету? Это поможет оценить объём и сроки.\n\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1393,
+    "cached_tokens": 1280,
+    "output_tokens": 371,
+    "latency_ms": 7362,
+    "cost_usd": 0.004064
+  }
+}

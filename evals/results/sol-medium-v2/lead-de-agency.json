@@ -1,0 +1,47 @@
+{
+  "case": "lead-de-agency",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Jonas Weber of a small real estate agency in Munich asks about an AI assistant that drafts replies to recurring property questions using their listing brochures. He also asks whether Alex is available for a short call next week.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Respond to Jonas Weber about the property inquiry assistant",
+      "description": "Jonas Weber at weber-immobilien.de wants an AI assistant for his small Munich real estate agency to draft email answers based on property listing brochures. Reply about the proposed service and provide availability for a short call next week.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "de",
+      "body": "Hallo Herr Weber,\n\nvielen Dank für Ihre Anfrage. Ich schaue mir gern an, wie sich Antwortentwürfe auf Basis Ihrer Exposés erstellen lassen. Könnten Sie mir dafür ein Beispiel-Exposé und einige typische Fragen schicken?\n\nFür ein kurzes Gespräch nächste Woche hätte ich [Tag und Uhrzeit] Zeit. Passt Ihnen dieser Termin?\n\nViele Grüße\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Jonas Weber of a small real estate agency in Munich asks about an AI assistant that drafts replies to recurring property questions using their listing brochures. He also asks whether Alex is available for a short call next week.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Respond to Jonas Weber about the property inquiry assistant",
+      "description": "Jonas Weber at weber-immobilien.de wants an AI assistant for his small Munich real estate agency to draft email answers based on property listing brochures. Reply about the proposed service and provide availability for a short call next week.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "de",
+      "body": "Hallo Herr Weber,\n\nvielen Dank für Ihre Anfrage. Ich schaue mir gern an, wie sich Antwortentwürfe auf Basis Ihrer Exposés erstellen lassen. Könnten Sie mir dafür ein Beispiel-Exposé und einige typische Fragen schicken?\n\nFür ein kurzes Gespräch nächste Woche hätte ich [Tag und Uhrzeit] Zeit. Passt Ihnen dieser Termin?\n\nViele Grüße\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1428,
+    "cached_tokens": 1280,
+    "output_tokens": 268,
+    "latency_ms": 5745,
+    "cost_usd": 0.003104
+  }
+}

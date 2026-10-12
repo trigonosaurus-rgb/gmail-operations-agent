@@ -1,0 +1,33 @@
+{
+  "case": "newsletter-en-substack",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "The Pragmatic Builder newsletter covers RAG app performance, including chunk sizes, re-ranking, caching, and reader questions.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "The Pragmatic Builder newsletter covers RAG app performance, including chunk sizes, re-ranking, caching, and reader questions.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1384,
+    "cached_tokens": 1280,
+    "output_tokens": 60,
+    "latency_ms": 1392,
+    "cost_usd": 5.3200000000000006e-05
+  }
+}

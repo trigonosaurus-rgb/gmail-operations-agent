@@ -1,0 +1,47 @@
+{
+  "case": "lead-de-agency",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Jonas Weber from a small real estate agency in Munich asks whether Alex can build an AI assistant that drafts replies to property inquiries using their property brochures. He would like a short call next week.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Respond to Jonas about the property inquiry assistant and a call",
+      "description": "Jonas Weber (jonas@weber-immobilien.de) wants an AI assistant for his Munich real estate agency to draft answers to repetitive property questions based on their property brochures. Confirm whether you can help and propose a time for a short call during the week of October 19, 2026.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "de",
+      "body": "Hallo Jonas,\n\nvielen Dank für Ihre Anfrage. Antwortentwürfe auf Basis Ihrer Exposés sind ein sinnvoller Anwendungsfall für einen KI-Assistenten. Gerne würde ich mit Ihnen die Anforderungen und die verfügbaren Unterlagen besprechen.\n\nFür ein kurzes Gespräch nächste Woche schlage ich [Tag und Uhrzeit] vor. Würde Ihnen das passen?\n\nViele Grüße\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Jonas Weber from a small real estate agency in Munich asks whether Alex can build an AI assistant that drafts replies to property inquiries using their property brochures. He would like a short call next week.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Respond to Jonas about the property inquiry assistant and a call",
+      "description": "Jonas Weber (jonas@weber-immobilien.de) wants an AI assistant for his Munich real estate agency to draft answers to repetitive property questions based on their property brochures. Confirm whether you can help and propose a time for a short call during the week of October 19, 2026.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "de",
+      "body": "Hallo Jonas,\n\nvielen Dank für Ihre Anfrage. Antwortentwürfe auf Basis Ihrer Exposés sind ein sinnvoller Anwendungsfall für einen KI-Assistenten. Gerne würde ich mit Ihnen die Anforderungen und die verfügbaren Unterlagen besprechen.\n\nFür ein kurzes Gespräch nächste Woche schlage ich [Tag und Uhrzeit] vor. Würde Ihnen das passen?\n\nViele Grüße\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1245,
+    "cached_tokens": 1097,
+    "output_tokens": 286,
+    "latency_ms": 6136,
+    "cost_usd": 0.0032657
+  }
+}

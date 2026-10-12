@@ -1,0 +1,33 @@
+{
+  "case": "spam-ru-leads",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "The sender offers a database of entrepreneurs’ email addresses and phone numbers: 1,000,000 contacts for 9,900 rubles, with contact via Telegram.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "spam",
+    "risk_reason": "Unsolicited bulk promotion for a contact database.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "The sender offers a database of entrepreneurs’ email addresses and phone numbers: 1,000,000 contacts for 9,900 rubles, with contact via Telegram.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "spam",
+    "risk_reason": "Unsolicited bulk promotion for a contact database.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1384,
+    "cached_tokens": 1280,
+    "output_tokens": 79,
+    "latency_ms": 1436,
+    "cost_usd": 6.27e-05
+  }
+}

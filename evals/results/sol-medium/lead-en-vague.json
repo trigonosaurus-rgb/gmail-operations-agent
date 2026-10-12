@@ -1,0 +1,47 @@
+{
+  "case": "lead-en-vague",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Mike was referred by a friend and asks whether Alex works with restaurants on AI projects. He is exploring options for later in 2026 and says there is no rush.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Mike about AI services for restaurants",
+      "description": "Mike (mike.t@gmail.com), referred by a friend, asks whether you work with restaurants. Confirm whether restaurant projects are a fit and ask what he has in mind for later in 2026; he says there is no rush.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hey Mike, thanks for reaching out! I build AI chatbots and automations for small businesses. What kind of restaurant project did you have in mind for later this year?"
+    }
+  },
+  "final": {
+    "summary": "Mike was referred by a friend and asks whether Alex works with restaurants on AI projects. He is exploring options for later in 2026 and says there is no rush.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Mike about AI services for restaurants",
+      "description": "Mike (mike.t@gmail.com), referred by a friend, asks whether you work with restaurants. Confirm whether restaurant projects are a fit and ask what he has in mind for later in 2026; he says there is no rush.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hey Mike, thanks for reaching out! I build AI chatbots and automations for small businesses. What kind of restaurant project did you have in mind for later this year?"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1185,
+    "cached_tokens": 1097,
+    "output_tokens": 296,
+    "latency_ms": 6309,
+    "cost_usd": 0.0032457
+  }
+}

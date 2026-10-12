@@ -1,0 +1,47 @@
+{
+  "case": "client-es-approval",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Lucía Martín says her team approved Alex’s proposal as written and asks him to send the contract and first invoice so they can start on Monday.",
+    "category": "client",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Send Lucía the contract and first invoice",
+      "description": "Lucía Martín approved Alex’s proposal as written and asks him to send the contract and first invoice so her team can start on Monday, 2026-10-12.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "es",
+      "body": "Gracias por confirmar la propuesta. Tomo nota de que quieren empezar el lunes. Les enviaré el contrato y la primera factura.\n\nUn saludo,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Lucía Martín says her team approved Alex’s proposal as written and asks him to send the contract and first invoice so they can start on Monday.",
+    "category": "client",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Send Lucía the contract and first invoice",
+      "description": "Lucía Martín approved Alex’s proposal as written and asks him to send the contract and first invoice so her team can start on Monday, 2026-10-12.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "es",
+      "body": "Gracias por confirmar la propuesta. Tomo nota de que quieren empezar el lunes. Les enviaré el contrato y la primera factura.\n\nUn saludo,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1390,
+    "cached_tokens": 1280,
+    "output_tokens": 403,
+    "latency_ms": 4286,
+    "cost_usd": 0.0002253
+  }
+}

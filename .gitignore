@@ -1,36 +1,39 @@
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
 *.egg-info/
-.installed.cfg
-*.egg
+/build/
+/dist/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
-# Virtual Environment
+# Secrets (never commit)
 .env
-.venv
-venv/
-ENV/
-
-# Secrets
+.env.*
+!.env.example
 credentials.json
 token.json
-.env.local
 
-# IDEs
+# Local runtime data
+/data/
+*.sqlite3
+*.sqlite3-*
+
+# Frontend
+node_modules/
+/frontend/dist/
+/frontend/test-results/
+/frontend/playwright-report/
+
+# Editors and OS
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db
+
+# Playwright MCP screenshots and snapshots (local tooling)
+/.playwright-mcp/

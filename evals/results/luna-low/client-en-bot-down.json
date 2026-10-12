@@ -1,0 +1,47 @@
+{
+  "case": "client-en-bot-down",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Tom Becker at QuickFit Gyms reports that the website chatbot has shown “Something went wrong” for every message since this morning. A promotion is running today and customers are complaining on Instagram; he asks Alex to investigate ASAP.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the QuickFit chatbot outage",
+      "description": "Tom Becker at QuickFit Gyms asks Alex to investigate why the website chatbot has shown “Something went wrong” for every message since the morning of 2026-10-12. Their promotion is running today and customers are complaining on Instagram.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Tom,\n\nI’ll investigate the chatbot issue as soon as possible and let you know what I find.\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Tom Becker at QuickFit Gyms reports that the website chatbot has shown “Something went wrong” for every message since this morning. A promotion is running today and customers are complaining on Instagram; he asks Alex to investigate ASAP.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the QuickFit chatbot outage",
+      "description": "Tom Becker at QuickFit Gyms asks Alex to investigate why the website chatbot has shown “Something went wrong” for every message since the morning of 2026-10-12. Their promotion is running today and customers are complaining on Instagram.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Tom,\n\nI’ll investigate the chatbot issue as soon as possible and let you know what I find.\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1216,
+    "cached_tokens": 1097,
+    "output_tokens": 224,
+    "latency_ms": 4702,
+    "cost_usd": 0.00013487000000000001
+  }
+}

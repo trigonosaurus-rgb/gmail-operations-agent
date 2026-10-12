@@ -1,0 +1,47 @@
+{
+  "case": "invoice-en-overdue",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "DesignCraft Studio sent a second reminder that invoice 2026-031 for $850 for a logo and brand kit was due September 30 and is overdue. They ask Alex to pay this week to avoid a late fee.",
+    "category": "invoice",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Pay overdue DesignCraft Studio invoice",
+      "description": "Pay DesignCraft Studio $850 for invoice 2026-031 (logo and brand kit), overdue since September 30, 2026. The sender asks for payment this week to avoid a late fee.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi,\n\nThanks for the reminder. I’ll look into invoice 2026-031.\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "DesignCraft Studio sent a second reminder that invoice 2026-031 for $850 for a logo and brand kit was due September 30 and is overdue. They ask Alex to pay this week to avoid a late fee.",
+    "category": "invoice",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Pay overdue DesignCraft Studio invoice",
+      "description": "Pay DesignCraft Studio $850 for invoice 2026-031 (logo and brand kit), overdue since September 30, 2026. The sender asks for payment this week to avoid a late fee.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi,\n\nThanks for the reminder. I’ll look into invoice 2026-031.\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1408,
+    "cached_tokens": 1280,
+    "output_tokens": 165,
+    "latency_ms": 1977,
+    "cost_usd": 0.0001081
+  }
+}

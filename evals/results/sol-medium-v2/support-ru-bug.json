@@ -1,0 +1,47 @@
+{
+  "case": "support-ru-bug",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Anna Belyaeva from TeaWorld support reports that two customers today received another customer's order status from the bot. The order numbers differ by one digit, raising a potential customer-data exposure issue.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the bot exposing other customers' order statuses",
+      "description": "Anna Belyaeva (anna@teaworld.ru), TeaWorld support, requests investigation as soon as possible. On October 12, two customers reported seeing another customer's order status; the order numbers differ by one digit. Obtain the affected order numbers and interaction times, investigate order matching and access checks, and determine how to prevent further exposure.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте.\n\nСпасибо, что сообщили. Посмотрю, почему бот показывает статус чужого заказа. Пришлите, пожалуйста, номера затронутых заказов и примерное время обращений, чтобы я мог найти их в логах.\n\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Anna Belyaeva from TeaWorld support reports that two customers today received another customer's order status from the bot. The order numbers differ by one digit, raising a potential customer-data exposure issue.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the bot exposing other customers' order statuses",
+      "description": "Anna Belyaeva (anna@teaworld.ru), TeaWorld support, requests investigation as soon as possible. On October 12, two customers reported seeing another customer's order status; the order numbers differ by one digit. Obtain the affected order numbers and interaction times, investigate order matching and access checks, and determine how to prevent further exposure.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте.\n\nСпасибо, что сообщили. Посмотрю, почему бот показывает статус чужого заказа. Пришлите, пожалуйста, номера затронутых заказов и примерное время обращений, чтобы я мог найти их в логах.\n\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1411,
+    "cached_tokens": 1280,
+    "output_tokens": 435,
+    "latency_ms": 9515,
+    "cost_usd": 0.00474
+  }
+}

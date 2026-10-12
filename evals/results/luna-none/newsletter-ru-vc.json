@@ -1,0 +1,33 @@
+{
+  "case": "newsletter-ru-vc",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "VC.ru sent a weekly digest featuring articles about retail AI bots and freelance AI earnings.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "VC.ru sent a weekly digest featuring articles about retail AI bots and freelance AI earnings.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1219,
+    "cached_tokens": 1097,
+    "output_tokens": 53,
+    "latency_ms": 1767,
+    "cost_usd": 4.9670000000000004e-05
+  }
+}

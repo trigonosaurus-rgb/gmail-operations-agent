@@ -1,0 +1,47 @@
+{
+  "case": "support-en-user-question",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Kevin Moore from QuickFit asks where to update weekend opening hours in the admin panel so the bot answers correctly; he couldn't find the instructions in the guide.",
+    "category": "support",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Explain how to update QuickFit's weekend hours",
+      "description": "Kevin Moore, front desk at QuickFit, asks where in the admin panel to update weekend opening hours for the bot. The hours will change next month; he could not find the instructions in the guide.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Kevin,\n\nI’ll check where the weekend hours are managed in the admin panel and send you the steps. If you can share the new hours, I can also confirm how they should be entered.\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Kevin Moore from QuickFit asks where to update weekend opening hours in the admin panel so the bot answers correctly; he couldn't find the instructions in the guide.",
+    "category": "support",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Explain how to update QuickFit's weekend hours",
+      "description": "Kevin Moore, front desk at QuickFit, asks where in the admin panel to update weekend opening hours for the bot. The hours will change next month; he could not find the instructions in the guide.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Kevin,\n\nI’ll check where the weekend hours are managed in the admin panel and send you the steps. If you can share the new hours, I can also confirm how they should be entered.\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1219,
+    "cached_tokens": 1097,
+    "output_tokens": 178,
+    "latency_ms": 4059,
+    "cost_usd": 0.00011217
+  }
+}

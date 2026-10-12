@@ -1,0 +1,10 @@
+{
+  "client-en-scope-creep": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Does not agree to the extra scope; promises to check what it involves."},
+  "client-ru-data-access": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Good, but the deadline blank is phrased as an instruction ('укажите')."},
+  "invoice-en-client-paid": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Exactly what was asked."},
+  "lead-en-low-budget": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Asks about the Notion structure and keeps the budget open."},
+  "lead-ru-referral": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Mentions the referral; only the decision about Thursday is blank."},
+  "meeting-en-cancel": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "The '[A date that works for me is ____]' blank is clumsy."},
+  "other-ru-mixed-lang": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Informal like the sender, proposes a call, does not promise two weeks."},
+  "support-en-feature-idea": {"grounding": 2, "usefulness": 1, "naturalness": 2, "reason": "Polite; could ask for the insurance list."}
+}

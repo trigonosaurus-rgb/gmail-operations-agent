@@ -1,0 +1,41 @@
+{
+  "case": "invoice-en-overdue",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "DesignCraft Studio sent a second reminder that invoice 2026-031 for $850, covering a logo and brand kit, was due September 30. They ask Alex to pay this week to avoid a late fee.",
+    "category": "invoice",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Pay invoice 2026-031",
+      "description": "Pay DesignCraft Studio $850 for invoice 2026-031, covering the logo and brand kit. The invoice was due September 30, 2026, and payment is requested this week to avoid a late fee.",
+      "due_date": "2026-10-18"
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "DesignCraft Studio sent a second reminder that invoice 2026-031 for $850, covering a logo and brand kit, was due September 30. They ask Alex to pay this week to avoid a late fee.",
+    "category": "invoice",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Pay invoice 2026-031",
+      "description": "Pay DesignCraft Studio $850 for invoice 2026-031, covering the logo and brand kit. The invoice was due September 30, 2026, and payment is requested this week to avoid a late fee.",
+      "due_date": "2026-10-18"
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1408,
+    "cached_tokens": 1280,
+    "output_tokens": 338,
+    "latency_ms": 3535,
+    "cost_usd": 0.0001946
+  }
+}

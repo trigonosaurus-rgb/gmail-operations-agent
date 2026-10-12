@@ -1,0 +1,47 @@
+{
+  "case": "client-en-bot-down",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Tom Becker reports that QuickFit Gyms’ website chatbot has shown “Something went wrong” for every message since this morning. He asks Alex to investigate ASAP because a promotion is running today and customers are complaining on Instagram.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate and restore QuickFit Gyms’ chatbot",
+      "description": "Tom Becker at QuickFit Gyms reports that the website chatbot returns “Something went wrong” for every message as of the morning of October 12. Investigate the outage ASAP and update Tom; a major promotion is running today and customers are complaining on Instagram.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Tom,\n\nThanks for flagging this. I’ll look into the chatbot errors and keep you updated on what I find. I understand the impact with today’s promo running.\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Tom Becker reports that QuickFit Gyms’ website chatbot has shown “Something went wrong” for every message since this morning. He asks Alex to investigate ASAP because a promotion is running today and customers are complaining on Instagram.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate and restore QuickFit Gyms’ chatbot",
+      "description": "Tom Becker at QuickFit Gyms reports that the website chatbot returns “Something went wrong” for every message as of the morning of October 12. Investigate the outage ASAP and update Tom; a major promotion is running today and customers are complaining on Instagram.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Tom,\n\nThanks for flagging this. I’ll look into the chatbot errors and keep you updated on what I find. I understand the impact with today’s promo running.\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1399,
+    "cached_tokens": 1280,
+    "output_tokens": 239,
+    "latency_ms": 5152,
+    "cost_usd": 0.002756
+  }
+}

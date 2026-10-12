@@ -1,0 +1,47 @@
+{
+  "case": "lead-de-agency",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Jonas Weber of a small Munich real estate agency asks whether Alex can build an assistant that drafts replies to common property inquiries using their brochures. He asks about a short call next week.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Jonas about the real estate assistant",
+      "description": "Jonas Weber of a small Munich real estate agency wants an assistant that drafts answers to recurring property questions based on their brochures. Reply about a short call next week; availability is for Alex to decide.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "de",
+      "body": "Hallo Herr Weber,\n\nvielen Dank für Ihre Anfrage. Ein Assistent, der Antwortentwürfe auf Basis Ihrer Exposés vorbereitet, klingt interessant. Für ein kurzes Gespräch nächste Woche [passt mir folgender Termin: …].\n\nViele Grüße\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Jonas Weber of a small Munich real estate agency asks whether Alex can build an assistant that drafts replies to common property inquiries using their brochures. He asks about a short call next week.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Jonas about the real estate assistant",
+      "description": "Jonas Weber of a small Munich real estate agency wants an assistant that drafts answers to recurring property questions based on their brochures. Reply about a short call next week; availability is for Alex to decide.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "de",
+      "body": "Hallo Herr Weber,\n\nvielen Dank für Ihre Anfrage. Ein Assistent, der Antwortentwürfe auf Basis Ihrer Exposés vorbereitet, klingt interessant. Für ein kurzes Gespräch nächste Woche [passt mir folgender Termin: …].\n\nViele Grüße\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1428,
+    "cached_tokens": 1280,
+    "output_tokens": 229,
+    "latency_ms": 3370,
+    "cost_usd": 0.00014209999999999998
+  }
+}

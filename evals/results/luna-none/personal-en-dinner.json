@@ -1,0 +1,47 @@
+{
+  "case": "personal-en-dinner",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Chris invites Alex to a small dinner at his place on Saturday around 7 p.m. and says to bring nothing.",
+    "category": "personal",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Chris about Saturday dinner",
+      "description": "Chris invited Alex to dinner at his place on Saturday around 7 p.m. Reply to say whether you can attend.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hey Chris, thanks for the invite! [I’m in / I can’t make it]."
+    }
+  },
+  "final": {
+    "summary": "Chris invites Alex to a small dinner at his place on Saturday around 7 p.m. and says to bring nothing.",
+    "category": "personal",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Chris about Saturday dinner",
+      "description": "Chris invited Alex to dinner at his place on Saturday around 7 p.m. Reply to say whether you can attend.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hey Chris, thanks for the invite! [I’m in / I can’t make it]."
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1188,
+    "cached_tokens": 1097,
+    "output_tokens": 122,
+    "latency_ms": 1997,
+    "cost_usd": 8.107e-05
+  }
+}

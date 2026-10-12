@@ -1,0 +1,47 @@
+{
+  "case": "support-en-user-question",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Kevin Moore at QuickFit asks where to update weekend opening hours in the admin panel so the bot gives correct answers next month; he could not find instructions in the guide.",
+    "category": "support",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Explain how to update QuickFit's weekend opening hours",
+      "description": "Kevin Moore, front desk at QuickFit, needs instructions for updating weekend opening hours in the bot's admin panel. The hours change next month, November 2026, and he could not find the relevant steps in the guide. Check the configuration and send him the correct steps.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Kevin,\n\nThanks for flagging this. I'll check where the weekend hours are configured and send you the steps to update them so the bot gives the right answer.\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Kevin Moore at QuickFit asks where to update weekend opening hours in the admin panel so the bot gives correct answers next month; he could not find instructions in the guide.",
+    "category": "support",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Explain how to update QuickFit's weekend opening hours",
+      "description": "Kevin Moore, front desk at QuickFit, needs instructions for updating weekend opening hours in the bot's admin panel. The hours change next month, November 2026, and he could not find the relevant steps in the guide. Check the configuration and send him the correct steps.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Kevin,\n\nThanks for flagging this. I'll check where the weekend hours are configured and send you the steps to update them so the bot gives the right answer.\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1402,
+    "cached_tokens": 1280,
+    "output_tokens": 226,
+    "latency_ms": 5200,
+    "cost_usd": 0.002632
+  }
+}

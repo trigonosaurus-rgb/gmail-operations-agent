@@ -1,0 +1,47 @@
+{
+  "case": "other-en-contract-review",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Ben Ortiz sent the contract for the analytics assistant project and requests Alex’s signature by Wednesday, October 14, so the project can start Monday, October 19.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review and sign the OrtizLabs project contract",
+      "description": "Ben Ortiz at OrtizLabs requests review and signature of OrtizLabs_Contract_v2.pdf for the analytics assistant project by Wednesday, October 14, 2026, ahead of a planned Monday, October 19 start. Review the terms and raise any questions before signing.",
+      "due_date": "2026-10-14"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Ben,\n\nThanks for sending the contract and confirming the Wednesday signature deadline. [Confirm whether you can review and sign by Wednesday, or list any questions about the terms.]\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Ben Ortiz sent the contract for the analytics assistant project and requests Alex’s signature by Wednesday, October 14, so the project can start Monday, October 19.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review and sign the OrtizLabs project contract",
+      "description": "Ben Ortiz at OrtizLabs requests review and signature of OrtizLabs_Contract_v2.pdf for the analytics assistant project by Wednesday, October 14, 2026, ahead of a planned Monday, October 19 start. Review the terms and raise any questions before signing.",
+      "due_date": "2026-10-14"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Ben,\n\nThanks for sending the contract and confirming the Wednesday signature deadline. [Confirm whether you can review and sign by Wednesday, or list any questions about the terms.]\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1214,
+    "cached_tokens": 1097,
+    "output_tokens": 232,
+    "latency_ms": 4564,
+    "cost_usd": 0.0026636999999999997
+  }
+}

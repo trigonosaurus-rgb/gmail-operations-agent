@@ -1,0 +1,41 @@
+{
+  "case": "notification-en-ci-failed",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "GitHub reports that the CI run for acme/booking-bot on main (commit a1b2c3d) failed; three tests failed in tests/test_calendar.py.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review the failed calendar tests",
+      "description": "Review GitHub CI for acme/booking-bot on main, commit a1b2c3d. The run lasted 2m 13s and three tests failed in tests/test_calendar.py.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "GitHub reports that the CI run for acme/booking-bot on main (commit a1b2c3d) failed; three tests failed in tests/test_calendar.py.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review the failed calendar tests",
+      "description": "Review GitHub CI for acme/booking-bot on main, commit a1b2c3d. The run lasted 2m 13s and three tests failed in tests/test_calendar.py.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1407,
+    "cached_tokens": 1280,
+    "output_tokens": 128,
+    "latency_ms": 2453,
+    "cost_usd": 8.95e-05
+  }
+}

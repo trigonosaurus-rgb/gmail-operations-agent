@@ -1,0 +1,47 @@
+{
+  "case": "lead-en-dental",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Sarah Kim, practice manager for two dental clinics in Austin, asks about a website chatbot to answer questions about cleaning prices, insurance and opening hours, and book appointments in Google Calendar. She wants a rough cost and timeline.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Estimate cost and timeline for Sarah's dental clinic chatbot",
+      "description": "Reply to Sarah Kim at sarah@brightsmile-dental.com with a rough cost and timeline for a website chatbot serving two dental clinics in Austin. It should answer questions about cleaning prices, insurance and opening hours, and book appointments in Google Calendar. Clarify booking rules and how calendars are organized before estimating.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Sarah,\n\nThanks for reaching out! For a chatbot covering those FAQs and Google Calendar booking, my rough estimate would be [cost range], with a timeline of [timeframe].\n\nDo the two clinics use separate calendars, and should patients book directly into available slots or request an appointment for your team to confirm?\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Sarah Kim, practice manager for two dental clinics in Austin, asks about a website chatbot to answer questions about cleaning prices, insurance and opening hours, and book appointments in Google Calendar. She wants a rough cost and timeline.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Estimate cost and timeline for Sarah's dental clinic chatbot",
+      "description": "Reply to Sarah Kim at sarah@brightsmile-dental.com with a rough cost and timeline for a website chatbot serving two dental clinics in Austin. It should answer questions about cleaning prices, insurance and opening hours, and book appointments in Google Calendar. Clarify booking rules and how calendars are organized before estimating.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Sarah,\n\nThanks for reaching out! For a chatbot covering those FAQs and Google Calendar booking, my rough estimate would be [cost range], with a timeline of [timeframe].\n\nDo the two clinics use separate calendars, and should patients book directly into available slots or request an appointment for your team to confirm?\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1436,
+    "cached_tokens": 1280,
+    "output_tokens": 278,
+    "latency_ms": 6575,
+    "cost_usd": 0.00322
+  }
+}

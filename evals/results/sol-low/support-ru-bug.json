@@ -1,0 +1,47 @@
+{
+  "case": "support-ru-bug",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Anna Belyaeva from TeaWorld support reports that two customers saw another customer's order status today. The order numbers differ by one digit, and she asks Alex to investigate as soon as possible.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate incorrect order-status disclosure in TeaWorld's bot",
+      "description": "Anna Belyaeva (anna@teaworld.ru), TeaWorld support, reports that two customers saw the status of someone else's order on October 12, 2026. The order numbers differ by one digit. Investigate order matching and access checks as soon as possible, assess the disclosure, and determine how to prevent further incorrect responses.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте. Это серьёзная проблема. Пришлите, пожалуйста, номера затронутых заказов и время обращений через защищённый рабочий канал, без персональных данных клиентов. [Срок начала проверки и временная мера для предотвращения повторных случаев]."
+    }
+  },
+  "final": {
+    "summary": "Anna Belyaeva from TeaWorld support reports that two customers saw another customer's order status today. The order numbers differ by one digit, and she asks Alex to investigate as soon as possible.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate incorrect order-status disclosure in TeaWorld's bot",
+      "description": "Anna Belyaeva (anna@teaworld.ru), TeaWorld support, reports that two customers saw the status of someone else's order on October 12, 2026. The order numbers differ by one digit. Investigate order matching and access checks as soon as possible, assess the disclosure, and determine how to prevent further incorrect responses.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте. Это серьёзная проблема. Пришлите, пожалуйста, номера затронутых заказов и время обращений через защищённый рабочий канал, без персональных данных клиентов. [Срок начала проверки и временная мера для предотвращения повторных случаев]."
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1228,
+    "cached_tokens": 1097,
+    "output_tokens": 274,
+    "latency_ms": 5707,
+    "cost_usd": 0.0031117
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "case": "support-ru-bug",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Anna Belyaeva from TeaWorld reports that two customers were shown another customer's order status because the order numbers differ by one digit. She asks Alex to investigate as soon as possible.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the order-status mix-up",
+      "description": "Anna Belyaeva from TeaWorld reports that the bot showed two customers the status of someone else's order when order numbers differed by one digit. Investigate the cause as soon as possible.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте. Спасибо, что сообщили. Я как можно скорее проверю, почему бот показывает статус чужого заказа, и сообщу вам, когда разберусь.\n\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Anna Belyaeva from TeaWorld reports that two customers were shown another customer's order status because the order numbers differ by one digit. She asks Alex to investigate as soon as possible.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the order-status mix-up",
+      "description": "Anna Belyaeva from TeaWorld reports that the bot showed two customers the status of someone else's order when order numbers differed by one digit. Investigate the cause as soon as possible.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте. Спасибо, что сообщили. Я как можно скорее проверю, почему бот показывает статус чужого заказа, и сообщу вам, когда разберусь.\n\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1411,
+    "cached_tokens": 1280,
+    "output_tokens": 171,
+    "latency_ms": 2513,
+    "cost_usd": 0.00011140000000000001
+  }
+}

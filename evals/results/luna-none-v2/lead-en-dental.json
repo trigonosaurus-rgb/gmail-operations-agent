@@ -1,0 +1,47 @@
+{
+  "case": "lead-en-dental",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Sarah Kim, practice manager for two dental clinics in Austin, asks whether Alex can build a website chatbot that answers questions about cleaning prices, insurance, and opening hours, and books appointments in Google Calendar. She requests a rough cost and timeline.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare a rough quote and timeline for Sarah's chatbot",
+      "description": "Sarah Kim of two dental clinics in Austin asks for a website chatbot to answer questions about cleaning prices, insurance, and opening hours, and book appointments in Google Calendar. Reply with a rough cost and estimated build timeline.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Sarah,\n\nThanks for reaching out. I’d be happy to learn more about the chatbot you have in mind and put together a rough cost and timeline. Could you share your website and any details about how you’d like appointment booking to work?\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Sarah Kim, practice manager for two dental clinics in Austin, asks whether Alex can build a website chatbot that answers questions about cleaning prices, insurance, and opening hours, and books appointments in Google Calendar. She requests a rough cost and timeline.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare a rough quote and timeline for Sarah's chatbot",
+      "description": "Sarah Kim of two dental clinics in Austin asks for a website chatbot to answer questions about cleaning prices, insurance, and opening hours, and book appointments in Google Calendar. Reply with a rough cost and estimated build timeline.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Sarah,\n\nThanks for reaching out. I’d be happy to learn more about the chatbot you have in mind and put together a rough cost and timeline. Could you share your website and any details about how you’d like appointment booking to work?\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1436,
+    "cached_tokens": 1280,
+    "output_tokens": 207,
+    "latency_ms": 3305,
+    "cost_usd": 0.0001319
+  }
+}

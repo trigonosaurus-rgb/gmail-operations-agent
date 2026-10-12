@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Design tokens from design/README.md. The surfaces stack without outlines:
+ * page → panel (the detail pane, popovers) → well (blocks inside a panel).
+ * shadcn's names (background, muted, …) point at the same tokens so its
+ * components fit in.
+ */
+:root {
+  --page: #f4f4f5;
+  --panel: #ffffff;
+  --field: #e8e8eb; /* inputs and gray buttons on the page, the selected row */
+  --well: #f4f4f5; /* blocks and gray buttons inside a panel */
+  --fg: #09090b;
+  --muted-fg: #71717a;
+  --hair: #e4e4e7;
+  --hair-strong: #d4d4d8;
+  --primary: #18181b;
+  --primary-fg: #fafafa;
+  --review: #3f5e9e;
+  --ok: #15803d;
+  --warn: #9a5b2c;
+  --warn-soft: #f8ebdf;
+  --danger: #b0473f;
+  --danger-soft: #f8e7e4;
+  --bar: #0a7ea0; /* chart bars: one hue, validated by the dataviz palette checks */
+  --overlay: rgb(0 0 0 / 0.4);
+  --shadow-pop: 0 12px 32px rgb(0 0 0 / 0.18), 0 0 0 1px var(--hair);
+  color-scheme: light;
+}
+
+.dark {
+  --page: #121211;
+  --panel: #1a1a19;
+  --field: #222220;
+  --well: #262624;
+  --fg: #ededea;
+  --muted-fg: #a3a39c;
+  --hair: #2c2c2a;
+  --hair-strong: #42423f;
+  --primary: #ededea;
+  --primary-fg: #1a1a19;
+  --review: #93a6d1;
+  --ok: #5dd39a;
+  --warn: #d3a77a;
+  --warn-soft: rgb(211 167 122 / 0.15);
+  --danger: #de8e85;
+  --danger-soft: rgb(222 142 133 / 0.15);
+  --bar: #1e99b1;
+  --overlay: rgb(0 0 0 / 0.55);
+  --shadow-pop: 0 12px 32px rgb(0 0 0 / 0.45), 0 0 0 1px var(--hair);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: "Geist Variable", system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, monospace;
+
+  --color-page: var(--page);
+  --color-panel: var(--panel);
+  --color-field: var(--field);
+  --color-well: var(--well);
+  --color-fg: var(--fg);
+  --color-muted-fg: var(--muted-fg);
+  --color-hair: var(--hair);
+  --color-hair-strong: var(--hair-strong);
+  --color-primary: var(--primary);
+  --color-primary-fg: var(--primary-fg);
+  --color-review: var(--review);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-bar: var(--bar);
+
+  --color-background: var(--page);
+  --color-foreground: var(--fg);
+  --color-popover: var(--panel);
+  --color-popover-foreground: var(--fg);
+  --color-muted: var(--well);
+  --color-muted-foreground: var(--muted-fg);
+  --color-border: var(--hair);
+  --color-input: var(--hair-strong);
+  --color-ring: var(--review);
+
+  --shadow-pop: var(--shadow-pop);
+}
+
+/* Corners: plain radii, swapped for larger squircles where the browser has them. */
+@theme {
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+}
+
+@supports (corner-shape: squircle) {
+  :root {
+    --radius-xs: 9px;
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+    --radius-xl: 30px;
+  }
+  [class*="rounded-"]:not([class*="rounded-full"]) {
+    corner-shape: squircle;
+  }
+}
+
+@utility caps {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@layer base {
+  * {
+    @apply border-hair;
+  }
+  html {
+    @apply bg-page font-sans text-fg antialiased;
+  }
+  body {
+    @apply min-h-dvh bg-page;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  :focus-visible {
+    outline: 2px solid var(--review);
+    outline-offset: 2px;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  [role="tab"],
+  label:has(> input[type="checkbox"]) {
+    cursor: pointer;
+  }
+  a {
+    text-underline-offset: 3px;
+  }
+}

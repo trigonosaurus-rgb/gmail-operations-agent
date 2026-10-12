@@ -1,0 +1,33 @@
+{
+  "case": "spam-en-seo",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Rahul SEO Expert offers to fix 37 alleged SEO errors for $99/month and guarantees a #1 Google ranking within 30 days, asking Alex to reply YES for a free audit.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "spam",
+    "risk_reason": "Unsolicited generic SEO sales pitch with an unsupported guarantee of a #1 Google ranking within 30 days.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Rahul SEO Expert offers to fix 37 alleged SEO errors for $99/month and guarantees a #1 Google ranking within 30 days, asking Alex to reply YES for a free audit.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "spam",
+    "risk_reason": "Unsolicited generic SEO sales pitch with an unsupported guarantee of a #1 Google ranking within 30 days.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1221,
+    "cached_tokens": 1097,
+    "output_tokens": 95,
+    "latency_ms": 2893,
+    "cost_usd": 0.0013077
+  }
+}

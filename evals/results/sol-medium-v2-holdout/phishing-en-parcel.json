@@ -1,0 +1,33 @@
+{
+  "case": "phishing-en-parcel",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "A sender claiming to be DHL says parcel 7781-2290 is on hold for an unpaid $2.99 customs fee and demands payment within 24 hours to avoid its return.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "phishing",
+    "risk_reason": "The message impersonates DHL using the suspicious domain dhl-parcel-track.info and pressures the recipient to pay through its link within 24 hours.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "A sender claiming to be DHL says parcel 7781-2290 is on hold for an unpaid $2.99 customs fee and demands payment within 24 hours to avoid its return.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "phishing",
+    "risk_reason": "The message impersonates DHL using the suspicious domain dhl-parcel-track.info and pressures the recipient to pay through its link within 24 hours.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1400,
+    "cached_tokens": 1280,
+    "output_tokens": 122,
+    "latency_ms": 3043,
+    "cost_usd": 0.001588
+  }
+}

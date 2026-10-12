@@ -1,0 +1,47 @@
+{
+  "case": "invoice-en-overdue",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "DesignCraft Studio sent a second reminder for overdue invoice 2026-031: $850 for a logo and brand kit, due September 30. They request payment this week to avoid a late fee.",
+    "category": "invoice",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Arrange payment for overdue DesignCraft invoice 2026-031",
+      "description": "DesignCraft Studio requests payment this week for invoice 2026-031, totaling $850 for a logo and brand kit. The invoice was due September 30, 2026; this is their second reminder, and a late fee may apply if payment is not arranged this week.",
+      "due_date": "2026-09-30"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi,\n\nThanks for the reminder. I'll look into invoice 2026-031 for $850 and check its payment status.\n\nKind regards,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "DesignCraft Studio sent a second reminder for overdue invoice 2026-031: $850 for a logo and brand kit, due September 30. They request payment this week to avoid a late fee.",
+    "category": "invoice",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Arrange payment for overdue DesignCraft invoice 2026-031",
+      "description": "DesignCraft Studio requests payment this week for invoice 2026-031, totaling $850 for a logo and brand kit. The invoice was due September 30, 2026; this is their second reminder, and a late fee may apply if payment is not arranged this week.",
+      "due_date": "2026-09-30"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi,\n\nThanks for the reminder. I'll look into invoice 2026-031 for $850 and check its payment status.\n\nKind regards,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1408,
+    "cached_tokens": 1280,
+    "output_tokens": 420,
+    "latency_ms": 7980,
+    "cost_usd": 0.004584
+  }
+}

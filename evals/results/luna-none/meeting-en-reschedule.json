@@ -1,0 +1,47 @@
+{
+  "case": "meeting-en-reschedule",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Anna Lee asks to move her call with Alex from tomorrow, October 13, at 11:00 to Thursday, October 15, at the same time.",
+    "category": "meeting",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Confirm whether Thursday's call works",
+      "description": "Anna Lee asks to reschedule the call currently set for Tuesday, October 13, 2026, at 11:00 to Thursday, October 15, at 11:00. Confirm whether the proposed time works.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Anna,\n\nThursday at 11:00 [works for me / doesn’t work for me].\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Anna Lee asks to move her call with Alex from tomorrow, October 13, at 11:00 to Thursday, October 15, at the same time.",
+    "category": "meeting",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Confirm whether Thursday's call works",
+      "description": "Anna Lee asks to reschedule the call currently set for Tuesday, October 13, 2026, at 11:00 to Thursday, October 15, at 11:00. Confirm whether the proposed time works.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Anna,\n\nThursday at 11:00 [works for me / doesn’t work for me].\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1196,
+    "cached_tokens": 1097,
+    "output_tokens": 163,
+    "latency_ms": 2531,
+    "cost_usd": 0.00010237000000000001
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "case": "invoice-en-receipt",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Stripe sent a Figma receipt for $15.00 paid on October 11, 2026, using a Visa ending in 4242.",
+    "category": "invoice",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Stripe sent a Figma receipt for $15.00 paid on October 11, 2026, using a Visa ending in 4242.",
+    "category": "invoice",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1204,
+    "cached_tokens": 1097,
+    "output_tokens": 66,
+    "latency_ms": 2535,
+    "cost_usd": 0.0009837000000000001
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "case": "client-es-approval",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Lucía Martín at Casa Martín approved the proposal without changes and asks Alex to send the contract and first invoice so they can start on Monday.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Send Casa Martín the contract and first invoice",
+      "description": "Lucía Martín (lucia@casamartin.es) approved the proposal as submitted. Prepare and send the contract and first invoice, and confirm which Monday they intend to start.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "es",
+      "body": "Hola Lucía,\n\nGracias por confirmar la aprobación. Os enviaré el contrato y la primera factura [fecha de envío]. ¿Podéis confirmar la fecha del lunes en que queréis empezar?\n\nUn saludo,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Lucía Martín at Casa Martín approved the proposal without changes and asks Alex to send the contract and first invoice so they can start on Monday.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Send Casa Martín the contract and first invoice",
+      "description": "Lucía Martín (lucia@casamartin.es) approved the proposal as submitted. Prepare and send the contract and first invoice, and confirm which Monday they intend to start.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "es",
+      "body": "Hola Lucía,\n\nGracias por confirmar la aprobación. Os enviaré el contrato y la primera factura [fecha de envío]. ¿Podéis confirmar la fecha del lunes en que queréis empezar?\n\nUn saludo,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1207,
+    "cached_tokens": 1097,
+    "output_tokens": 320,
+    "latency_ms": 8062,
+    "cost_usd": 0.0035296999999999998
+  }
+}

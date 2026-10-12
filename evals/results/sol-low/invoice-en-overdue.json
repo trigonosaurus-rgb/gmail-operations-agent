@@ -1,0 +1,47 @@
+{
+  "case": "invoice-en-overdue",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "DesignCraft Studio sent a second reminder for overdue invoice 2026-031: $850 for a logo and brand kit, originally due September 30. They request payment this week to avoid a late fee.",
+    "category": "invoice",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Arrange payment for overdue DesignCraft invoice 2026-031",
+      "description": "DesignCraft Studio Accounts requests payment this week for invoice 2026-031, totaling $850 for a logo and brand kit. The invoice was due September 30, 2026; this is the second reminder, and a late fee may apply if payment is not arranged this week.",
+      "due_date": "2026-10-16"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi,\n\nThank you for the reminder. I plan to arrange payment of the $850 for invoice 2026-031 on [payment date].\n\nKind regards,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "DesignCraft Studio sent a second reminder for overdue invoice 2026-031: $850 for a logo and brand kit, originally due September 30. They request payment this week to avoid a late fee.",
+    "category": "invoice",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Arrange payment for overdue DesignCraft invoice 2026-031",
+      "description": "DesignCraft Studio Accounts requests payment this week for invoice 2026-031, totaling $850 for a logo and brand kit. The invoice was due September 30, 2026; this is the second reminder, and a late fee may apply if payment is not arranged this week.",
+      "due_date": "2026-10-16"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi,\n\nThank you for the reminder. I plan to arrange payment of the $850 for invoice 2026-031 on [payment date].\n\nKind regards,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1225,
+    "cached_tokens": 1097,
+    "output_tokens": 206,
+    "latency_ms": 4641,
+    "cost_usd": 0.0024257
+  }
+}

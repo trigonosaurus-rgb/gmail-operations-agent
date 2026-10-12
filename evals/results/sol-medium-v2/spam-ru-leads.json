@@ -1,0 +1,33 @@
+{
+  "case": "spam-ru-leads",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "An unsolicited seller offers a database of 1,000,000 entrepreneurs' email addresses and phone numbers for RUB 9,900 and asks interested buyers to contact them on Telegram.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "spam",
+    "risk_reason": "Unsolicited marketing for bulk email and phone contact databases.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "An unsolicited seller offers a database of 1,000,000 entrepreneurs' email addresses and phone numbers for RUB 9,900 and asks interested buyers to contact them on Telegram.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "spam",
+    "risk_reason": "Unsolicited marketing for bulk email and phone contact databases.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1384,
+    "cached_tokens": 1280,
+    "output_tokens": 83,
+    "latency_ms": 3316,
+    "cost_usd": 0.001166
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "case": "newsletter-ru-vc",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "vc.ru sent a weekly digest featuring articles on a retailer reducing support by 40% using bots and AI freelancers’ earnings.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "vc.ru sent a weekly digest featuring articles on a retailer reducing support by 40% using bots and AI freelancers’ earnings.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1219,
+    "cached_tokens": 1097,
+    "output_tokens": 61,
+    "latency_ms": 2718,
+    "cost_usd": 0.0009637000000000001
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "case": "client-en-bot-down",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Tom Becker says QuickFit Gyms’ website chatbot has shown “Something went wrong” for every message since this morning. A promotion is running today and customers are complaining on Instagram; he asks Alex to investigate ASAP.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the QuickFit chatbot outage",
+      "description": "Tom Becker at QuickFit Gyms reports that since the morning of 2026-10-12, the website chatbot shows “Something went wrong” for every message. A promotion is running today and customers are complaining on Instagram. Investigate the issue ASAP.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Tom,\n\nI’ll look into the chatbot issue as soon as possible and update you when I know more.\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Tom Becker says QuickFit Gyms’ website chatbot has shown “Something went wrong” for every message since this morning. A promotion is running today and customers are complaining on Instagram; he asks Alex to investigate ASAP.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the QuickFit chatbot outage",
+      "description": "Tom Becker at QuickFit Gyms reports that since the morning of 2026-10-12, the website chatbot shows “Something went wrong” for every message. A promotion is running today and customers are complaining on Instagram. Investigate the issue ASAP.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Tom,\n\nI’ll look into the chatbot issue as soon as possible and update you when I know more.\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1399,
+    "cached_tokens": 1280,
+    "output_tokens": 184,
+    "latency_ms": 2540,
+    "cost_usd": 0.0001167
+  }
+}

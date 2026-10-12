@@ -1,0 +1,47 @@
+{
+  "case": "client-en-scope-creep",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Greg Wilson asks Alex to add SMS reminders sent the day before to the booking bot and include them in the same release.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Assess and respond to the SMS reminder request",
+      "description": "Greg Wilson asks Alex to add day-before SMS reminders to the booking bot and include them in the same release. Clarify scope and whether this can be included; no estimate or commitment is provided.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Greg,\n\nThanks for the suggestion. I’ll look into what adding day-before SMS reminders would involve and whether they can fit into the same release.\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Greg Wilson asks Alex to add SMS reminders sent the day before to the booking bot and include them in the same release.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Assess and respond to the SMS reminder request",
+      "description": "Greg Wilson asks Alex to add day-before SMS reminders to the booking bot and include them in the same release. Clarify scope and whether this can be included; no estimate or commitment is provided.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Greg,\n\nThanks for the suggestion. I’ll look into what adding day-before SMS reminders would involve and whether they can fit into the same release.\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1394,
+    "cached_tokens": 1280,
+    "output_tokens": 194,
+    "latency_ms": 2864,
+    "cost_usd": 0.0001212
+  }
+}

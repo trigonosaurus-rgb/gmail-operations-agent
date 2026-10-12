@@ -1,0 +1,47 @@
+{
+  "case": "client-es-approval",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Lucía Martín has approved the proposal without changes and requests the contract and first invoice so the project can start on Monday.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare and send the contract and first invoice",
+      "description": "Lucía Martín at Casa Martín (lucia@casamartin.es) approved the proposal as submitted. Prepare and send the contract and first invoice for the requested Monday start; confirm which Monday she means if necessary.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "es",
+      "body": "Hola Lucía,\n\nGracias por aprobar la propuesta. Os enviaré el contrato y la primera factura [fecha de envío]. ¿Os referís a empezar hoy o el próximo lunes 19?\n\nUn saludo"
+    }
+  },
+  "final": {
+    "summary": "Lucía Martín has approved the proposal without changes and requests the contract and first invoice so the project can start on Monday.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare and send the contract and first invoice",
+      "description": "Lucía Martín at Casa Martín (lucia@casamartin.es) approved the proposal as submitted. Prepare and send the contract and first invoice for the requested Monday start; confirm which Monday she means if necessary.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "es",
+      "body": "Hola Lucía,\n\nGracias por aprobar la propuesta. Os enviaré el contrato y la primera factura [fecha de envío]. ¿Os referís a empezar hoy o el próximo lunes 19?\n\nUn saludo"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1207,
+    "cached_tokens": 1097,
+    "output_tokens": 475,
+    "latency_ms": 8966,
+    "cost_usd": 0.0050796999999999995
+  }
+}

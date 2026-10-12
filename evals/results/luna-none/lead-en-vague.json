@@ -1,0 +1,47 @@
+{
+  "case": "lead-en-vague",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Mike asks whether Alex works with restaurants, possibly for a project later this year.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply about restaurant AI work",
+      "description": "Mike asks whether Alex works with restaurants and may be interested in a project later this year. Reply with relevant experience or ask what he has in mind.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hey Mike, yes, I work on AI assistants and automations for businesses, including restaurants. What are you thinking about for later this year?"
+    }
+  },
+  "final": {
+    "summary": "Mike asks whether Alex works with restaurants, possibly for a project later this year.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply about restaurant AI work",
+      "description": "Mike asks whether Alex works with restaurants and may be interested in a project later this year. Reply with relevant experience or ask what he has in mind.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hey Mike, yes, I work on AI assistants and automations for businesses, including restaurants. What are you thinking about for later this year?"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1185,
+    "cached_tokens": 1097,
+    "output_tokens": 129,
+    "latency_ms": 2538,
+    "cost_usd": 8.427e-05
+  }
+}

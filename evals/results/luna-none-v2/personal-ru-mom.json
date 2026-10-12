@@ -1,0 +1,47 @@
+{
+  "case": "personal-ru-mom",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Alex’s mother asks him to check train tickets for the 25th, as previously agreed.",
+    "category": "personal",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check train tickets for the 25th",
+      "description": "Alex’s mother Galina asks him to look at train tickets for the 25th, as they previously agreed.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Хорошо, посмотрю билеты на 25-е. Целую, Алекс"
+    }
+  },
+  "final": {
+    "summary": "Alex’s mother asks him to check train tickets for the 25th, as previously agreed.",
+    "category": "personal",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check train tickets for the 25th",
+      "description": "Alex’s mother Galina asks him to look at train tickets for the 25th, as they previously agreed.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Хорошо, посмотрю билеты на 25-е. Целую, Алекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1374,
+    "cached_tokens": 1280,
+    "output_tokens": 117,
+    "latency_ms": 1985,
+    "cost_usd": 8.07e-05
+  }
+}

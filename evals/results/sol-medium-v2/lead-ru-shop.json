@@ -1,0 +1,47 @@
+{
+  "case": "lead-ru-shop",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Dmitry Orlov wants a Telegram bot for a tea e-commerce store handling about 300 orders per month, answering delivery questions and checking order status in MoySklad. He asks about pricing and a start date, with a budget of RUB 150,000–200,000.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Quote Dmitry's Telegram bot and propose a start date",
+      "description": "Reply to Dmitry Orlov at d.orlov@teaworld.ru about a Telegram bot for his tea e-commerce store, which handles about 300 orders monthly. The bot should answer delivery questions and retrieve order status from MoySklad. His budget is RUB 150,000–200,000; provide an estimated price and possible start date, clarifying integration requirements as needed.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Дмитрий, добрый день!\n\nСпасибо за описание. Предварительная стоимость такого бота — [сумма] руб., начать смогу [дата]. Для уточнения оценки подскажите, как покупатель должен подтверждать, что заказ принадлежит ему, и есть ли у вас готовые ответы на вопросы о доставке?\n\nС уважением,\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Dmitry Orlov wants a Telegram bot for a tea e-commerce store handling about 300 orders per month, answering delivery questions and checking order status in MoySklad. He asks about pricing and a start date, with a budget of RUB 150,000–200,000.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Quote Dmitry's Telegram bot and propose a start date",
+      "description": "Reply to Dmitry Orlov at d.orlov@teaworld.ru about a Telegram bot for his tea e-commerce store, which handles about 300 orders monthly. The bot should answer delivery questions and retrieve order status from MoySklad. His budget is RUB 150,000–200,000; provide an estimated price and possible start date, clarifying integration requirements as needed.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Дмитрий, добрый день!\n\nСпасибо за описание. Предварительная стоимость такого бота — [сумма] руб., начать смогу [дата]. Для уточнения оценки подскажите, как покупатель должен подтверждать, что заказ принадлежит ему, и есть ли у вас готовые ответы на вопросы о доставке?\n\nС уважением,\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1431,
+    "cached_tokens": 1280,
+    "output_tokens": 315,
+    "latency_ms": 6053,
+    "cost_usd": 0.00358
+  }
+}

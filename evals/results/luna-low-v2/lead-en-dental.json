@@ -1,0 +1,47 @@
+{
+  "case": "lead-en-dental",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Sarah Kim, practice manager for two dental clinics in Austin, asks whether Alex can build a website chatbot answering questions about cleaning prices, insurance and opening hours, and booking appointments in Google Calendar. She requests a rough cost and timeline.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare a rough chatbot quote and timeline",
+      "description": "Sarah Kim of two dental clinics in Austin asks for a website chatbot to answer questions about cleaning prices, insurance and opening hours, and book appointments in Google Calendar. Provide a rough cost and timeline.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Sarah,\n\nThanks for reaching out. I’d be happy to learn more about the clinics’ requirements and discuss a rough cost and timeline. Could you share how appointment availability and booking rules are managed today, and whether you have existing answers for the common questions?\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Sarah Kim, practice manager for two dental clinics in Austin, asks whether Alex can build a website chatbot answering questions about cleaning prices, insurance and opening hours, and booking appointments in Google Calendar. She requests a rough cost and timeline.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare a rough chatbot quote and timeline",
+      "description": "Sarah Kim of two dental clinics in Austin asks for a website chatbot to answer questions about cleaning prices, insurance and opening hours, and book appointments in Google Calendar. Provide a rough cost and timeline.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Sarah,\n\nThanks for reaching out. I’d be happy to learn more about the clinics’ requirements and discuss a rough cost and timeline. Could you share how appointment availability and booking rules are managed today, and whether you have existing answers for the common questions?\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1436,
+    "cached_tokens": 1280,
+    "output_tokens": 201,
+    "latency_ms": 2793,
+    "cost_usd": 0.00012890000000000002
+  }
+}

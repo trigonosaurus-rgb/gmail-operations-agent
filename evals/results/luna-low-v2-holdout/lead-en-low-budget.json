@@ -1,0 +1,47 @@
+{
+  "case": "lead-en-low-budget",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Priya Shah, who runs a one-person design studio, asks whether Alex can automate copying Typeform responses into Notion. Her budget is around $200.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Priya about the Typeform-to-Notion automation",
+      "description": "Priya Shah asks if Alex can automate copying client Typeform answers into Notion for her design studio. Her budget is around $200.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Priya,\n\nThanks for reaching out. I can look into automating the Typeform-to-Notion workflow. Could you share a little more about how your Notion pages are structured and what information you’d like transferred? I’ll then let you know whether it fits your budget of around $200.\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Priya Shah, who runs a one-person design studio, asks whether Alex can automate copying Typeform responses into Notion. Her budget is around $200.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Priya about the Typeform-to-Notion automation",
+      "description": "Priya Shah asks if Alex can automate copying client Typeform answers into Notion for her design studio. Her budget is around $200.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Priya,\n\nThanks for reaching out. I can look into automating the Typeform-to-Notion workflow. Could you share a little more about how your Notion pages are structured and what information you’d like transferred? I’ll then let you know whether it fits your budget of around $200.\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1398,
+    "cached_tokens": 1280,
+    "output_tokens": 192,
+    "latency_ms": 2555,
+    "cost_usd": 0.00012059999999999999
+  }
+}

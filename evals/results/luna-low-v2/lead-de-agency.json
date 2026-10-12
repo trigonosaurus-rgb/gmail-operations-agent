@@ -1,0 +1,47 @@
+{
+  "case": "lead-de-agency",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Jonas Weber of a small real estate agency in Munich asks whether Alex can build an assistant that drafts replies to common property inquiries using their exposés. He asks about a short conversation next week.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Jonas about the AI assistant and a call",
+      "description": "Jonas Weber of a small Munich real estate agency wants an assistant to draft answers to recurring property inquiries based on the agency’s exposés. Reply to his request and indicate whether a short call next week works.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "de",
+      "body": "Hallo Herr Weber,\n\nvielen Dank für Ihre Anfrage. Ein Assistent, der auf Basis Ihrer Exposés Antwortentwürfe zu häufigen Fragen vorbereitet, klingt nach einem interessanten Vorhaben. Ein kurzes Gespräch nächste Woche [passt mir].\n\nViele Grüße\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Jonas Weber of a small real estate agency in Munich asks whether Alex can build an assistant that drafts replies to common property inquiries using their exposés. He asks about a short conversation next week.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Jonas about the AI assistant and a call",
+      "description": "Jonas Weber of a small Munich real estate agency wants an assistant to draft answers to recurring property inquiries based on the agency’s exposés. Reply to his request and indicate whether a short call next week works.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "de",
+      "body": "Hallo Herr Weber,\n\nvielen Dank für Ihre Anfrage. Ein Assistent, der auf Basis Ihrer Exposés Antwortentwürfe zu häufigen Fragen vorbereitet, klingt nach einem interessanten Vorhaben. Ein kurzes Gespräch nächste Woche [passt mir].\n\nViele Grüße\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1428,
+    "cached_tokens": 1280,
+    "output_tokens": 287,
+    "latency_ms": 3601,
+    "cost_usd": 0.00017109999999999998
+  }
+}

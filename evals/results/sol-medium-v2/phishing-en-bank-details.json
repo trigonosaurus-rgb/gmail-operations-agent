@@ -1,0 +1,33 @@
+{
+  "case": "phishing-en-bank-details",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Lucía Martín requests that all future company payments go to a new bank account and asks Alex to confirm the records have been updated. She says the old account closes tomorrow, October 13.",
+    "category": "invoice",
+    "priority": "urgent",
+    "risk": "phishing",
+    "risk_reason": "The email redirects payments to a new bank account and pressures Alex to act before the old account allegedly closes tomorrow. This could be a payment-diversion scam; verify the change through a previously trusted contact channel.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Lucía Martín requests that all future company payments go to a new bank account and asks Alex to confirm the records have been updated. She says the old account closes tomorrow, October 13.",
+    "category": "invoice",
+    "priority": "urgent",
+    "risk": "phishing",
+    "risk_reason": "The email redirects payments to a new bank account and pressures Alex to act before the old account allegedly closes tomorrow. This could be a payment-diversion scam; verify the change through a previously trusted contact channel.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1430,
+    "cached_tokens": 1280,
+    "output_tokens": 178,
+    "latency_ms": 4971,
+    "cost_usd": 0.002208
+  }
+}
