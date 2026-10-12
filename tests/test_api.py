@@ -81,6 +81,9 @@ async def test_list_shows_triage_summary_and_filters_by_state(
 
     only_review = (await client.get("/api/messages?state=awaiting_approval")).json()
     assert [item["id"] for item in only_review["items"]] == ["review-me"]
+    # Counts cover the whole inbox, so filter tabs can show them whatever is selected.
+    assert only_review["counts"]["awaiting_approval"] == 1
+    assert sum(only_review["counts"].values()) == 2
 
 
 async def test_search_ignores_case_in_any_alphabet(api: Api, client: httpx.AsyncClient) -> None:

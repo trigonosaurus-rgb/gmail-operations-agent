@@ -1,3 +1,4 @@
+import asyncio
 import sqlite3
 from pathlib import Path
 
@@ -53,6 +54,32 @@ async def test_worker_wakes_up_for_a_retry_due_before_the_next_poll(
     worker.pipeline.add_email(make_email("a"))
     delay = await worker.tick()
     assert 8 <= delay <= 12  # the retry backoff, not the 60 s poll interval
+
+
+async def test_a_wake_during_a_cycle_is_not_lost(store: Store, clock: FakeClock) -> None:
+    """An approval that lands while a cycle runs must start another cycle, not wait for the poll.
+
+    The cycle may already have seen that message (as awaiting approval), so only a new
+    cycle picks it up. Under load, this lost wake-up left approved mail "Running" for 60 s.
+    """
+    worker, _ = build(store, clock, FakeLLM())
+    ticks = 0
+    tick = worker.tick
+
+    async def tick_with_an_approval_meanwhile() -> float:
+        nonlocal ticks
+        ticks += 1
+        if ticks == 1:
+            worker.wake()
+        return await tick()
+
+    worker.tick = tick_with_an_approval_meanwhile  # type: ignore[method-assign]
+    stop = asyncio.Event()
+    task = asyncio.create_task(worker.run(stop))
+    await asyncio.sleep(0.05)
+    stop.set()
+    await task
+    assert ticks >= 2
 
 
 def test_store_migrations_are_idempotent(tmp_path: Path) -> None:

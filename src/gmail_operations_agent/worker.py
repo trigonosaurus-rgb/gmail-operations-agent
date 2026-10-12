@@ -53,8 +53,10 @@ class Worker:
         logger.info("Worker started (source: %s)", self.source.name)
         try:
             while not stop.is_set():
-                delay = await self.tick()
+                # Cleared before the cycle, not after: a wake() that arrives while the
+                # cycle runs (an approval of mail it already passed) starts the next one.
                 self._wake.clear()
+                delay = await self.tick()
                 await _wait_any(stop, self._wake, delay)
         finally:
             self.status.running = False

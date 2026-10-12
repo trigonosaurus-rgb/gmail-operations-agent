@@ -19,6 +19,7 @@ from gmail_operations_agent.runtime import Runtime
 logger = logging.getLogger(__name__)
 
 MAX_BODY_BYTES = 64 * 1024
+TITLE = "Gmail Operations Agent"
 
 
 def create_app(runtime: Runtime, run_worker: bool = True) -> FastAPI:
@@ -38,12 +39,7 @@ def create_app(runtime: Runtime, run_worker: bool = True) -> FastAPI:
             stop.set()
             await asyncio.gather(*tasks, return_exceptions=True)
 
-    app = FastAPI(
-        title="Gmail Operations Agent",
-        version=__version__,
-        lifespan=lifespan,
-        redoc_url=None,
-    )
+    app = FastAPI(title=TITLE, version=__version__, lifespan=lifespan, redoc_url=None)
     app.state.runtime = runtime
     app.state.hub = EventHub(runtime.store)
     app.include_router(router)

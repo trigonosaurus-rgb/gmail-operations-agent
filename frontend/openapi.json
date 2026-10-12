@@ -1,0 +1,1878 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Gmail Operations Agent",
+    "version": "0.2.0"
+  },
+  "paths": {
+    "/api/status": {
+      "get": {
+        "summary": "Status",
+        "operationId": "status_api_status_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/settings": {
+      "put": {
+        "summary": "Update Settings",
+        "operationId": "update_settings_api_settings_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SettingsIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/stats": {
+      "get": {
+        "summary": "Stats",
+        "operationId": "stats_api_stats_get",
+        "parameters": [
+          {
+            "name": "hours",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 720,
+              "minimum": 1,
+              "default": 24,
+              "title": "Hours"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatsOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/messages": {
+      "get": {
+        "summary": "List Messages",
+        "operationId": "list_messages_api_messages_get",
+        "parameters": [
+          {
+            "name": "state",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MessageState"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "State"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 200
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Q"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Before"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessagePage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/messages/{message_id}": {
+      "get": {
+        "summary": "Get Message",
+        "operationId": "get_message_api_messages__message_id__get",
+        "parameters": [
+          {
+            "name": "message_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Message Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/messages/{message_id}/approve": {
+      "post": {
+        "summary": "Approve",
+        "operationId": "approve_api_messages__message_id__approve_post",
+        "parameters": [
+          {
+            "name": "message_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Message Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/ApproveIn"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/messages/{message_id}/reject": {
+      "post": {
+        "summary": "Reject",
+        "operationId": "reject_api_messages__message_id__reject_post",
+        "parameters": [
+          {
+            "name": "message_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Message Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/messages/{message_id}/retry": {
+      "post": {
+        "summary": "Retry",
+        "operationId": "retry_api_messages__message_id__retry_post",
+        "parameters": [
+          {
+            "name": "message_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Message Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/events": {
+      "get": {
+        "summary": "Events",
+        "description": "Live events for the viewer's messages.\n\nStart with `after` = the `cursor` of the list you loaded; on reconnect the browser\nsends `Last-Event-ID` itself, which takes precedence.",
+        "operationId": "events_api_events_get",
+        "parameters": [
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "After"
+            }
+          },
+          {
+            "name": "last-event-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Last-Event-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "text/event-stream": {
+                "itemSchema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "string"
+                    },
+                    "event": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "retry": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/demo": {
+      "get": {
+        "summary": "Demo Info",
+        "operationId": "demo_info_api_demo_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DemoOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/demo/emails": {
+      "post": {
+        "summary": "Send Test Email",
+        "operationId": "send_test_email_api_demo_emails_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestEmailIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TestEmailOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/demo/reset": {
+      "post": {
+        "summary": "Reset Demo",
+        "description": "Start over with a fresh copy of the seed inbox.",
+        "operationId": "reset_demo_api_demo_reset_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ActionKind": {
+        "type": "string",
+        "enum": [
+          "notion_task",
+          "sheets_row",
+          "gmail_draft",
+          "mark_processed"
+        ],
+        "title": "ActionKind"
+      },
+      "ActionOut": {
+        "properties": {
+          "kind": {
+            "$ref": "#/components/schemas/ActionKind"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ActionStatus"
+          },
+          "needs_approval": {
+            "type": "boolean",
+            "title": "Needs Approval"
+          },
+          "attempts": {
+            "type": "integer",
+            "title": "Attempts"
+          },
+          "preview": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Preview"
+          },
+          "url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Url"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "kind",
+          "status",
+          "needs_approval",
+          "attempts",
+          "preview",
+          "url",
+          "error",
+          "updated_at"
+        ],
+        "title": "ActionOut"
+      },
+      "ActionStatus": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "running",
+          "done",
+          "failed",
+          "skipped"
+        ],
+        "title": "ActionStatus"
+      },
+      "ApproveIn": {
+        "properties": {
+          "reply_body": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 10000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reply Body"
+          },
+          "task_title": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Task Title"
+          },
+          "task_description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 5000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Task Description"
+          },
+          "skip": {
+            "items": {
+              "$ref": "#/components/schemas/ActionKind"
+            },
+            "type": "array",
+            "maxItems": 4,
+            "title": "Skip"
+          }
+        },
+        "type": "object",
+        "title": "ApproveIn",
+        "description": "Edits made in review. Empty fields keep the model's text."
+      },
+      "BlockedOut": {
+        "properties": {
+          "service": {
+            "type": "string",
+            "title": "Service"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          },
+          "until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Until"
+          }
+        },
+        "type": "object",
+        "required": [
+          "service",
+          "reason",
+          "until"
+        ],
+        "title": "BlockedOut"
+      },
+      "Category": {
+        "type": "string",
+        "enum": [
+          "lead",
+          "client",
+          "invoice",
+          "meeting",
+          "support",
+          "newsletter",
+          "notification",
+          "personal",
+          "spam",
+          "other"
+        ],
+        "title": "Category"
+      },
+      "ConnectionOut": {
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "title": "Enabled"
+          },
+          "sandbox": {
+            "type": "boolean",
+            "title": "Sandbox"
+          }
+        },
+        "type": "object",
+        "required": [
+          "enabled",
+          "sandbox"
+        ],
+        "title": "ConnectionOut"
+      },
+      "Decision": {
+        "type": "string",
+        "enum": [
+          "auto",
+          "approved",
+          "rejected"
+        ],
+        "title": "Decision"
+      },
+      "DemoOut": {
+        "properties": {
+          "quota": {
+            "$ref": "#/components/schemas/QuotaOut"
+          },
+          "live": {
+            "type": "boolean",
+            "title": "Live"
+          },
+          "presets": {
+            "items": {
+              "$ref": "#/components/schemas/PresetOut"
+            },
+            "type": "array",
+            "title": "Presets"
+          },
+          "max_subject_chars": {
+            "type": "integer",
+            "title": "Max Subject Chars"
+          },
+          "max_body_chars": {
+            "type": "integer",
+            "title": "Max Body Chars"
+          }
+        },
+        "type": "object",
+        "required": [
+          "quota",
+          "live",
+          "presets",
+          "max_subject_chars",
+          "max_body_chars"
+        ],
+        "title": "DemoOut"
+      },
+      "EmailOut": {
+        "properties": {
+          "to": {
+            "type": "string",
+            "title": "To"
+          },
+          "reply_to": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reply To"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body"
+          },
+          "body_truncated": {
+            "type": "boolean",
+            "title": "Body Truncated"
+          },
+          "attachments": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Attachments"
+          },
+          "is_automated": {
+            "type": "boolean",
+            "title": "Is Automated"
+          },
+          "web_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Web Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "to",
+          "reply_to",
+          "body",
+          "body_truncated",
+          "attachments",
+          "is_automated",
+          "web_url"
+        ],
+        "title": "EmailOut"
+      },
+      "EventOut": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "message_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message Id"
+          },
+          "type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "data": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Data"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "message_id",
+          "type",
+          "data",
+          "created_at"
+        ],
+        "title": "EventOut"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LatencyOut": {
+        "properties": {
+          "avg": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Avg"
+          },
+          "p50": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "P50"
+          },
+          "p95": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "P95"
+          }
+        },
+        "type": "object",
+        "required": [
+          "avg",
+          "p50",
+          "p95"
+        ],
+        "title": "LatencyOut"
+      },
+      "LlmStatsOut": {
+        "properties": {
+          "calls": {
+            "type": "integer",
+            "title": "Calls"
+          },
+          "failures": {
+            "type": "integer",
+            "title": "Failures"
+          },
+          "cost_usd": {
+            "type": "number",
+            "title": "Cost Usd"
+          },
+          "cost_per_1k_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cost Per 1K Usd"
+          },
+          "latency_ms": {
+            "$ref": "#/components/schemas/LatencyOut"
+          }
+        },
+        "type": "object",
+        "required": [
+          "calls",
+          "failures",
+          "cost_usd",
+          "cost_per_1k_usd",
+          "latency_ms"
+        ],
+        "title": "LlmStatsOut"
+      },
+      "MessageDetail": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "state": {
+            "$ref": "#/components/schemas/MessageState"
+          },
+          "sender_name": {
+            "type": "string",
+            "title": "Sender Name"
+          },
+          "sender_address": {
+            "type": "string",
+            "title": "Sender Address"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "received_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Received At"
+          },
+          "summary": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Summary"
+          },
+          "category": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Category"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "priority": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Priority"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "risk": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Risk"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "has_task": {
+            "type": "boolean",
+            "title": "Has Task"
+          },
+          "has_reply": {
+            "type": "boolean",
+            "title": "Has Reply"
+          },
+          "attempts": {
+            "type": "integer",
+            "title": "Attempts"
+          },
+          "next_attempt_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Attempt At"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          },
+          "email": {
+            "$ref": "#/components/schemas/EmailOut"
+          },
+          "triage": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Triage"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "edited": {
+            "type": "boolean",
+            "title": "Edited"
+          },
+          "notes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Notes"
+          },
+          "decision": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Decision"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "actions": {
+            "items": {
+              "$ref": "#/components/schemas/ActionOut"
+            },
+            "type": "array",
+            "title": "Actions"
+          },
+          "events": {
+            "items": {
+              "$ref": "#/components/schemas/EventOut"
+            },
+            "type": "array",
+            "title": "Events"
+          },
+          "usage": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/UsageOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "state",
+          "sender_name",
+          "sender_address",
+          "subject",
+          "received_at",
+          "summary",
+          "category",
+          "priority",
+          "risk",
+          "has_task",
+          "has_reply",
+          "attempts",
+          "next_attempt_at",
+          "error",
+          "created_at",
+          "updated_at",
+          "email",
+          "triage",
+          "edited",
+          "notes",
+          "decision",
+          "actions",
+          "events",
+          "usage"
+        ],
+        "title": "MessageDetail"
+      },
+      "MessagePage": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/MessageSummary"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "next_before": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Before"
+          },
+          "cursor": {
+            "type": "integer",
+            "title": "Cursor"
+          },
+          "counts": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "propertyNames": {
+              "$ref": "#/components/schemas/MessageState"
+            },
+            "type": "object",
+            "title": "Counts"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items",
+          "next_before",
+          "cursor",
+          "counts"
+        ],
+        "title": "MessagePage"
+      },
+      "MessageState": {
+        "type": "string",
+        "enum": [
+          "new",
+          "awaiting_approval",
+          "acting",
+          "done",
+          "rejected",
+          "dead"
+        ],
+        "title": "MessageState"
+      },
+      "MessageSummary": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "state": {
+            "$ref": "#/components/schemas/MessageState"
+          },
+          "sender_name": {
+            "type": "string",
+            "title": "Sender Name"
+          },
+          "sender_address": {
+            "type": "string",
+            "title": "Sender Address"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "received_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Received At"
+          },
+          "summary": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Summary"
+          },
+          "category": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Category"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "priority": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Priority"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "risk": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Risk"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "has_task": {
+            "type": "boolean",
+            "title": "Has Task"
+          },
+          "has_reply": {
+            "type": "boolean",
+            "title": "Has Reply"
+          },
+          "attempts": {
+            "type": "integer",
+            "title": "Attempts"
+          },
+          "next_attempt_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Attempt At"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "state",
+          "sender_name",
+          "sender_address",
+          "subject",
+          "received_at",
+          "summary",
+          "category",
+          "priority",
+          "risk",
+          "has_task",
+          "has_reply",
+          "attempts",
+          "next_attempt_at",
+          "error",
+          "created_at",
+          "updated_at"
+        ],
+        "title": "MessageSummary"
+      },
+      "PresetOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "sender_name": {
+            "type": "string",
+            "title": "Sender Name"
+          },
+          "sender_address": {
+            "type": "string",
+            "title": "Sender Address"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "sender_name",
+          "sender_address",
+          "subject",
+          "body"
+        ],
+        "title": "PresetOut"
+      },
+      "Priority": {
+        "type": "string",
+        "enum": [
+          "low",
+          "medium",
+          "high",
+          "urgent"
+        ],
+        "title": "Priority"
+      },
+      "QuotaOut": {
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "title": "Limit"
+          },
+          "used": {
+            "type": "integer",
+            "title": "Used"
+          },
+          "left": {
+            "type": "integer",
+            "title": "Left"
+          },
+          "resets_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Resets At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "limit",
+          "used",
+          "left",
+          "resets_at"
+        ],
+        "title": "QuotaOut"
+      },
+      "Reply": {
+        "properties": {
+          "language": {
+            "type": "string",
+            "title": "Language",
+            "description": "ISO 639-1 code of the email's language, e.g. en, ru."
+          },
+          "body": {
+            "type": "string",
+            "title": "Body",
+            "description": "Reply text only, no subject line."
+          }
+        },
+        "type": "object",
+        "required": [
+          "language",
+          "body"
+        ],
+        "title": "Reply"
+      },
+      "Risk": {
+        "type": "string",
+        "enum": [
+          "none",
+          "spam",
+          "phishing",
+          "prompt_injection"
+        ],
+        "title": "Risk"
+      },
+      "SettingsIn": {
+        "properties": {
+          "mode": {
+            "type": "string",
+            "enum": [
+              "review",
+              "auto"
+            ],
+            "title": "Mode"
+          }
+        },
+        "type": "object",
+        "required": [
+          "mode"
+        ],
+        "title": "SettingsIn"
+      },
+      "StatsOut": {
+        "properties": {
+          "hours": {
+            "type": "integer",
+            "title": "Hours"
+          },
+          "counts": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Counts"
+          },
+          "by_category": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "By Category"
+          },
+          "llm": {
+            "$ref": "#/components/schemas/LlmStatsOut"
+          }
+        },
+        "type": "object",
+        "required": [
+          "hours",
+          "counts",
+          "by_category",
+          "llm"
+        ],
+        "title": "StatsOut"
+      },
+      "StatusOut": {
+        "properties": {
+          "source": {
+            "type": "string",
+            "enum": [
+              "gmail",
+              "demo"
+            ],
+            "title": "Source"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "review",
+              "auto"
+            ],
+            "title": "Mode"
+          },
+          "model": {
+            "type": "string",
+            "title": "Model"
+          },
+          "worker": {
+            "$ref": "#/components/schemas/WorkerOut"
+          },
+          "connections": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ConnectionOut"
+            },
+            "type": "object",
+            "title": "Connections"
+          }
+        },
+        "type": "object",
+        "required": [
+          "source",
+          "mode",
+          "model",
+          "worker",
+          "connections"
+        ],
+        "title": "StatusOut"
+      },
+      "Task": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "Imperative and under 80 characters."
+          },
+          "description": {
+            "type": "string",
+            "title": "Description",
+            "description": "Self-contained: who asks, what to do, key facts, amounts and links."
+          },
+          "due_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Due Date",
+            "description": "YYYY-MM-DD only if the email states or clearly implies a deadline."
+          }
+        },
+        "type": "object",
+        "required": [
+          "title",
+          "description",
+          "due_date"
+        ],
+        "title": "Task"
+      },
+      "TestEmailIn": {
+        "properties": {
+          "sender_name": {
+            "type": "string",
+            "maxLength": 100,
+            "title": "Sender Name",
+            "default": ""
+          },
+          "sender_address": {
+            "type": "string",
+            "maxLength": 254,
+            "pattern": "^[^\\s@<>\\\"]+@[^\\s@<>\\\"]+\\.[^\\s@<>\\\"]+$",
+            "title": "Sender Address"
+          },
+          "subject": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Subject"
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 5000,
+            "minLength": 1,
+            "title": "Body"
+          }
+        },
+        "type": "object",
+        "required": [
+          "sender_address",
+          "subject",
+          "body"
+        ],
+        "title": "TestEmailIn"
+      },
+      "TestEmailOut": {
+        "properties": {
+          "message": {
+            "$ref": "#/components/schemas/MessageSummary"
+          },
+          "recorded": {
+            "type": "boolean",
+            "title": "Recorded"
+          },
+          "quota": {
+            "$ref": "#/components/schemas/QuotaOut"
+          }
+        },
+        "type": "object",
+        "required": [
+          "message",
+          "recorded",
+          "quota"
+        ],
+        "title": "TestEmailOut"
+      },
+      "Triage": {
+        "properties": {
+          "summary": {
+            "type": "string",
+            "title": "Summary",
+            "description": "One or two sentences."
+          },
+          "category": {
+            "$ref": "#/components/schemas/Category"
+          },
+          "priority": {
+            "$ref": "#/components/schemas/Priority"
+          },
+          "risk": {
+            "$ref": "#/components/schemas/Risk"
+          },
+          "risk_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Risk Reason",
+            "description": "Why the risk is not 'none', else null."
+          },
+          "task": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Task"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Null unless the owner has something to do."
+          },
+          "reply": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Reply"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Null unless a person expects an answer."
+          }
+        },
+        "type": "object",
+        "required": [
+          "summary",
+          "category",
+          "priority",
+          "risk",
+          "risk_reason",
+          "task",
+          "reply"
+        ],
+        "title": "Triage"
+      },
+      "UsageOut": {
+        "properties": {
+          "model": {
+            "type": "string",
+            "title": "Model"
+          },
+          "input_tokens": {
+            "type": "integer",
+            "title": "Input Tokens"
+          },
+          "cached_tokens": {
+            "type": "integer",
+            "title": "Cached Tokens"
+          },
+          "output_tokens": {
+            "type": "integer",
+            "title": "Output Tokens"
+          },
+          "latency_ms": {
+            "type": "integer",
+            "title": "Latency Ms"
+          },
+          "cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cost Usd"
+          },
+          "recorded": {
+            "type": "boolean",
+            "title": "Recorded"
+          }
+        },
+        "type": "object",
+        "required": [
+          "model",
+          "input_tokens",
+          "cached_tokens",
+          "output_tokens",
+          "latency_ms",
+          "cost_usd",
+          "recorded"
+        ],
+        "title": "UsageOut"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "WorkerOut": {
+        "properties": {
+          "running": {
+            "type": "boolean",
+            "title": "Running"
+          },
+          "last_poll_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Poll At"
+          },
+          "last_error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Error"
+          },
+          "blocked": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BlockedOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "in_flight": {
+            "type": "integer",
+            "title": "In Flight"
+          }
+        },
+        "type": "object",
+        "required": [
+          "running",
+          "last_poll_at",
+          "last_error",
+          "blocked",
+          "in_flight"
+        ],
+        "title": "WorkerOut"
+      }
+    }
+  }
+}

@@ -19,6 +19,7 @@ The approved design for the inbox screen and the demo's test-email form. Phase 5
 - **Header.** It holds only navigation, search, the connection status, the test-email button and the demo label. Review mode, theme and connection details live in a quick-settings popover.
 - **Detail panel.** The Approve/Reject bar is sticky. The prompt version and model effort are not shown, because users can't act on them. Cost and latency sit in the Activity tab and as small text under the list.
 - **Color.** Semantic colors are muted, at 4.5:1 contrast or better in both themes. Green stays bright. The dark theme is a warm gray (#121211 page, #1A1A19 panels), not black.
+- **Built in phase 5** (`frontend/`), with three changes: no Settings page (everything it would hold is in quick settings), a Stats page drawn in the same style, and phones show the list and the email one at a time.
 - **Test-email form.** Five presets come from the eval set (lead, client request, overdue invoice, phishing, prompt injection). A daily quota is shown. Sent mail appears at the top of the inbox as "Triaging".
 
 ## Tokens

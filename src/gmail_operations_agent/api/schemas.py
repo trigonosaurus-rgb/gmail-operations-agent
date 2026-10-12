@@ -187,6 +187,7 @@ class MessagePage(BaseModel):
     items: list[MessageSummary]
     next_before: datetime | None  # pass as `before` for the next page
     cursor: int  # pass to /api/events as `after` to get every change since this page
+    counts: dict[MessageState, int]  # the whole inbox by state, ignoring filters and search
 
 
 class LatencyOut(BaseModel):

@@ -215,6 +215,7 @@ async def list_messages(
         items=[MessageSummary.of(record) for record in records],
         next_before=records[-1].created_at if len(records) == limit else None,
         cursor=cursor,
+        counts=runtime.store.count_by_state(viewer.owner),
     )
 
 
