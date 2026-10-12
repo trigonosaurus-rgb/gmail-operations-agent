@@ -1,8 +1,9 @@
-"""Command line entry point: `gmail-agent auth | run | once | status`."""
+"""Command line entry point: `gmail-agent auth | run | once | serve | demo | status`."""
 
 import argparse
 import asyncio
 import contextlib
+import ipaddress
 import json
 import logging
 import signal
@@ -24,6 +25,11 @@ def main(argv: list[str] | None = None) -> int:
     commands.add_parser("auth", help="log in to Google in the browser and save the token")
     commands.add_parser("run", help="process Gmail continuously")
     commands.add_parser("once", help="poll Gmail once, process what is due, and exit")
+    serve = commands.add_parser("serve", help="process Gmail and serve the API and UI")
+    demo = commands.add_parser("demo", help="serve the public demo: synthetic inbox, no Google")
+    for command in (serve, demo):
+        command.add_argument("--host", help="default: API_HOST (127.0.0.1)")
+        command.add_argument("--port", type=int, help="default: API_PORT (8000)")
     commands.add_parser("status", help="print message counts and LLM spend for the last 24 hours")
     args = parser.parse_args(argv)
 
@@ -37,6 +43,12 @@ def main(argv: list[str] | None = None) -> int:
             return _auth(settings)
         if args.command == "status":
             return _status(settings)
+        if args.command in ("serve", "demo"):
+            if args.host:
+                settings.api_host = args.host
+            if args.port:
+                settings.api_port = args.port
+            return asyncio.run(_serve(settings, demo=args.command == "demo"))
         return asyncio.run(_run(settings, once=args.command == "once"))
     except ConfigError as exc:
         logger.error("%s", exc)
@@ -88,6 +100,47 @@ async def _run(settings: Settings, once: bool) -> int:
         return 0
     finally:
         runtime.store.close()
+
+
+async def _serve(settings: Settings, demo: bool) -> int:
+    import uvicorn
+
+    from gmail_operations_agent.api.app import create_app
+    from gmail_operations_agent.runtime import build_demo_runtime, build_gmail_runtime
+
+    if not demo:
+        if not settings.api_allow_remote and not _is_loopback(settings.api_host):
+            raise ConfigError(
+                f"Refusing to serve your Gmail on {settings.api_host}: the API has no login."
+                " Use 127.0.0.1, or set API_ALLOW_REMOTE=true behind your own authentication."
+            )
+        problems = settings.problems_for_gmail()
+        if problems:
+            raise ConfigError(" ".join(problems))
+    runtime = build_demo_runtime(settings) if demo else build_gmail_runtime(settings)
+    config = uvicorn.Config(
+        create_app(runtime),
+        host=settings.api_host,
+        port=settings.api_port,
+        proxy_headers=True,
+        forwarded_allow_ips=settings.api_forwarded_allow_ips,
+        log_config=None,  # keep this app's log format
+        access_log=False,  # access logs would store visitor addresses
+    )
+    try:
+        await uvicorn.Server(config).serve()  # handles SIGINT/SIGTERM, then runs the lifespan exit
+        return 0
+    finally:
+        runtime.store.close()
+
+
+def _is_loopback(host: str) -> bool:
+    if host == "localhost":
+        return True
+    try:
+        return ipaddress.ip_address(host).is_loopback
+    except ValueError:
+        return False
 
 
 def _install_signal_handlers(stop: asyncio.Event) -> None:

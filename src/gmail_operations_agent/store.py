@@ -5,10 +5,11 @@ short local transaction, so blocking is negligible and there are no locking surp
 """
 
 import json
+import math
 import sqlite3
 from collections.abc import Callable, Iterable, Iterator
 from contextlib import contextmanager
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -41,6 +42,24 @@ def _ts(value: datetime) -> str:
 
 def _dt(value: str | None) -> datetime | None:
     return datetime.fromisoformat(value) if value else None
+
+
+def _casefold(value: str | None) -> str | None:
+    return value.casefold() if value else value
+
+
+def _like(text: str) -> str:
+    """A LIKE pattern that matches `text` literally anywhere (used with ESCAPE '!')."""
+    escaped = text.casefold().replace("!", "!!").replace("%", "!%").replace("_", "!_")
+    return f"%{escaped}%"
+
+
+def _percentile(sorted_values: list[int], q: float) -> int | None:
+    """Nearest-rank percentile; enough for latency on a dashboard."""
+    if not sorted_values:
+        return None
+    rank = max(1, math.ceil(q * len(sorted_values)))
+    return sorted_values[rank - 1]
 
 
 MIGRATIONS = [
@@ -101,6 +120,35 @@ MIGRATIONS = [
         created_at TEXT NOT NULL
     );
     """,
+    # 2: owners. The Gmail agent has one owner (''); the public demo gives every
+    # visitor a sandbox, and each owner sees only its own messages and events.
+    """
+    ALTER TABLE messages ADD COLUMN owner TEXT NOT NULL DEFAULT '';
+    CREATE INDEX messages_owner ON messages (owner, created_at);
+    ALTER TABLE events ADD COLUMN owner TEXT NOT NULL DEFAULT '';
+    CREATE INDEX events_owner ON events (owner, id);
+    CREATE INDEX llm_calls_message ON llm_calls (message_id);
+
+    CREATE TABLE settings (
+        owner TEXT NOT NULL,
+        key TEXT NOT NULL,
+        value TEXT NOT NULL,
+        PRIMARY KEY (owner, key)
+    );
+
+    CREATE TABLE sandboxes (
+        owner TEXT PRIMARY KEY,
+        created_at TEXT NOT NULL,
+        last_seen_at TEXT NOT NULL
+    );
+
+    CREATE TABLE demo_usage (
+        visitor TEXT NOT NULL,
+        kind TEXT NOT NULL,
+        created_at TEXT NOT NULL
+    );
+    CREATE INDEX demo_usage_visitor ON demo_usage (visitor, kind, created_at);
+    """,
 ]
 
 
@@ -117,6 +165,7 @@ class ActionRecord(BaseModel):
 
 class MessageRecord(BaseModel):
     id: str
+    owner: str = ""
     source: str
     state: MessageState
     email: Email
@@ -137,6 +186,7 @@ class MessageRecord(BaseModel):
 
 class Event(BaseModel):
     id: int
+    owner: str = ""
     message_id: str | None
     type: str
     data: dict[str, Any]
@@ -149,6 +199,8 @@ class Store:
             Path(path).parent.mkdir(parents=True, exist_ok=True)
         self._db = sqlite3.connect(path, isolation_level=None)
         self._db.row_factory = sqlite3.Row
+        # Unicode-aware case folding for search; SQLite's lower() only knows ASCII.
+        self._db.create_function("casefold", 1, _casefold, deterministic=True)
         self._db.execute("PRAGMA journal_mode = WAL")
         self._db.execute("PRAGMA foreign_keys = ON")
         self._db.execute("PRAGMA busy_timeout = 5000")
@@ -188,16 +240,31 @@ class Store:
         return row is not None
 
     def add_message(
-        self, email: Email, state: MessageState = MessageState.NEW, error: str | None = None
+        self,
+        email: Email,
+        state: MessageState = MessageState.NEW,
+        error: str | None = None,
+        owner: str = "",
     ) -> bool:
         """Insert a new message; returns False if it is already known."""
-        now = self._now()
+        now = self._next_created_at()
         cursor = self._db.execute(
-            "INSERT OR IGNORE INTO messages (id, source, state, email_json, last_error,"
-            " created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)",
-            (email.id, email.source, state, email.model_dump_json(), error, now, now),
+            "INSERT OR IGNORE INTO messages (id, owner, source, state, email_json, last_error,"
+            " created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+            (email.id, owner, email.source, state, email.model_dump_json(), error, now, now),
         )
         return cursor.rowcount == 1
+
+    def _next_created_at(self) -> str:
+        """Now, but strictly after the newest message, so lists and page cursors never tie.
+
+        A coarse system clock (Windows) or a burst of inserts can repeat a timestamp.
+        """
+        now = self._clock()
+        newest = self._db.execute("SELECT MAX(created_at) FROM messages").fetchone()[0]
+        if newest and _ts(now) <= newest:
+            now = datetime.fromisoformat(newest) + timedelta(microseconds=1)
+        return _ts(now)
 
     def get_message(self, message_id: str) -> MessageRecord | None:
         row = self._db.execute("SELECT * FROM messages WHERE id = ?", (message_id,)).fetchone()
@@ -205,21 +272,42 @@ class Store:
 
     def list_messages(
         self,
+        owner: str = "",
         states: list[MessageState] | None = None,
         limit: int = 50,
         before: datetime | None = None,
+        query: str | None = None,
     ) -> list[MessageRecord]:
-        sql = "SELECT * FROM messages WHERE 1 = 1"
-        params: list[Any] = []
+        """Newest first. `query` matches sender, subject and summary, ignoring case."""
+        sql = "SELECT * FROM messages WHERE owner = ?"
+        params: list[Any] = [owner]
         if states:
             sql += f" AND state IN ({', '.join('?' for _ in states)})"
             params += list(states)
         if before:
             sql += " AND created_at < ?"
             params.append(_ts(before))
+        if query and query.strip():
+            fields = [
+                "json_extract(email_json, '$.sender_name')",
+                "json_extract(email_json, '$.sender_address')",
+                "json_extract(email_json, '$.subject')",
+                "json_extract(triage_json, '$.summary')",
+            ]
+            sql += " AND (" + " OR ".join(f"casefold({f}) LIKE ? ESCAPE '!'" for f in fields) + ")"
+            params += [_like(query.strip())] * len(fields)
         sql += " ORDER BY created_at DESC LIMIT ?"
         params.append(limit)
         return [self._message(row) for row in self._db.execute(sql, params)]
+
+    def count_by_state(self, owner: str = "") -> dict[MessageState, int]:
+        rows = self._db.execute(
+            "SELECT state, COUNT(*) AS n FROM messages WHERE owner = ? GROUP BY state", (owner,)
+        )
+        counts = dict.fromkeys(MessageState, 0)
+        for row in rows:
+            counts[MessageState(row["state"])] = row["n"]
+        return counts
 
     def due_message_ids(self, limit: int = 50) -> list[str]:
         rows = self._db.execute(
@@ -308,6 +396,7 @@ class Store:
     def _message(self, row: sqlite3.Row) -> MessageRecord:
         return MessageRecord(
             id=row["id"],
+            owner=row["owner"],
             source=row["source"],
             state=MessageState(row["state"]),
             email=Email.model_validate_json(row["email_json"]),
@@ -418,52 +507,92 @@ class Store:
             ),
         )
 
-    def llm_spend_since(self, since: datetime) -> float:
+    def llm_spend_since(self, since: datetime, provider: str | None = None) -> float:
+        sql = "SELECT COALESCE(SUM(cost_usd), 0) FROM llm_calls WHERE created_at >= ?"
+        params: list[Any] = [_ts(since)]
+        if provider:
+            sql += " AND provider = ?"
+            params.append(provider)
+        return float(self._db.execute(sql, params).fetchone()[0])
+
+    def last_usage(self, message_id: str) -> Usage | None:
+        """The successful LLM call behind the message's current triage."""
         row = self._db.execute(
-            "SELECT COALESCE(SUM(cost_usd), 0) FROM llm_calls WHERE created_at >= ?",
-            (_ts(since),),
+            "SELECT * FROM llm_calls WHERE message_id = ? AND ok = 1 ORDER BY id DESC LIMIT 1",
+            (message_id,),
         ).fetchone()
-        return float(row[0])
+        if row is None:
+            return None
+        return Usage(
+            provider=row["provider"],
+            model=row["model"],
+            prompt_version=row["prompt_version"] or "",
+            input_tokens=row["input_tokens"] or 0,
+            cached_tokens=row["cached_tokens"] or 0,
+            output_tokens=row["output_tokens"] or 0,
+            latency_ms=row["latency_ms"] or 0,
+            cost_usd=row["cost_usd"],
+        )
 
     # --- events ------------------------------------------------------------------------
 
     def subscribe(self, listener: Callable[[Event], None]) -> None:
         self._listeners.append(listener)
 
+    def unsubscribe(self, listener: Callable[[Event], None]) -> None:
+        self._listeners.remove(listener)
+
     def add_event(
         self, message_id: str | None, type: str, data: dict[str, Any] | None = None
     ) -> Event:
+        """Append to the event log. The owner is copied from the message."""
         now = self._now()
         payload = data or {}
-        cursor = self._db.execute(
-            "INSERT INTO events (message_id, type, data_json, created_at) VALUES (?, ?, ?, ?)",
-            (message_id, type, json.dumps(payload, ensure_ascii=False, default=str), now),
-        )
-        assert cursor.lastrowid is not None
+        row = self._db.execute(
+            "INSERT INTO events (message_id, owner, type, data_json, created_at)"
+            " VALUES (?, COALESCE((SELECT owner FROM messages WHERE id = ?), ''), ?, ?, ?)"
+            " RETURNING id, owner",
+            (
+                message_id,
+                message_id,
+                type,
+                json.dumps(payload, ensure_ascii=False, default=str),
+                now,
+            ),
+        ).fetchone()
         event = Event(
-            id=cursor.lastrowid,
+            id=row["id"],
+            owner=row["owner"],
             message_id=message_id,
             type=type,
             data=payload,
             created_at=datetime.fromisoformat(now),
         )
-        for listener in self._listeners:
+        for listener in list(self._listeners):
             listener(event)
         return event
 
     def events_after(
-        self, after_id: int = 0, limit: int = 500, message_id: str | None = None
+        self,
+        after_id: int = 0,
+        limit: int = 500,
+        message_id: str | None = None,
+        owner: str | None = None,
     ) -> list[Event]:
         sql = "SELECT * FROM events WHERE id > ?"
         params: list[Any] = [after_id]
         if message_id:
             sql += " AND message_id = ?"
             params.append(message_id)
+        if owner is not None:
+            sql += " AND owner = ?"
+            params.append(owner)
         sql += " ORDER BY id LIMIT ?"
         params.append(limit)
         return [
             Event(
                 id=row["id"],
+                owner=row["owner"],
                 message_id=row["message_id"],
                 type=row["type"],
                 data=json.loads(row["data_json"]),
@@ -472,31 +601,116 @@ class Store:
             for row in self._db.execute(sql, params)
         ]
 
+    def last_event_id(self) -> int:
+        """The newest event id of any owner: a cursor for 'everything after now'."""
+        row = self._db.execute("SELECT COALESCE(MAX(id), 0) FROM events").fetchone()
+        return int(row[0])
+
+    # --- settings ----------------------------------------------------------------------
+
+    def get_setting(self, owner: str, key: str) -> str | None:
+        row = self._db.execute(
+            "SELECT value FROM settings WHERE owner = ? AND key = ?", (owner, key)
+        ).fetchone()
+        return str(row["value"]) if row else None
+
+    def set_setting(self, owner: str, key: str, value: str) -> None:
+        self._db.execute(
+            "INSERT INTO settings (owner, key, value) VALUES (?, ?, ?)"
+            " ON CONFLICT (owner, key) DO UPDATE SET value = excluded.value",
+            (owner, key, value),
+        )
+
     # --- stats -------------------------------------------------------------------------
 
-    def stats(self, since: datetime) -> dict[str, Any]:
-        by_state = {
-            row["state"]: row["n"]
-            for row in self._db.execute("SELECT state, COUNT(*) AS n FROM messages GROUP BY state")
-        }
+    def stats(self, since: datetime, owner: str = "") -> dict[str, Any]:
+        by_state = {state.value: n for state, n in self.count_by_state(owner).items() if n}
         by_category = {
             row["category"]: row["n"]
             for row in self._db.execute(
                 "SELECT json_extract(triage_json, '$.category') AS category, COUNT(*) AS n"
-                " FROM messages WHERE triage_json IS NOT NULL GROUP BY category"
+                " FROM messages WHERE owner = ? AND triage_json IS NOT NULL GROUP BY category",
+                (owner,),
             )
         }
-        llm = self._db.execute(
-            "SELECT COUNT(*) AS calls, COALESCE(SUM(cost_usd), 0) AS cost,"
-            " AVG(latency_ms) AS avg_latency, SUM(1 - ok) AS failures"
-            " FROM llm_calls WHERE created_at >= ?",
-            (_ts(since),),
-        ).fetchone()
+        rows = self._db.execute(
+            "SELECT c.ok, c.cost_usd, c.latency_ms FROM llm_calls c"
+            " JOIN messages m ON m.id = c.message_id"
+            " WHERE m.owner = ? AND c.created_at >= ?",
+            (owner, _ts(since)),
+        ).fetchall()
+        ok = [row for row in rows if row["ok"]]
+        cost = sum(row["cost_usd"] or 0 for row in rows)
+        latencies = sorted(row["latency_ms"] for row in ok if row["latency_ms"] is not None)
         return {
             "by_state": by_state,
             "by_category": by_category,
-            "llm_calls": llm["calls"],
-            "llm_failures": llm["failures"] or 0,
-            "llm_cost_usd": round(llm["cost"], 6),
-            "llm_avg_latency_ms": round(llm["avg_latency"]) if llm["avg_latency"] else None,
+            "llm_calls": len(rows),
+            "llm_failures": len(rows) - len(ok),
+            "llm_cost_usd": round(cost, 6),
+            "llm_cost_per_1k_usd": round(cost / len(ok) * 1000, 4) if ok else None,
+            "llm_avg_latency_ms": round(sum(latencies) / len(latencies)) if latencies else None,
+            "llm_p50_latency_ms": _percentile(latencies, 0.5),
+            "llm_p95_latency_ms": _percentile(latencies, 0.95),
         }
+
+    # --- demo sandboxes ----------------------------------------------------------------
+
+    def sandbox_last_seen(self, owner: str) -> datetime | None:
+        row = self._db.execute(
+            "SELECT last_seen_at FROM sandboxes WHERE owner = ?", (owner,)
+        ).fetchone()
+        return _dt(row["last_seen_at"]) if row else None
+
+    def add_sandbox(self, owner: str) -> None:
+        now = self._now()
+        self._db.execute(
+            "INSERT INTO sandboxes (owner, created_at, last_seen_at) VALUES (?, ?, ?)",
+            (owner, now, now),
+        )
+
+    def touch_sandbox(self, owner: str) -> None:
+        self._db.execute(
+            "UPDATE sandboxes SET last_seen_at = ? WHERE owner = ?", (self._now(), owner)
+        )
+
+    def stale_sandboxes(self, keep: int, seen_before: datetime | None = None) -> list[str]:
+        """Sandboxes beyond the `keep` most recently seen, and any not seen since `seen_before`."""
+        rows = self._db.execute(
+            "SELECT owner, last_seen_at FROM sandboxes ORDER BY last_seen_at DESC"
+        ).fetchall()
+        cutoff = _ts(seen_before) if seen_before else ""
+        return [
+            row["owner"]
+            for index, row in enumerate(rows)
+            if index >= keep or row["last_seen_at"] < cutoff
+        ]
+
+    def delete_sandbox(self, owner: str) -> None:
+        """Remove a sandbox and its messages. Live LLM calls stay: they count toward the budget."""
+        with self.transaction():
+            self._db.execute(
+                "DELETE FROM llm_calls WHERE provider = 'replay'"
+                " AND message_id IN (SELECT id FROM messages WHERE owner = ?)",
+                (owner,),
+            )
+            self._db.execute("DELETE FROM messages WHERE owner = ?", (owner,))
+            self._db.execute("DELETE FROM events WHERE owner = ?", (owner,))
+            self._db.execute("DELETE FROM settings WHERE owner = ?", (owner,))
+            self._db.execute("DELETE FROM sandboxes WHERE owner = ?", (owner,))
+
+    def record_demo_usage(self, visitor: str, kind: str) -> None:
+        self._db.execute(
+            "INSERT INTO demo_usage (visitor, kind, created_at) VALUES (?, ?, ?)",
+            (visitor, kind, self._now()),
+        )
+
+    def demo_usage_since(self, visitor: str, kind: str, since: datetime) -> int:
+        row = self._db.execute(
+            "SELECT COUNT(*) FROM demo_usage WHERE visitor = ? AND kind = ? AND created_at >= ?",
+            (visitor, kind, _ts(since)),
+        ).fetchone()
+        return int(row[0])
+
+    def prune_demo_usage(self, before: datetime) -> None:
+        self._db.execute("DELETE FROM demo_usage WHERE created_at < ?", (_ts(before),))

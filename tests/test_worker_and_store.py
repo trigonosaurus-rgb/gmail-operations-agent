@@ -1,3 +1,4 @@
+import sqlite3
 from pathlib import Path
 
 from gmail_operations_agent.config import Settings
@@ -6,7 +7,7 @@ from gmail_operations_agent.errors import BlockedError
 from gmail_operations_agent.integrations.base import MarkProcessedSink
 from gmail_operations_agent.pipeline import Pipeline, PipelineConfig
 from gmail_operations_agent.rules import plan_actions
-from gmail_operations_agent.store import Store
+from gmail_operations_agent.store import MIGRATIONS, Store
 from gmail_operations_agent.worker import BLOCKED_PAUSE_SECONDS, Worker
 from tests.fakes import FakeClock, FakeLLM, FakeSink, FakeSource, make_email, make_triage
 
@@ -64,6 +65,42 @@ def test_store_migrations_are_idempotent(tmp_path: Path) -> None:
     assert record is not None
     assert record.state == MessageState.NEW
     second.close()
+
+
+def test_upgrade_from_the_first_schema_keeps_data(tmp_path: Path) -> None:
+    path = tmp_path / "agent.sqlite3"
+    db = sqlite3.connect(path)
+    for statement in MIGRATIONS[0].split(";"):
+        if statement.strip():
+            db.execute(statement)
+    db.execute(
+        "INSERT INTO messages (id, source, state, email_json, created_at, updated_at)"
+        " VALUES ('old', 'gmail', 'done', ?, ?, ?)",
+        (
+            make_email("old").model_dump_json(),
+            "2026-10-01T00:00:00.000000+00:00",
+            "2026-10-01T00:00:00.000000+00:00",
+        ),
+    )
+    db.execute("PRAGMA user_version = 1")
+    db.commit()
+    db.close()
+
+    store = Store(path)
+    record = store.get_message("old")
+    assert record is not None
+    assert record.owner == ""
+    assert [r.id for r in store.list_messages()] == ["old"]
+    store.close()
+
+
+def test_message_timestamps_never_tie(store: Store) -> None:
+    # The fake clock stands still, like a coarse system clock during a burst of inserts.
+    for name in "abc":
+        store.add_message(make_email(name))
+    stamps = [r.created_at for r in store.list_messages()]
+    assert len(set(stamps)) == 3
+    assert [r.id for r in store.list_messages()] == ["c", "b", "a"]
 
 
 def test_plan_actions_respects_triage_and_configuration() -> None:

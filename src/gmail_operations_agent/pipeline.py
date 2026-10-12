@@ -106,8 +106,8 @@ class Pipeline:
                 added += 1
         return added
 
-    def add_email(self, email: Email) -> bool:
-        if not self.store.add_message(email):
+    def add_email(self, email: Email, owner: str = "") -> bool:
+        if not self.store.add_message(email, owner=owner):
             return False
         self.store.add_event(
             email.id, "ingested", {"subject": email.subject, "from": email.sender_display}
@@ -150,7 +150,9 @@ class Pipeline:
 
         triage, notes = apply_guardrails(email, outcome.triage)
         actions = plan_actions(triage, self.enabled_actions)
-        needs_review = self.config.mode == "review" and any(a in NEEDS_APPROVAL for a in actions)
+        needs_review = self.mode(record.owner) == "review" and any(
+            a in NEEDS_APPROVAL for a in actions
+        )
         state = MessageState.AWAITING_APPROVAL if needs_review else MessageState.ACTING
         decision = None if needs_review else Decision.AUTO
         self.store.save_triage(email.id, triage, notes, actions, state, decision)
@@ -308,22 +310,36 @@ class Pipeline:
             raise BlockedError("budget", f"daily LLM budget of ${cap:.2f} reached (${spent:.4f})")
 
     # --- human decisions ---------------------------------------------------------------
+    # `by` names who decided, for the activity log: "you", or "demo scenario" in the demo.
 
-    def approve(self, message_id: str, overrides: Overrides | None = None) -> None:
+    def mode(self, owner: str = "") -> Literal["review", "auto"]:
+        """Review or auto: the owner's choice from the UI, else the configured default."""
+        match self.store.get_setting(owner, "mode"):
+            case "auto":
+                return "auto"
+            case "review":
+                return "review"
+            case _:
+                return self.config.mode
+
+    def set_mode(self, mode: Literal["review", "auto"], owner: str = "") -> None:
+        self.store.set_setting(owner, "mode", mode)
+
+    def approve(self, message_id: str, overrides: Overrides | None = None, by: str = "you") -> None:
         self._require(message_id, MessageState.AWAITING_APPROVAL)
         if overrides:
             self.store.set_overrides(message_id, overrides)
             skip = [kind for kind in overrides.skip if kind != ActionKind.MARK_PROCESSED]
             self.store.skip_actions(message_id, skip)
         self.store.set_state(message_id, MessageState.ACTING, Decision.APPROVED)
-        self.store.add_event(message_id, "approved")
+        self.store.add_event(message_id, "approved", {"by": by})
 
-    def reject(self, message_id: str) -> None:
+    def reject(self, message_id: str, by: str = "you") -> None:
         self._require(message_id, MessageState.AWAITING_APPROVAL)
         skip = [kind for kind in self.enabled_actions if kind != ActionKind.MARK_PROCESSED]
         self.store.skip_actions(message_id, skip)
         self.store.set_state(message_id, MessageState.ACTING, Decision.REJECTED)
-        self.store.add_event(message_id, "rejected")
+        self.store.add_event(message_id, "rejected", {"by": by})
 
     def retry(self, message_id: str) -> None:
         record = self._require(message_id, MessageState.DEAD)

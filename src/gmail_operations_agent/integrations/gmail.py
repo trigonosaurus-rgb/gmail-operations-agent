@@ -176,6 +176,16 @@ def build_reply(email: Email, body: str) -> EmailMessage:
     return message
 
 
+def draft_preview(email: Email, triage: Triage) -> dict[str, object]:
+    message = build_reply(email, triage.reply.body if triage.reply else "")
+    return {
+        "to": message["To"],
+        "subject": message["Subject"],
+        "body": triage.reply.body if triage.reply else "",
+        "language": triage.reply.language if triage.reply else None,
+    }
+
+
 class GmailDraftSink:
     """Creates a reply draft in the original thread. Drafts are never sent automatically."""
 
@@ -185,13 +195,7 @@ class GmailDraftSink:
         self._api = api
 
     def preview(self, email: Email, triage: Triage) -> dict[str, object]:
-        message = build_reply(email, triage.reply.body if triage.reply else "")
-        return {
-            "to": message["To"],
-            "subject": message["Subject"],
-            "body": triage.reply.body if triage.reply else "",
-            "language": triage.reply.language if triage.reply else None,
-        }
+        return draft_preview(email, triage)
 
     async def find_existing(self, email: Email) -> ActionResult | None:
         """A draft in the thread that answers this exact message."""

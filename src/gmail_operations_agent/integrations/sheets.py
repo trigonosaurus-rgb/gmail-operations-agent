@@ -36,6 +36,10 @@ def build_row(email: Email, triage: Triage, processed_at: datetime) -> list[str]
     ]
 
 
+def row_preview(email: Email, triage: Triage) -> dict[str, object]:
+    return {"columns": HEADER, "row": build_row(email, triage, datetime.now(UTC))}
+
+
 class SheetsSink:
     kind = ActionKind.SHEETS_ROW
 
@@ -46,7 +50,7 @@ class SheetsSink:
         self._header_checked = False
 
     def preview(self, email: Email, triage: Triage) -> dict[str, object]:
-        return {"columns": HEADER, "row": build_row(email, triage, datetime.now(UTC))}
+        return row_preview(email, triage)
 
     async def _ensure_header(self) -> None:
         if self._header_checked:

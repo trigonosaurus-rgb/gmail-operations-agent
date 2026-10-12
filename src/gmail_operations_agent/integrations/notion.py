@@ -60,6 +60,16 @@ class _Schema:
     email_id: str | None
 
 
+def task_preview(triage: Triage) -> dict[str, object]:
+    task = triage.task
+    return {
+        "title": task.title if task else "",
+        "description": task.description if task else "",
+        "priority": triage.priority.value,
+        "due_date": task.due_date if task else None,
+    }
+
+
 class NotionSink:
     kind = ActionKind.NOTION_TASK
 
@@ -122,13 +132,7 @@ class NotionSink:
         return str(sources[0]["id"])
 
     def preview(self, email: Email, triage: Triage) -> dict[str, object]:
-        task = triage.task
-        return {
-            "title": task.title if task else "",
-            "description": task.description if task else "",
-            "priority": triage.priority.value,
-            "due_date": task.due_date if task else None,
-        }
+        return task_preview(triage)
 
     async def find_existing(self, email: Email) -> ActionResult | None:
         schema = await self.schema()

@@ -44,6 +44,28 @@ class Settings(BaseSettings):
     notion_priority_property: str | None = "Priority"
     notion_email_id_property: str | None = "Gmail ID"
 
+    # API server
+    api_host: str = "127.0.0.1"
+    api_port: int = Field(8000, ge=1, le=65535)
+    # The Gmail mode has no login: it refuses to listen beyond this machine unless allowed.
+    api_allow_remote: bool = False
+    # Proxies trusted to set X-Forwarded-For (the demo's quota is per client address).
+    api_forwarded_allow_ips: str = "127.0.0.1"
+    web_dist_dir: Path = Path("frontend/dist")
+
+    # Public demo (`gmail-agent demo`): synthetic inbox, sandboxed actions
+    demo_db_path: Path = Path("data/demo.sqlite3")
+    # Salt for hashing visitor addresses; a random one is used if unset (quotas reset on restart).
+    demo_secret: SecretStr | None = None
+    demo_daily_quota: int = Field(5, ge=0)
+    # Live LLM spend cap per calendar month; past it, only the recorded presets work.
+    demo_monthly_budget_usd: float = Field(5.0, ge=0)
+    demo_sandbox_ttl_hours: float = Field(24, gt=0)
+    demo_max_sandboxes: int = Field(500, ge=1)
+    demo_sandboxes_per_visitor: int = Field(20, ge=1)
+    # Recorded triage replays wait this share of the original latency (0 = instant).
+    demo_replay_speed: float = Field(1.0, ge=0, le=1)
+
     # Runtime
     log_level: str = "INFO"
     log_format: Literal["text", "json"] = "text"
