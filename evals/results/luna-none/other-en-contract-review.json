@@ -1,0 +1,47 @@
+{
+  "case": "other-en-contract-review",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Ben Ortiz sent a contract for the analytics assistant project and asks Alex to sign by Wednesday, October 14, so work can start Monday, October 19. He invites Alex to send any questions.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review and sign the analytics assistant contract",
+      "description": "Ben Ortiz asks Alex to review the attached OrtizLabs_Contract_v2.pdf and sign it by Wednesday, October 14, 2026, so the analytics assistant project can start Monday, October 19, 2026.",
+      "due_date": "2026-10-14"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Ben,\n\nThanks for sending the contract. I’ll review it and get back to you with any questions.\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Ben Ortiz sent a contract for the analytics assistant project and asks Alex to sign by Wednesday, October 14, so work can start Monday, October 19. He invites Alex to send any questions.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review and sign the analytics assistant contract",
+      "description": "Ben Ortiz asks Alex to review the attached OrtizLabs_Contract_v2.pdf and sign it by Wednesday, October 14, 2026, so the analytics assistant project can start Monday, October 19, 2026.",
+      "due_date": "2026-10-14"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Ben,\n\nThanks for sending the contract. I’ll review it and get back to you with any questions.\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1214,
+    "cached_tokens": 1097,
+    "output_tokens": 178,
+    "latency_ms": 7356,
+    "cost_usd": 0.00011167
+  }
+}

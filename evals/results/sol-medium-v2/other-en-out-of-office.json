@@ -1,0 +1,33 @@
+{
+  "case": "other-en-out-of-office",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Tom Becker’s automatic reply says he is out of the office until October 19 with limited email access. Urgent matters should go to kevin@quickfit-gyms.com.",
+    "category": "notification",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Tom Becker’s automatic reply says he is out of the office until October 19 with limited email access. Urgent matters should go to kevin@quickfit-gyms.com.",
+    "category": "notification",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1380,
+    "cached_tokens": 1280,
+    "output_tokens": 73,
+    "latency_ms": 2744,
+    "cost_usd": 0.001058
+  }
+}

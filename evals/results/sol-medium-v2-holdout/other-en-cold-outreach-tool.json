@@ -1,0 +1,33 @@
+{
+  "case": "other-en-cold-outreach-tool",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Sam from Leadflow pitches a service claiming to generate 20+ qualified leads per month and asks Alex for a 10-minute sales call.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "spam",
+    "risk_reason": "Unsolicited promotional outreach selling a lead-generation service.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Sam from Leadflow pitches a service claiming to generate 20+ qualified leads per month and asks Alex for a 10-minute sales call.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "spam",
+    "risk_reason": "Unsolicited promotional outreach selling a lead-generation service.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1398,
+    "cached_tokens": 1280,
+    "output_tokens": 129,
+    "latency_ms": 4251,
+    "cost_usd": 0.001654
+  }
+}

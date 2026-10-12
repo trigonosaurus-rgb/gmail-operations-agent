@@ -1,0 +1,47 @@
+{
+  "case": "lead-en-vague",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Mike asks whether Alex works with restaurants, possibly for a project later this year; there is no urgency.",
+    "category": "lead",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply about restaurant AI projects",
+      "description": "Mike asks whether Alex works with restaurants and may be interested in a project later this year. Reply to his inquiry.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Mike,\n\nThanks for reaching out. I’d be happy to hear a bit more about what you have in mind for a restaurant later this year. What are you hoping to build?\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Mike asks whether Alex works with restaurants, possibly for a project later this year; there is no urgency.",
+    "category": "lead",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply about restaurant AI projects",
+      "description": "Mike asks whether Alex works with restaurants and may be interested in a project later this year. Reply to his inquiry.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Mike,\n\nThanks for reaching out. I’d be happy to hear a bit more about what you have in mind for a restaurant later this year. What are you hoping to build?\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1368,
+    "cached_tokens": 1280,
+    "output_tokens": 140,
+    "latency_ms": 2437,
+    "cost_usd": 9.159999999999999e-05
+  }
+}

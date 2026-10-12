@@ -1,0 +1,47 @@
+{
+  "case": "support-en-user-question",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Kevin Moore at QuickFit asks where to update weekend opening hours in the admin panel so the bot gives correct answers next month; he could not find instructions in the guide.",
+    "category": "support",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Explain how to update QuickFit's opening hours",
+      "description": "Kevin Moore (front desk at QuickFit, kevin@quickfit-gyms.com) needs instructions for updating weekend opening hours in the bot's admin panel. The hours change next month, November 2026, and he could not find the procedure in the guide. Confirm the correct steps and send them to Kevin.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Kevin,\n\nYou can update the weekend opening hours here: [admin panel location and steps]. To make sure the bot gives the right answer from next month, [instructions for when the new hours take effect and how to verify them].\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Kevin Moore at QuickFit asks where to update weekend opening hours in the admin panel so the bot gives correct answers next month; he could not find instructions in the guide.",
+    "category": "support",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Explain how to update QuickFit's opening hours",
+      "description": "Kevin Moore (front desk at QuickFit, kevin@quickfit-gyms.com) needs instructions for updating weekend opening hours in the bot's admin panel. The hours change next month, November 2026, and he could not find the procedure in the guide. Confirm the correct steps and send them to Kevin.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Kevin,\n\nYou can update the weekend opening hours here: [admin panel location and steps]. To make sure the bot gives the right answer from next month, [instructions for when the new hours take effect and how to verify them].\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1219,
+    "cached_tokens": 1097,
+    "output_tokens": 252,
+    "latency_ms": 5776,
+    "cost_usd": 0.0028737
+  }
+}

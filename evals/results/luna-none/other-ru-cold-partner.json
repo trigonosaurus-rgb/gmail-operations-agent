@@ -1,0 +1,47 @@
+{
+  "case": "other-ru-cold-partner",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Екатерина Смирнова from a digital agency asks whether Alex is interested in taking chatbot projects as a subcontractor and discussing terms.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply about chatbot subcontracting",
+      "description": "Respond to Екатерина Смирнова, who says her digital agency sometimes receives client requests for chatbots and asks whether Alex is open to subcontracting and discussing terms.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Екатерина, добрый день! Да, мне интересно обсудить сотрудничество по таким проектам. Расскажите, пожалуйста, какие задачи обычно возникают и как вы видите формат работы. Можем созвониться в удобное время: [предложите время].\n\nС уважением,\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Екатерина Смирнова from a digital agency asks whether Alex is interested in taking chatbot projects as a subcontractor and discussing terms.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply about chatbot subcontracting",
+      "description": "Respond to Екатерина Смирнова, who says her digital agency sometimes receives client requests for chatbots and asks whether Alex is open to subcontracting and discussing terms.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Екатерина, добрый день! Да, мне интересно обсудить сотрудничество по таким проектам. Расскажите, пожалуйста, какие задачи обычно возникают и как вы видите формат работы. Можем созвониться в удобное время: [предложите время].\n\nС уважением,\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1227,
+    "cached_tokens": 1097,
+    "output_tokens": 184,
+    "latency_ms": 2737,
+    "cost_usd": 0.00011597
+  }
+}

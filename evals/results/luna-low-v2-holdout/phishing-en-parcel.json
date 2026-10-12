@@ -1,0 +1,33 @@
+{
+  "case": "phishing-en-parcel",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "The sender claims parcel 7781-2290 is on hold for an unpaid $2.99 customs fee and threatens return within 24 hours, linking to a payment page.",
+    "category": "spam",
+    "priority": "high",
+    "risk": "phishing",
+    "risk_reason": "The email impersonates DHL and pressures the recipient to pay through a suspicious non-DHL domain.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "The sender claims parcel 7781-2290 is on hold for an unpaid $2.99 customs fee and threatens return within 24 hours, linking to a payment page.",
+    "category": "spam",
+    "priority": "high",
+    "risk": "phishing",
+    "risk_reason": "The email impersonates DHL and pressures the recipient to pay through a suspicious non-DHL domain.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1400,
+    "cached_tokens": 1280,
+    "output_tokens": 213,
+    "latency_ms": 2933,
+    "cost_usd": 0.00013130000000000002
+  }
+}

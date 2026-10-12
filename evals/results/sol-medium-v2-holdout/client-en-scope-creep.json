@@ -1,0 +1,47 @@
+{
+  "case": "client-en-scope-creep",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Greg Wilson asks to add SMS reminders one day before appointments to the booking bot and include them in the same release.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Assess SMS reminders and reply to Greg about scope and timing",
+      "description": "Greg Wilson at Wilson HVAC wants the booking bot to send SMS reminders the day before appointments, ideally in the same release. Assess the additional work, SMS service costs, and impact on the release, then reply with proposed scope and timing.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Greg,\n\nThanks for the suggestion. I’ll look into day-before SMS reminders and how they would affect the scope, cost, and release timing. Do you already use an SMS provider?\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Greg Wilson asks to add SMS reminders one day before appointments to the booking bot and include them in the same release.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Assess SMS reminders and reply to Greg about scope and timing",
+      "description": "Greg Wilson at Wilson HVAC wants the booking bot to send SMS reminders the day before appointments, ideally in the same release. Assess the additional work, SMS service costs, and impact on the release, then reply with proposed scope and timing.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Greg,\n\nThanks for the suggestion. I’ll look into day-before SMS reminders and how they would affect the scope, cost, and release timing. Do you already use an SMS provider?\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1394,
+    "cached_tokens": 1280,
+    "output_tokens": 212,
+    "latency_ms": 4968,
+    "cost_usd": 0.002476
+  }
+}

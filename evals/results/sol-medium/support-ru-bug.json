@@ -1,0 +1,47 @@
+{
+  "case": "support-ru-bug",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Anna Belyaeva from TeaWorld support reports that two customers saw another customer's order status in the bot today. The order numbers differ by one digit, and she requests an investigation as soon as possible.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the bot showing another customer's order status",
+      "description": "Anna Belyaeva (anna@teaworld.ru) reports that on October 12, 2026, two customers complained that the bot displayed someone else's order status. The order numbers differ by one digit. Investigate urgently for incorrect order matching and potential unauthorized disclosure of order information.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте. Пришлите, пожалуйста, номера затронутых заказов и время обращений или ссылки на диалоги, без персональных данных клиентов. Это поможет проверить, почему бот показал статус чужого заказа."
+    }
+  },
+  "final": {
+    "summary": "Anna Belyaeva from TeaWorld support reports that two customers saw another customer's order status in the bot today. The order numbers differ by one digit, and she requests an investigation as soon as possible.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the bot showing another customer's order status",
+      "description": "Anna Belyaeva (anna@teaworld.ru) reports that on October 12, 2026, two customers complained that the bot displayed someone else's order status. The order numbers differ by one digit. Investigate urgently for incorrect order matching and potential unauthorized disclosure of order information.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте. Пришлите, пожалуйста, номера затронутых заказов и время обращений или ссылки на диалоги, без персональных данных клиентов. Это поможет проверить, почему бот показал статус чужого заказа."
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1228,
+    "cached_tokens": 1097,
+    "output_tokens": 214,
+    "latency_ms": 4758,
+    "cost_usd": 0.0025117
+  }
+}

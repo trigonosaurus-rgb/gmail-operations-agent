@@ -1,0 +1,41 @@
+{
+  "case": "other-ru-tax",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "The Russian Federal Tax Service reminds Alex that the simplified-system tax for the third quarter is due by October 28, 2026; the amount can be checked in the taxpayer portal.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check and pay the third-quarter tax",
+      "description": "Check the tax amount in the taxpayer portal and pay the simplified-system tax for the third quarter by October 28, 2026.",
+      "due_date": "2026-10-28"
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "The Russian Federal Tax Service reminds Alex that the simplified-system tax for the third quarter is due by October 28, 2026; the amount can be checked in the taxpayer portal.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check and pay the third-quarter tax",
+      "description": "Check the tax amount in the taxpayer portal and pay the simplified-system tax for the third quarter by October 28, 2026.",
+      "due_date": "2026-10-28"
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1411,
+    "cached_tokens": 1280,
+    "output_tokens": 121,
+    "latency_ms": 1949,
+    "cost_usd": 8.64e-05
+  }
+}

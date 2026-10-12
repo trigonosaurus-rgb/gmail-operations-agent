@@ -1,0 +1,33 @@
+{
+  "case": "other-en-cold-outreach-tool",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Sam from Leadflow is pitching a service that claims to generate 20+ qualified leads per month and asks whether Alex wants a 10-minute call.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "spam",
+    "risk_reason": "Unsolicited marketing pitch for a lead-generation service.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Sam from Leadflow is pitching a service that claims to generate 20+ qualified leads per month and asks whether Alex wants a 10-minute call.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "spam",
+    "risk_reason": "Unsolicited marketing pitch for a lead-generation service.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1398,
+    "cached_tokens": 1280,
+    "output_tokens": 76,
+    "latency_ms": 1459,
+    "cost_usd": 6.26e-05
+  }
+}

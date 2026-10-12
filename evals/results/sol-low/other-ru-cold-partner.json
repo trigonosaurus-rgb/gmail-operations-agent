@@ -1,0 +1,47 @@
+{
+  "case": "other-ru-cold-partner",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Ekaterina Smirnova from a digital agency asks whether Alex is interested in taking chatbot projects as a subcontractor and discussing terms.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Respond to Ekaterina about chatbot subcontracting",
+      "description": "Ekaterina Smirnova (ek@digital-agency.ru) says her digital agency receives chatbot requests but lacks in-house expertise. Decide whether to take these projects as a subcontractor and reply about discussing cooperation terms.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Екатерина, добрый день!\n\nСпасибо за предложение. [Ваше решение о сотрудничестве на субподряде]. Подскажите, какие задачи по чат-ботам обычно возникают у ваших клиентов и какой формат сотрудничества вы рассматриваете?"
+    }
+  },
+  "final": {
+    "summary": "Ekaterina Smirnova from a digital agency asks whether Alex is interested in taking chatbot projects as a subcontractor and discussing terms.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Respond to Ekaterina about chatbot subcontracting",
+      "description": "Ekaterina Smirnova (ek@digital-agency.ru) says her digital agency receives chatbot requests but lacks in-house expertise. Decide whether to take these projects as a subcontractor and reply about discussing cooperation terms.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Екатерина, добрый день!\n\nСпасибо за предложение. [Ваше решение о сотрудничестве на субподряде]. Подскажите, какие задачи по чат-ботам обычно возникают у ваших клиентов и какой формат сотрудничества вы рассматриваете?"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1227,
+    "cached_tokens": 1097,
+    "output_tokens": 222,
+    "latency_ms": 4996,
+    "cost_usd": 0.0025897
+  }
+}

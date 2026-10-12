@@ -1,0 +1,47 @@
+{
+  "case": "lead-de-agency",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Jonas Weber of a small Munich real estate agency asks whether Alex can build an assistant that drafts replies to repeated property inquiries using their listings. He asks about a short call next week.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Jonas about a discovery call",
+      "description": "Jonas Weber of a small Munich real estate agency is interested in an assistant that drafts answers to recurring property inquiries using their exposés. Reply with availability for a short call next week.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "de",
+      "body": "Hallo Jonas,\n\nvielen Dank für Ihre Anfrage. Das klingt nach einem passenden Anwendungsfall. Für ein kurzes Gespräch nächste Woche könnte ich [Terminvorschlag] anbieten. Passt Ihnen das?\n\nViele Grüße\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Jonas Weber of a small Munich real estate agency asks whether Alex can build an assistant that drafts replies to repeated property inquiries using their listings. He asks about a short call next week.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Jonas about a discovery call",
+      "description": "Jonas Weber of a small Munich real estate agency is interested in an assistant that drafts answers to recurring property inquiries using their exposés. Reply with availability for a short call next week.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "de",
+      "body": "Hallo Jonas,\n\nvielen Dank für Ihre Anfrage. Das klingt nach einem passenden Anwendungsfall. Für ein kurzes Gespräch nächste Woche könnte ich [Terminvorschlag] anbieten. Passt Ihnen das?\n\nViele Grüße\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1245,
+    "cached_tokens": 1097,
+    "output_tokens": 179,
+    "latency_ms": 2961,
+    "cost_usd": 0.00011527000000000001
+  }
+}

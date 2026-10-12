@@ -1,0 +1,47 @@
+{
+  "case": "support-en-user-question",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Kevin Moore at QuickFit asks where to update weekend opening hours in the admin panel so the bot answers correctly. The hours change next month, and he could not find instructions in the guide.",
+    "category": "support",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Explain how to update QuickFit's weekend opening hours",
+      "description": "Reply to Kevin Moore, front desk at QuickFit, with the admin panel location and steps for updating weekend opening hours and ensuring the bot uses them. The hours change next month, and the guide did not help him find the setting.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Kevin,\n\n[Admin panel location and steps to update the weekend opening hours, including how to ensure the bot uses the new hours when they take effect next month.]\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Kevin Moore at QuickFit asks where to update weekend opening hours in the admin panel so the bot answers correctly. The hours change next month, and he could not find instructions in the guide.",
+    "category": "support",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Explain how to update QuickFit's weekend opening hours",
+      "description": "Reply to Kevin Moore, front desk at QuickFit, with the admin panel location and steps for updating weekend opening hours and ensuring the bot uses them. The hours change next month, and the guide did not help him find the setting.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Kevin,\n\n[Admin panel location and steps to update the weekend opening hours, including how to ensure the bot uses the new hours when they take effect next month.]\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1219,
+    "cached_tokens": 1097,
+    "output_tokens": 364,
+    "latency_ms": 7617,
+    "cost_usd": 0.0039937
+  }
+}

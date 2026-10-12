@@ -1,0 +1,47 @@
+{
+  "case": "support-ru-bug",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Анна Беляева from TeaWorld reports that two customers were shown another customer's order status because their order numbers differ by one digit. She asks Alex to investigate as soon as possible.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate incorrect order status access",
+      "description": "Anna Belyaeva from TeaWorld reports that two customers saw another customer's order status; the order numbers differ by one digit. Investigate the bot's order lookup as soon as possible.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте. Спасибо, что сообщили. Проверю, почему бот показывает статус чужого заказа, как можно скорее.\n\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Анна Беляева from TeaWorld reports that two customers were shown another customer's order status because their order numbers differ by one digit. She asks Alex to investigate as soon as possible.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate incorrect order status access",
+      "description": "Anna Belyaeva from TeaWorld reports that two customers saw another customer's order status; the order numbers differ by one digit. Investigate the bot's order lookup as soon as possible.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте. Спасибо, что сообщили. Проверю, почему бот показывает статус чужого заказа, как можно скорее.\n\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1411,
+    "cached_tokens": 1280,
+    "output_tokens": 166,
+    "latency_ms": 2409,
+    "cost_usd": 0.0001089
+  }
+}

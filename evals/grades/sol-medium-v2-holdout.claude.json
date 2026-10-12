@@ -1,0 +1,10 @@
+{
+  "client-en-scope-creep": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Flags the scope and cost impact, asks about the SMS provider."},
+  "client-ru-data-access": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Both decisions are blanks inside natural sentences."},
+  "invoice-en-client-paid": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Exactly what was asked."},
+  "lead-en-low-budget": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Asks which fields move where; budget kept in mind."},
+  "lead-ru-referral": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Time blank plus a sensible time-zone question."},
+  "meeting-en-cancel": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Proposes dates as a blank and asks which suit them."},
+  "other-ru-mixed-lang": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Decision blank plus the right scoping questions."},
+  "support-en-feature-idea": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Asks for the insurance list."}
+}

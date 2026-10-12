@@ -1,0 +1,41 @@
+{
+  "case": "notification-en-billing-alert",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "AWS reports that the “Monthly” budget has reached 90% of its $50 limit. Actual spend is $46.12 as of October 12, with a forecast of $71.40.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review AWS spending",
+      "description": "AWS reports $46.12 in actual spend against the $50 monthly budget as of October 12 and forecasts $71.40. Review spending in the AWS Billing console.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "AWS reports that the “Monthly” budget has reached 90% of its $50 limit. Actual spend is $46.12 as of October 12, with a forecast of $71.40.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review AWS spending",
+      "description": "AWS reports $46.12 in actual spend against the $50 monthly budget as of October 12 and forecasts $71.40. Review spending in the AWS Billing console.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1410,
+    "cached_tokens": 1280,
+    "output_tokens": 123,
+    "latency_ms": 2611,
+    "cost_usd": 8.73e-05
+  }
+}

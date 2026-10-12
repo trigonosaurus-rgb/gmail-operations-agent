@@ -1,0 +1,39 @@
+{
+  "case": "client-en-thanks",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Nina Patel says the FAQ assistant is working well and her team loves it; she will reach out if they need anything else.",
+    "category": "client",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": {
+      "language": "en",
+      "body": "Thanks, Nina—glad to hear everything is working well and the team loves it. Feel free to reach out if you need anything else.\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Nina Patel says the FAQ assistant is working well and her team loves it; she will reach out if they need anything else.",
+    "category": "client",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": {
+      "language": "en",
+      "body": "Thanks, Nina—glad to hear everything is working well and the team loves it. Feel free to reach out if you need anything else.\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1374,
+    "cached_tokens": 1280,
+    "output_tokens": 99,
+    "latency_ms": 1593,
+    "cost_usd": 7.170000000000001e-05
+  }
+}

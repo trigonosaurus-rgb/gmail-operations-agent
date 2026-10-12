@@ -1,0 +1,33 @@
+{
+  "case": "notification-ru-bank",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "An automated bank message confirms receipt of ₽120,000 from sole proprietor Smirnov A. V. for September under contract No. 12. The reported balance is ₽184,530.",
+    "category": "invoice",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "An automated bank message confirms receipt of ₽120,000 from sole proprietor Smirnov A. V. for September under contract No. 12. The reported balance is ₽184,530.",
+    "category": "invoice",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1214,
+    "cached_tokens": 1097,
+    "output_tokens": 75,
+    "latency_ms": 2727,
+    "cost_usd": 0.0010937
+  }
+}

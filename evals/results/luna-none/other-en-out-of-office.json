@@ -1,0 +1,33 @@
+{
+  "case": "other-en-out-of-office",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Tom Becker is out of the office until October 19 and has limited email access. He says to contact Kevin for urgent matters.",
+    "category": "notification",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Tom Becker is out of the office until October 19 and has limited email access. He says to contact Kevin for urgent matters.",
+    "category": "notification",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1197,
+    "cached_tokens": 1097,
+    "output_tokens": 62,
+    "latency_ms": 6190,
+    "cost_usd": 5.197e-05
+  }
+}

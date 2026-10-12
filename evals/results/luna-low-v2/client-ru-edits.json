@@ -1,0 +1,47 @@
+{
+  "case": "client-ru-edits",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Existing client Olga Kim requests two chatbot changes: clarify that delivery to the region is free for orders from 3,000 RUB, and offer promo code FLOWER10 at the end of the conversation. She asks whether the changes can be completed by the end of the week.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Update the bot's delivery message and promo offer",
+      "description": "Olga Kim at Flowerbox asks Alex to change the bot so it says regional delivery is free for orders from 3,000 RUB, and offers promo code FLOWER10 at the end of the conversation. She asks for completion by the end of the week.",
+      "due_date": "2026-10-16"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Ольга, привет! Спасибо, понял: поправлю условие бесплатной доставки в область — от 3000 рублей — и добавлю предложение промокода FLOWER10 в конце диалога. По сроку до конца недели — [смогу / не смогу уложиться].\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Existing client Olga Kim requests two chatbot changes: clarify that delivery to the region is free for orders from 3,000 RUB, and offer promo code FLOWER10 at the end of the conversation. She asks whether the changes can be completed by the end of the week.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Update the bot's delivery message and promo offer",
+      "description": "Olga Kim at Flowerbox asks Alex to change the bot so it says regional delivery is free for orders from 3,000 RUB, and offers promo code FLOWER10 at the end of the conversation. She asks for completion by the end of the week.",
+      "due_date": "2026-10-16"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Ольга, привет! Спасибо, понял: поправлю условие бесплатной доставки в область — от 3000 рублей — и добавлю предложение промокода FLOWER10 в конце диалога. По сроку до конца недели — [смогу / не смогу уложиться].\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1429,
+    "cached_tokens": 1280,
+    "output_tokens": 387,
+    "latency_ms": 3511,
+    "cost_usd": 0.00022119999999999998
+  }
+}

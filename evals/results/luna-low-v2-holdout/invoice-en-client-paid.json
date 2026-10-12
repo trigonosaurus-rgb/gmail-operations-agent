@@ -1,0 +1,47 @@
+{
+  "case": "invoice-en-client-paid",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Lucy Grant says her team sent the second milestone payment of $1,200 via Wise and asks Alex to let her know when it arrives.",
+    "category": "invoice",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check for Lucy's $1,200 milestone payment",
+      "description": "Check Wise for the second milestone payment of $1,200 sent by Lucy Grant on 2026-10-12, and let her know when it arrives.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Lucy,\n\nThanks for letting me know. I’ll check for it and let you know when it arrives.\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Lucy Grant says her team sent the second milestone payment of $1,200 via Wise and asks Alex to let her know when it arrives.",
+    "category": "invoice",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check for Lucy's $1,200 milestone payment",
+      "description": "Check Wise for the second milestone payment of $1,200 sent by Lucy Grant on 2026-10-12, and let her know when it arrives.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Lucy,\n\nThanks for letting me know. I’ll check for it and let you know when it arrives.\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1375,
+    "cached_tokens": 1280,
+    "output_tokens": 147,
+    "latency_ms": 2059,
+    "cost_usd": 9.58e-05
+  }
+}

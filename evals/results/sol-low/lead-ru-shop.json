@@ -1,0 +1,47 @@
+{
+  "case": "lead-ru-shop",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Dmitry Orlov wants a Telegram bot for a tea online store handling about 300 orders per month, answering delivery questions and checking order status in MoySklad. He asks for pricing and availability, with a budget of RUB 150,000–200,000.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Quote the Telegram bot project and confirm availability",
+      "description": "Reply to Dmitry Orlov at d.orlov@teaworld.ru with estimated pricing and a possible start date for a Telegram bot for his tea online store. The store handles about 300 orders per month; the bot should answer delivery questions and retrieve order status from MoySklad. His budget is RUB 150,000–200,000.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Дмитрий, добрый день!\n\nСпасибо за описание. Ориентировочная стоимость — [оценка стоимости] руб., начать смогу [дата начала]. Для уточнения оценки подскажите, как покупатель должен подтверждать свою личность для проверки заказа и есть ли у вас готовые ответы на вопросы о доставке?\n\nС уважением,\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Dmitry Orlov wants a Telegram bot for a tea online store handling about 300 orders per month, answering delivery questions and checking order status in MoySklad. He asks for pricing and availability, with a budget of RUB 150,000–200,000.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Quote the Telegram bot project and confirm availability",
+      "description": "Reply to Dmitry Orlov at d.orlov@teaworld.ru with estimated pricing and a possible start date for a Telegram bot for his tea online store. The store handles about 300 orders per month; the bot should answer delivery questions and retrieve order status from MoySklad. His budget is RUB 150,000–200,000.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Дмитрий, добрый день!\n\nСпасибо за описание. Ориентировочная стоимость — [оценка стоимости] руб., начать смогу [дата начала]. Для уточнения оценки подскажите, как покупатель должен подтверждать свою личность для проверки заказа и есть ли у вас готовые ответы на вопросы о доставке?\n\nС уважением,\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1248,
+    "cached_tokens": 1097,
+    "output_tokens": 263,
+    "latency_ms": 5950,
+    "cost_usd": 0.0030416999999999996
+  }
+}

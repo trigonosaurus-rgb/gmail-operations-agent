@@ -1,0 +1,47 @@
+{
+  "case": "personal-en-dinner",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Chris invites Alex to a small dinner at his home on Saturday, October 17, around 7 p.m., with nothing to bring.",
+    "category": "personal",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Let Chris know whether you can attend Saturday dinner",
+      "description": "Reply to Chris Martin (chris.martin87@gmail.com) about dinner at his home on Saturday, October 17, around 7 p.m. He says not to bring anything.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hey Chris, thanks for the invite! [Confirm whether you can make it Saturday around 7.]"
+    }
+  },
+  "final": {
+    "summary": "Chris invites Alex to a small dinner at his home on Saturday, October 17, around 7 p.m., with nothing to bring.",
+    "category": "personal",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Let Chris know whether you can attend Saturday dinner",
+      "description": "Reply to Chris Martin (chris.martin87@gmail.com) about dinner at his home on Saturday, October 17, around 7 p.m. He says not to bring anything.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hey Chris, thanks for the invite! [Confirm whether you can make it Saturday around 7.]"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1188,
+    "cached_tokens": 1097,
+    "output_tokens": 145,
+    "latency_ms": 3674,
+    "cost_usd": 0.0017417
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "case": "notification-en-real-security",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Google reports a new sign-in to Alex’s account on a Windows device and says no action is needed if it was Alex.",
+    "category": "notification",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Google reports a new sign-in to Alex’s account on a Windows device and says no action is needed if it was Alex.",
+    "category": "notification",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1412,
+    "cached_tokens": 1280,
+    "output_tokens": 151,
+    "latency_ms": 2231,
+    "cost_usd": 0.0001015
+  }
+}

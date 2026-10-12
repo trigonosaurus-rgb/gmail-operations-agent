@@ -1,0 +1,47 @@
+{
+  "case": "support-ru-bug",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Anna Belyaeva from TeaWorld support reports that today two customers were shown another customer's order status because order numbers differ by one digit. She asks Alex to investigate as soon as possible.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the bot's order-status mix-up",
+      "description": "Anna Belyaeva from TeaWorld reports that on 2026-10-12, two customers saw another customer's order status when their order numbers differed by one digit. Investigate the bot's order lookup and address the data exposure as soon as possible.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте. Спасибо, что сообщили. Срочно проверю логику поиска заказа и разберусь, почему бот возвращает статус по похожему номеру. Если можете, пришлите примеры затронутых заказов по защищённому каналу."
+    }
+  },
+  "final": {
+    "summary": "Anna Belyaeva from TeaWorld support reports that today two customers were shown another customer's order status because order numbers differ by one digit. She asks Alex to investigate as soon as possible.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the bot's order-status mix-up",
+      "description": "Anna Belyaeva from TeaWorld reports that on 2026-10-12, two customers saw another customer's order status when their order numbers differed by one digit. Investigate the bot's order lookup and address the data exposure as soon as possible.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Анна, здравствуйте. Спасибо, что сообщили. Срочно проверю логику поиска заказа и разберусь, почему бот возвращает статус по похожему номеру. Если можете, пришлите примеры затронутых заказов по защищённому каналу."
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1228,
+    "cached_tokens": 1097,
+    "output_tokens": 263,
+    "latency_ms": 5305,
+    "cost_usd": 0.00015557
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "case": "newsletter-en-course-promo",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "LearnAI Academy advertises 50% off its LLM Engineering bootcamp, with the offer ending tonight.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "spam",
+    "risk_reason": "Unsolicited promotional email advertising a course discount.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "LearnAI Academy advertises 50% off its LLM Engineering bootcamp, with the offer ending tonight.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "spam",
+    "risk_reason": "Unsolicited promotional email advertising a course discount.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1403,
+    "cached_tokens": 1280,
+    "output_tokens": 67,
+    "latency_ms": 1787,
+    "cost_usd": 5.86e-05
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "case": "spam-en-crypto",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "A sender calling itself Elon Giveaway promises 2 BTC within 24 hours if Alex first sends 0.05 BTC to supposedly verify his wallet.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "phishing",
+    "risk_reason": "This cryptocurrency giveaway scam requests an upfront payment of 0.05 BTC under the pretext of wallet verification, promising 2 BTC in return.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "A sender calling itself Elon Giveaway promises 2 BTC within 24 hours if Alex first sends 0.05 BTC to supposedly verify his wallet.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "phishing",
+    "risk_reason": "This cryptocurrency giveaway scam requests an upfront payment of 0.05 BTC under the pretext of wallet verification, promising 2 BTC in return.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1375,
+    "cached_tokens": 1280,
+    "output_tokens": 113,
+    "latency_ms": 3347,
+    "cost_usd": 0.001448
+  }
+}

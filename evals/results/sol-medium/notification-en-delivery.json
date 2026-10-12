@@ -1,0 +1,33 @@
+{
+  "case": "notification-en-delivery",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Amazon reports that Alex’s USB-C hub was delivered on October 12 at 14:05 and left at the front door.",
+    "category": "notification",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Amazon reports that Alex’s USB-C hub was delivered on October 12 at 14:05 and left at the front door.",
+    "category": "notification",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1187,
+    "cached_tokens": 1097,
+    "output_tokens": 62,
+    "latency_ms": 2847,
+    "cost_usd": 0.0009097
+  }
+}

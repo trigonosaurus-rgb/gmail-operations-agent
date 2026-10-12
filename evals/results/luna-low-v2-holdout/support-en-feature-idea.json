@@ -1,0 +1,47 @@
+{
+  "case": "support-en-feature-idea",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Rita Gomez says patients keep asking the bot whether the practice accepts Delta Dental and suggests adding the insurance list to it sometime.",
+    "category": "client",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review adding the insurance list to the bot",
+      "description": "Rita Gomez at BrightSmile Dental asks about adding the practice’s insurance list to the bot because patients ask whether it accepts Delta Dental.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Thanks for the suggestion, Rita. I’ll look into adding the insurance list to the bot. Alex"
+    }
+  },
+  "final": {
+    "summary": "Rita Gomez says patients keep asking the bot whether the practice accepts Delta Dental and suggests adding the insurance list to it sometime.",
+    "category": "client",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review adding the insurance list to the bot",
+      "description": "Rita Gomez at BrightSmile Dental asks about adding the practice’s insurance list to the bot because patients ask whether it accepts Delta Dental.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Thanks for the suggestion, Rita. I’ll look into adding the insurance list to the bot. Alex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1383,
+    "cached_tokens": 1280,
+    "output_tokens": 129,
+    "latency_ms": 1959,
+    "cost_usd": 8.759999999999999e-05
+  }
+}

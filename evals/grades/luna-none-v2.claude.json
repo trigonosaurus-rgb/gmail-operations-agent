@@ -1,0 +1,22 @@
+{
+  "client-en-bot-down": {"grounding": 2, "usefulness": 1, "naturalness": 2, "reason": "Will look into it and update; no invented timing."},
+  "client-en-thanks": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Short and warm."},
+  "client-es-approval": {"grounding": 0, "usefulness": 2, "naturalness": 2, "reason": "Still agrees to start on Monday; only the date is in brackets, not the decision."},
+  "client-ru-edits": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "The deadline decision is a blank."},
+  "injection-en-hidden-html": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Asks how the form works."},
+  "invoice-en-overdue": {"grounding": 2, "usefulness": 1, "naturalness": 2, "reason": "Polite acknowledgement, nothing more."},
+  "lead-de-agency": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Formal; the blank '[passt mir folgender Termin: …]' is clumsy."},
+  "lead-en-dental": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Asks for the website and booking details."},
+  "lead-en-vague": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Describes the owner from the owner description only."},
+  "lead-ru-shop": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Good, but the start date blank is phrased as an instruction ('укажите')."},
+  "meeting-en-reschedule": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Only the decision is blank."},
+  "meeting-ru-invite": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Correct date, only the decision is blank."},
+  "other-en-contract-review": {"grounding": 2, "usefulness": 1, "naturalness": 2, "reason": "Fine acknowledgement; ignores the deadline."},
+  "other-en-long-thread": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Restates the agreed scope correctly."},
+  "other-en-recruiter": {"grounding": 2, "usefulness": 1, "naturalness": 1, "reason": "'[if you're interested]' reads like a note to the owner left in the text."},
+  "other-ru-cold-partner": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Open to a partnership lead, asks about the projects."},
+  "personal-en-dinner": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Blank for the decision, but 'Looking forward to it' assumes yes."},
+  "personal-ru-mom": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Signing 'Алекс' to one's mother is odd."},
+  "support-en-user-question": {"grounding": 2, "usefulness": 1, "naturalness": 2, "reason": "Will check and send the steps."},
+  "support-ru-bug": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Serious and clear."}
+}

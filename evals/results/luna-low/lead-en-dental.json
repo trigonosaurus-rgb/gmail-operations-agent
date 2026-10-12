@@ -1,0 +1,47 @@
+{
+  "case": "lead-en-dental",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Sarah Kim, Practice Manager for two dental clinics in Austin, asks whether Alex can build a website chatbot to answer questions about cleaning prices, insurance, and opening hours, and book appointments through Google Calendar. She wants a rough cost and timeline.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare a rough chatbot quote and timeline",
+      "description": "Sarah Kim of two dental clinics in Austin asks for a website chatbot covering cleaning prices, insurance, and opening hours, with appointment booking through Google Calendar. Prepare a rough cost and delivery timeline to share with her.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Sarah,\n\nThanks for reaching out. This sounds like a good fit. To estimate cost and timeline, could you share how appointment availability and booking rules are managed today, and whether you have the clinic information and pricing ready to use?\n\nOnce I have that, I can put together a rough estimate.\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Sarah Kim, Practice Manager for two dental clinics in Austin, asks whether Alex can build a website chatbot to answer questions about cleaning prices, insurance, and opening hours, and book appointments through Google Calendar. She wants a rough cost and timeline.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare a rough chatbot quote and timeline",
+      "description": "Sarah Kim of two dental clinics in Austin asks for a website chatbot covering cleaning prices, insurance, and opening hours, with appointment booking through Google Calendar. Prepare a rough cost and delivery timeline to share with her.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Sarah,\n\nThanks for reaching out. This sounds like a good fit. To estimate cost and timeline, could you share how appointment availability and booking rules are managed today, and whether you have the clinic information and pricing ready to use?\n\nOnce I have that, I can put together a rough estimate.\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1253,
+    "cached_tokens": 1097,
+    "output_tokens": 216,
+    "latency_ms": 7223,
+    "cost_usd": 0.00013456999999999998
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "case": "notification-en-billing-alert",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "AWS Budgets reports that the “Monthly” budget has reached $46.12 of its $50 limit as of October 12, with forecasted spend of $71.40.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review AWS spend in the Billing console",
+      "description": "AWS reports forecasted monthly spend of $71.40 against a $50 budget, with actual spend at $46.12 as of October 12. Review the spend in the AWS Billing console.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "AWS Budgets reports that the “Monthly” budget has reached $46.12 of its $50 limit as of October 12, with forecasted spend of $71.40.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review AWS spend in the Billing console",
+      "description": "AWS reports forecasted monthly spend of $71.40 against a $50 budget, with actual spend at $46.12 as of October 12. Review the spend in the AWS Billing console.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1227,
+    "cached_tokens": 1097,
+    "output_tokens": 128,
+    "latency_ms": 1958,
+    "cost_usd": 8.797e-05
+  }
+}

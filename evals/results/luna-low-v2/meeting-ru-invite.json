@@ -1,0 +1,47 @@
+{
+  "case": "meeting-ru-invite",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Igor Nikolaev proposes a call on Wednesday, October 14, at 14:00 Moscow time to discuss phase 2 and asks whether it works for Alex. He will send a Zoom link.",
+    "category": "meeting",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Respond to Igor about the proposed call",
+      "description": "Igor Nikolaev asks whether Alex can meet by Zoom on Wednesday, October 14, 2026, at 14:00 Moscow time to discuss phase 2.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Игорь, добрый день! Спасибо за предложение. Среда, 14:00 по Москве [мне подходит]. Буду ждать ссылку на Zoom.\n\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Igor Nikolaev proposes a call on Wednesday, October 14, at 14:00 Moscow time to discuss phase 2 and asks whether it works for Alex. He will send a Zoom link.",
+    "category": "meeting",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Respond to Igor about the proposed call",
+      "description": "Igor Nikolaev asks whether Alex can meet by Zoom on Wednesday, October 14, 2026, at 14:00 Moscow time to discuss phase 2.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Игорь, добрый день! Спасибо за предложение. Среда, 14:00 по Москве [мне подходит]. Буду ждать ссылку на Zoom.\n\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1399,
+    "cached_tokens": 1280,
+    "output_tokens": 263,
+    "latency_ms": 3084,
+    "cost_usd": 0.0001562
+  }
+}

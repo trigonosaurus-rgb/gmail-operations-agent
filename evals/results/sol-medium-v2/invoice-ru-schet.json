@@ -1,0 +1,41 @@
+{
+  "case": "invoice-ru-schet",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Romashka LLC’s accounting department sent invoice #418 for RUB 45,000 for workspace rental in October, payable by October 20, 2026.",
+    "category": "invoice",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Pay invoice #418 for October workspace rental",
+      "description": "Romashka LLC’s accounting department requests payment of RUB 45,000 for workspace rental in October by October 20, 2026. The invoice is attached as schet_418.pdf.",
+      "due_date": "2026-10-20"
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "Romashka LLC’s accounting department sent invoice #418 for RUB 45,000 for workspace rental in October, payable by October 20, 2026.",
+    "category": "invoice",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Pay invoice #418 for October workspace rental",
+      "description": "Romashka LLC’s accounting department requests payment of RUB 45,000 for workspace rental in October by October 20, 2026. The invoice is attached as schet_418.pdf.",
+      "due_date": "2026-10-20"
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1413,
+    "cached_tokens": 1280,
+    "output_tokens": 215,
+    "latency_ms": 5213,
+    "cost_usd": 0.002544
+  }
+}

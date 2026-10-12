@@ -1,0 +1,47 @@
+{
+  "case": "personal-en-dinner",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Chris invites Alex to a small dinner at his place on Saturday, October 17, around 7 p.m. and asks whether he can come. Alex does not need to bring anything.",
+    "category": "personal",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "RSVP to Chris's Saturday dinner invitation",
+      "description": "Let Chris know whether you can attend dinner at his place on Saturday, October 17, around 7 p.m. He says not to bring anything.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hey Chris, thanks for the invite! [I’m in / I can’t make it this time]."
+    }
+  },
+  "final": {
+    "summary": "Chris invites Alex to a small dinner at his place on Saturday, October 17, around 7 p.m. and asks whether he can come. Alex does not need to bring anything.",
+    "category": "personal",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "RSVP to Chris's Saturday dinner invitation",
+      "description": "Let Chris know whether you can attend dinner at his place on Saturday, October 17, around 7 p.m. He says not to bring anything.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hey Chris, thanks for the invite! [I’m in / I can’t make it this time]."
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1188,
+    "cached_tokens": 1097,
+    "output_tokens": 255,
+    "latency_ms": 5671,
+    "cost_usd": 0.0028417
+  }
+}

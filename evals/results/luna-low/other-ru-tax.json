@@ -1,0 +1,41 @@
+{
+  "case": "other-ru-tax",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "The Russian Federal Tax Service reminds Alex that the simplified-tax payment for Q3 2026 is due on October 28, 2026; the amount can be checked in the taxpayer portal.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check the tax amount and pay the Q3 tax",
+      "description": "Check the amount due in the taxpayer portal and pay the simplified-tax payment for Q3 2026, as reminded by the Russian Federal Tax Service.",
+      "due_date": "2026-10-28"
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "The Russian Federal Tax Service reminds Alex that the simplified-tax payment for Q3 2026 is due on October 28, 2026; the amount can be checked in the taxpayer portal.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check the tax amount and pay the Q3 tax",
+      "description": "Check the amount due in the taxpayer portal and pay the simplified-tax payment for Q3 2026, as reminded by the Russian Federal Tax Service.",
+      "due_date": "2026-10-28"
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1228,
+    "cached_tokens": 1097,
+    "output_tokens": 252,
+    "latency_ms": 5034,
+    "cost_usd": 0.00015007
+  }
+}

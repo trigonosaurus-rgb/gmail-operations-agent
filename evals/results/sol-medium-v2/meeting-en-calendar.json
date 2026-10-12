@@ -1,0 +1,33 @@
+{
+  "case": "meeting-en-calendar",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Anna Lee invited Alex to a weekly sync on October 14, 2026, from 10:00 to 10:30 EEST via Google Meet.",
+    "category": "meeting",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Anna Lee invited Alex to a weekly sync on October 14, 2026, from 10:00 to 10:30 EEST via Google Meet.",
+    "category": "meeting",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1423,
+    "cached_tokens": 1280,
+    "output_tokens": 69,
+    "latency_ms": 2276,
+    "cost_usd": 0.001104
+  }
+}

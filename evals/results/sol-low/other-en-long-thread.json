@@ -1,0 +1,47 @@
+{
+  "case": "other-en-long-thread",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Anna Lee confirms phase 2: Slack integration and an analytics dashboard for $4,800, starting November 2. She asks Alex to send the updated SOW.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Update and send the phase 2 SOW to Anna Lee",
+      "description": "Anna Lee at Acme confirms phase 2 scope as Slack integration plus an analytics dashboard, priced at $4,800 with a November 2, 2026 start. Update the statement of work to reflect these terms and send it to anna@acme.io.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Anna,\n\nThanks for confirming. Phase 2 is Slack integration plus the analytics dashboard, at $4,800, starting November 2. I'll send the updated SOW by [send date]."
+    }
+  },
+  "final": {
+    "summary": "Anna Lee confirms phase 2: Slack integration and an analytics dashboard for $4,800, starting November 2. She asks Alex to send the updated SOW.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Update and send the phase 2 SOW to Anna Lee",
+      "description": "Anna Lee at Acme confirms phase 2 scope as Slack integration plus an analytics dashboard, priced at $4,800 with a November 2, 2026 start. Update the statement of work to reflect these terms and send it to anna@acme.io.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Anna,\n\nThanks for confirming. Phase 2 is Slack integration plus the analytics dashboard, at $4,800, starting November 2. I'll send the updated SOW by [send date]."
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1204,
+    "cached_tokens": 1097,
+    "output_tokens": 230,
+    "latency_ms": 4883,
+    "cost_usd": 0.0026236999999999996
+  }
+}

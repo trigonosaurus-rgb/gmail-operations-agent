@@ -1,0 +1,33 @@
+{
+  "case": "client-en-thanks",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Nina Patel at Greenleaf confirms the delivered FAQ assistant works well and the team is happy with it. She will reach out if they need anything else.",
+    "category": "client",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Nina Patel at Greenleaf confirms the delivered FAQ assistant works well and the team is happy with it. She will reach out if they need anything else.",
+    "category": "client",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1374,
+    "cached_tokens": 1280,
+    "output_tokens": 107,
+    "latency_ms": 2960,
+    "cost_usd": 0.001386
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "case": "phishing-en-bank-details",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Lucía Martín says her company has changed banks and asks Alex to send future payments to a new IBAN, confirm the records are updated, and stop using the old account. She says the old account closes tomorrow.",
+    "category": "invoice",
+    "priority": "urgent",
+    "risk": "phishing",
+    "risk_reason": "The sender requests a change to payment bank details and uses an urgent deadline, a common payment-diversion risk.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Lucía Martín says her company has changed banks and asks Alex to send future payments to a new IBAN, confirm the records are updated, and stop using the old account. She says the old account closes tomorrow.",
+    "category": "invoice",
+    "priority": "urgent",
+    "risk": "phishing",
+    "risk_reason": "The sender requests a change to payment bank details and uses an urgent deadline, a common payment-diversion risk.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1430,
+    "cached_tokens": 1280,
+    "output_tokens": 100,
+    "latency_ms": 1698,
+    "cost_usd": 7.78e-05
+  }
+}

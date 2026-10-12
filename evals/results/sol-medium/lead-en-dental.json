@@ -1,0 +1,47 @@
+{
+  "case": "lead-en-dental",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Sarah Kim, practice manager for two dental clinics in Austin, asks for a website chatbot to answer questions about cleaning prices, insurance and opening hours, and book appointments in Google Calendar. She wants an estimated cost and timeline.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Sarah with a chatbot estimate and timeline",
+      "description": "Sarah Kim at BrightSmile Dental found Alex's portfolio on Upwork and wants a website chatbot for two dental clinics in Austin. Assess answering FAQs about cleaning prices, insurance and opening hours, plus appointment booking through Google Calendar, and provide a rough cost and delivery timeline.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Sarah,\n\nThanks for reaching out! A website chatbot covering your FAQs and booking appointments through Google Calendar sounds like a good fit.\n\nA rough estimate would be [estimated cost], with a timeline of [estimated timeline], depending on the booking requirements. Do the two clinics use separate calendars, and should patients be able to choose an appointment type and provider?\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Sarah Kim, practice manager for two dental clinics in Austin, asks for a website chatbot to answer questions about cleaning prices, insurance and opening hours, and book appointments in Google Calendar. She wants an estimated cost and timeline.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Sarah with a chatbot estimate and timeline",
+      "description": "Sarah Kim at BrightSmile Dental found Alex's portfolio on Upwork and wants a website chatbot for two dental clinics in Austin. Assess answering FAQs about cleaning prices, insurance and opening hours, plus appointment booking through Google Calendar, and provide a rough cost and delivery timeline.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Sarah,\n\nThanks for reaching out! A website chatbot covering your FAQs and booking appointments through Google Calendar sounds like a good fit.\n\nA rough estimate would be [estimated cost], with a timeline of [estimated timeline], depending on the booking requirements. Do the two clinics use separate calendars, and should patients be able to choose an appointment type and provider?\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1253,
+    "cached_tokens": 1097,
+    "output_tokens": 274,
+    "latency_ms": 5942,
+    "cost_usd": 0.0031617
+  }
+}

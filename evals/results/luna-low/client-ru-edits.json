@@ -1,0 +1,47 @@
+{
+  "case": "client-ru-edits",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Ольга Ким reviewed the bot and requests two changes: correct the delivery-to-region message to say delivery is free for orders from 3,000 rubles, and offer promo code FLOWER10 at the end of the conversation. She asks if Alex can complete them by the end of the week.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Update the bot’s delivery and promo-code messaging",
+      "description": "Oльга Ким asks Alex to change the bot so regional delivery is described as free for orders from 3,000 rubles, and so it offers promo code FLOWER10 at the end of a conversation. She asks for completion by the end of the week.",
+      "due_date": "2026-10-16"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Ольга, привет! Да, внесу обе правки до конца недели."
+    }
+  },
+  "final": {
+    "summary": "Ольга Ким reviewed the bot and requests two changes: correct the delivery-to-region message to say delivery is free for orders from 3,000 rubles, and offer promo code FLOWER10 at the end of the conversation. She asks if Alex can complete them by the end of the week.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Update the bot’s delivery and promo-code messaging",
+      "description": "Oльга Ким asks Alex to change the bot so regional delivery is described as free for orders from 3,000 rubles, and so it offers promo code FLOWER10 at the end of a conversation. She asks for completion by the end of the week.",
+      "due_date": "2026-10-16"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Ольга, привет! Да, внесу обе правки до конца недели."
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1246,
+    "cached_tokens": 1097,
+    "output_tokens": 198,
+    "latency_ms": 4184,
+    "cost_usd": 0.00012487000000000002
+  }
+}

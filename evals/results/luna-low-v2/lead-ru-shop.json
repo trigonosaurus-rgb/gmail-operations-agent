@@ -1,0 +1,47 @@
+{
+  "case": "lead-ru-shop",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Dmitry Orlov asks for a quote and start availability for a Telegram bot for his tea store, handling delivery and order-status questions using MoySklad. The store has about 300 orders a month and a budget of 150,000–200,000 rubles.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare a quote and estimate availability",
+      "description": "Dmitry Orlov wants a Telegram bot for his tea e-commerce store that answers delivery and order-status questions using MoySklad. The store has about 300 orders monthly and a budget of 150,000–200,000 rubles. Reply with a price estimate and when you could start.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Добрый день, Дмитрий!\n\nСпасибо за описание задачи и информацию о бюджете. Я подготовлю оценку стоимости и сроков запуска с учётом интеграции с МойСкладом. Чтобы точнее оценить объём работ, расскажите, пожалуйста, как сейчас покупатели проверяют статус заказа и какие вопросы о доставке бот должен обрабатывать.\n\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Dmitry Orlov asks for a quote and start availability for a Telegram bot for his tea store, handling delivery and order-status questions using MoySklad. The store has about 300 orders a month and a budget of 150,000–200,000 rubles.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare a quote and estimate availability",
+      "description": "Dmitry Orlov wants a Telegram bot for his tea e-commerce store that answers delivery and order-status questions using MoySklad. The store has about 300 orders monthly and a budget of 150,000–200,000 rubles. Reply with a price estimate and when you could start.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Добрый день, Дмитрий!\n\nСпасибо за описание задачи и информацию о бюджете. Я подготовлю оценку стоимости и сроков запуска с учётом интеграции с МойСкладом. Чтобы точнее оценить объём работ, расскажите, пожалуйста, как сейчас покупатели проверяют статус заказа и какие вопросы о доставке бот должен обрабатывать.\n\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1431,
+    "cached_tokens": 0,
+    "output_tokens": 253,
+    "latency_ms": 3112,
+    "cost_usd": 0.00026960000000000005
+  }
+}

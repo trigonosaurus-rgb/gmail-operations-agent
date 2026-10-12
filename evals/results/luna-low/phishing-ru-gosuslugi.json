@@ -1,0 +1,33 @@
+{
+  "case": "phishing-ru-gosuslugi",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "The sender claiming to be Госуслуги says Alex’s account may be blocked and asks him to submit passport details and an SMS code through a link.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "phishing",
+    "risk_reason": "The message impersonates Госуслуги using a suspicious domain and asks for sensitive identity information and an SMS code via a link.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "The sender claiming to be Госуслуги says Alex’s account may be blocked and asks him to submit passport details and an SMS code through a link.",
+    "category": "spam",
+    "priority": "low",
+    "risk": "phishing",
+    "risk_reason": "The message impersonates Госуслуги using a suspicious domain and asks for sensitive identity information and an SMS code via a link.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1227,
+    "cached_tokens": 1097,
+    "output_tokens": 211,
+    "latency_ms": 4885,
+    "cost_usd": 0.00012947
+  }
+}

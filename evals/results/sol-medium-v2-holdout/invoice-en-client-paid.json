@@ -1,0 +1,47 @@
+{
+  "case": "invoice-en-client-paid",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Lucy Grant says Grant Cafe has sent the second milestone payment of $1,200 via Wise and asks Alex to confirm when it arrives.",
+    "category": "invoice",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check the Wise payment and confirm receipt to Lucy",
+      "description": "Lucy Grant at Grant Cafe reports sending the second milestone payment of $1,200 via Wise. Check whether it has arrived and let Lucy know once received.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Lucy, thanks for the update! I'll check and let you know when the $1,200 arrives.\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Lucy Grant says Grant Cafe has sent the second milestone payment of $1,200 via Wise and asks Alex to confirm when it arrives.",
+    "category": "invoice",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check the Wise payment and confirm receipt to Lucy",
+      "description": "Lucy Grant at Grant Cafe reports sending the second milestone payment of $1,200 via Wise. Check whether it has arrived and let Lucy know once received.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Lucy, thanks for the update! I'll check and let you know when the $1,200 arrives.\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1375,
+    "cached_tokens": 1280,
+    "output_tokens": 220,
+    "latency_ms": 5275,
+    "cost_usd": 0.002518
+  }
+}

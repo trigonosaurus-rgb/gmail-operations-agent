@@ -1,0 +1,33 @@
+{
+  "case": "phishing-en-bank-details",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Lucía Martín asks Alex to redirect all company payments to IBAN GB29 NWBK 6016 1331 9268 19 and confirm the records are updated. She says the old account closes tomorrow, October 13.",
+    "category": "invoice",
+    "priority": "urgent",
+    "risk": "phishing",
+    "risk_reason": "An unverified bank-account change sent from an Outlook address, combined with urgency and instructions to stop using the old account, raises a payment-diversion risk. Verify through a previously trusted contact channel before changing payment details.",
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "Lucía Martín asks Alex to redirect all company payments to IBAN GB29 NWBK 6016 1331 9268 19 and confirm the records are updated. She says the old account closes tomorrow, October 13.",
+    "category": "invoice",
+    "priority": "urgent",
+    "risk": "phishing",
+    "risk_reason": "An unverified bank-account change sent from an Outlook address, combined with urgency and instructions to stop using the old account, raises a payment-diversion risk. Verify through a previously trusted contact channel before changing payment details.",
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1247,
+    "cached_tokens": 1097,
+    "output_tokens": 204,
+    "latency_ms": 4818,
+    "cost_usd": 0.0024497
+  }
+}

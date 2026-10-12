@@ -1,0 +1,41 @@
+{
+  "case": "notification-en-billing-alert",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "AWS Budgets reports that Alex's $50 monthly budget has reached $46.12 in actual spend as of October 12, with forecasted spend of $71.40. The alert recommends reviewing spending in the Billing console.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review AWS spending against the $50 monthly budget",
+      "description": "Review the AWS Billing console after AWS Budgets reported $46.12 in actual spending as of October 12, exceeding the 90% alert threshold for the $50 Monthly budget. Forecasted spending is $71.40; decide whether to reduce usage or adjust the budget.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "AWS Budgets reports that Alex's $50 monthly budget has reached $46.12 in actual spend as of October 12, with forecasted spend of $71.40. The alert recommends reviewing spending in the Billing console.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review AWS spending against the $50 monthly budget",
+      "description": "Review the AWS Billing console after AWS Budgets reported $46.12 in actual spending as of October 12, exceeding the 90% alert threshold for the $50 Monthly budget. Forecasted spending is $71.40; decide whether to reduce usage or adjust the budget.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1227,
+    "cached_tokens": 1097,
+    "output_tokens": 185,
+    "latency_ms": 4700,
+    "cost_usd": 0.0022197
+  }
+}

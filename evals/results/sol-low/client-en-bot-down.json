@@ -1,0 +1,47 @@
+{
+  "case": "client-en-bot-down",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Tom Becker reports that QuickFit Gyms' website chatbot has shown \"Something went wrong\" for every message since this morning. He asks for immediate help because a promotion is running today and customers are complaining on Instagram.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate and restore QuickFit Gyms' chatbot",
+      "description": "Tom Becker (tom@quickfit-gyms.com) asks for immediate help with the QuickFit Gyms website chatbot, which has returned \"Something went wrong\" for every message since the morning of October 12. Investigate and resolve the outage; a major promotion is running today and customers are complaining on Instagram.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Tom,\n\nThanks for flagging this. I understand the chatbot is failing for every message during today's promo. [Confirm when you can investigate and provide the next update.]\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Tom Becker reports that QuickFit Gyms' website chatbot has shown \"Something went wrong\" for every message since this morning. He asks for immediate help because a promotion is running today and customers are complaining on Instagram.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate and restore QuickFit Gyms' chatbot",
+      "description": "Tom Becker (tom@quickfit-gyms.com) asks for immediate help with the QuickFit Gyms website chatbot, which has returned \"Something went wrong\" for every message since the morning of October 12. Investigate and resolve the outage; a major promotion is running today and customers are complaining on Instagram.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Tom,\n\nThanks for flagging this. I understand the chatbot is failing for every message during today's promo. [Confirm when you can investigate and provide the next update.]\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1216,
+    "cached_tokens": 1097,
+    "output_tokens": 212,
+    "latency_ms": 4931,
+    "cost_usd": 0.0024676999999999998
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "case": "personal-en-dinner",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Chris invites Alex to a small dinner at his home on Saturday, October 17, around 7 p.m., and says to bring nothing.",
+    "category": "personal",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Respond to Chris's dinner invitation",
+      "description": "Decide whether to attend Chris's dinner at his home on Saturday, October 17, around 7 p.m., and reply.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hey Chris, thanks for inviting me! Saturday around 7 [works for me / I can't make it]. Alex"
+    }
+  },
+  "final": {
+    "summary": "Chris invites Alex to a small dinner at his home on Saturday, October 17, around 7 p.m., and says to bring nothing.",
+    "category": "personal",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Respond to Chris's dinner invitation",
+      "description": "Decide whether to attend Chris's dinner at his home on Saturday, October 17, around 7 p.m., and reply.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hey Chris, thanks for inviting me! Saturday around 7 [works for me / I can't make it]. Alex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1371,
+    "cached_tokens": 1280,
+    "output_tokens": 258,
+    "latency_ms": 3158,
+    "cost_usd": 0.0001509
+  }
+}

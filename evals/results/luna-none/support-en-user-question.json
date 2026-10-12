@@ -1,0 +1,47 @@
+{
+  "case": "support-en-user-question",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Kevin Moore from QuickFit asks where to update the bot’s weekend opening hours in the admin panel; he couldn’t find the instructions in the guide.",
+    "category": "support",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Explain how to update the bot’s opening hours",
+      "description": "Reply to Kevin Moore at QuickFit with instructions for updating weekend opening hours in the admin panel so the bot gives accurate answers. He could not find the steps in the guide.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Kevin,\n\nYou can update the weekend hours in [admin panel location]. I’ll also check whether the guide needs an update.\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Kevin Moore from QuickFit asks where to update the bot’s weekend opening hours in the admin panel; he couldn’t find the instructions in the guide.",
+    "category": "support",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Explain how to update the bot’s opening hours",
+      "description": "Reply to Kevin Moore at QuickFit with instructions for updating weekend opening hours in the admin panel so the bot gives accurate answers. He could not find the steps in the guide.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Kevin,\n\nYou can update the weekend hours in [admin panel location]. I’ll also check whether the guide needs an update.\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1219,
+    "cached_tokens": 1097,
+    "output_tokens": 157,
+    "latency_ms": 2332,
+    "cost_usd": 0.00010167000000000001
+  }
+}

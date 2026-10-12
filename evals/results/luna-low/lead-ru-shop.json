@@ -1,0 +1,47 @@
+{
+  "case": "lead-ru-shop",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Dmitry Orlov wants a Telegram bot for his tea store to answer delivery and order-status questions, integrating with MoySklad. The store handles about 300 orders monthly, with a budget of 150,000–200,000 rubles; he asks for a price and start availability.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply with a Telegram bot estimate and availability",
+      "description": "Dmitry Orlov at d.orlov@teaworld.ru is considering a Telegram bot for his tea e-commerce store (about 300 orders/month) to answer delivery and order-status questions using MoySklad data. He has a budget of 150,000–200,000 rubles and asks what it might cost and when Alex can start.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Добрый день, Дмитрий!\n\nСпасибо за описание задачи. Бюджет 150–200 тыс. руб. может подойти, но для оценки нужно уточнить, как бот будет получать данные о статусах заказов из МойСклад и какие сценарии доставки нужно поддержать. Могу обсудить это на коротком звонке. Когда вам удобно? После уточнения требований смогу назвать стоимость и срок начала.\n\nС уважением,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Dmitry Orlov wants a Telegram bot for his tea store to answer delivery and order-status questions, integrating with MoySklad. The store handles about 300 orders monthly, with a budget of 150,000–200,000 rubles; he asks for a price and start availability.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply with a Telegram bot estimate and availability",
+      "description": "Dmitry Orlov at d.orlov@teaworld.ru is considering a Telegram bot for his tea e-commerce store (about 300 orders/month) to answer delivery and order-status questions using MoySklad data. He has a budget of 150,000–200,000 rubles and asks what it might cost and when Alex can start.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Добрый день, Дмитрий!\n\nСпасибо за описание задачи. Бюджет 150–200 тыс. руб. может подойти, но для оценки нужно уточнить, как бот будет получать данные о статусах заказов из МойСклад и какие сценарии доставки нужно поддержать. Могу обсудить это на коротком звонке. Когда вам удобно? После уточнения требований смогу назвать стоимость и срок начала.\n\nС уважением,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1248,
+    "cached_tokens": 0,
+    "output_tokens": 286,
+    "latency_ms": 7742,
+    "cost_usd": 0.0002678
+  }
+}

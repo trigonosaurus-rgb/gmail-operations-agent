@@ -1,0 +1,39 @@
+{
+  "case": "personal-en-dinner",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Chris invites Alex to a small dinner at his place on Saturday around 7 p.m. and says to bring nothing.",
+    "category": "personal",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": {
+      "language": "en",
+      "body": "Thanks for the invite! Saturday around 7 [works for me]. Looking forward to it.\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Chris invites Alex to a small dinner at his place on Saturday around 7 p.m. and says to bring nothing.",
+    "category": "personal",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": {
+      "language": "en",
+      "body": "Thanks for the invite! Saturday around 7 [works for me]. Looking forward to it.\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1371,
+    "cached_tokens": 1280,
+    "output_tokens": 86,
+    "latency_ms": 2335,
+    "cost_usd": 6.49e-05
+  }
+}

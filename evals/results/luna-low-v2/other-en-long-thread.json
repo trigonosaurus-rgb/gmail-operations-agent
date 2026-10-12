@@ -1,0 +1,47 @@
+{
+  "case": "other-en-long-thread",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Anna Lee says Acme is ready to lock phase 2 as a Slack integration and analytics dashboard for $4,800, starting November 2. She asks Alex to send an updated SOW.",
+    "category": "client",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare and send the updated phase 2 SOW",
+      "description": "Anna Lee at Acme asks Alex to send an updated SOW for phase 2: Slack integration and analytics dashboard, $4,800, with a November 2 start.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Thanks, Anna. I’ll prepare the updated SOW reflecting the Slack integration and analytics dashboard for $4,800, with a November 2 start, and send it over.\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Anna Lee says Acme is ready to lock phase 2 as a Slack integration and analytics dashboard for $4,800, starting November 2. She asks Alex to send an updated SOW.",
+    "category": "client",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare and send the updated phase 2 SOW",
+      "description": "Anna Lee at Acme asks Alex to send an updated SOW for phase 2: Slack integration and analytics dashboard, $4,800, with a November 2 start.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Thanks, Anna. I’ll prepare the updated SOW reflecting the Slack integration and analytics dashboard for $4,800, with a November 2 start, and send it over.\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1387,
+    "cached_tokens": 1280,
+    "output_tokens": 395,
+    "latency_ms": 3834,
+    "cost_usd": 0.000221
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "case": "client-en-bot-down",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Tom Becker at QuickFit Gyms reports that the website chatbot has returned “Something went wrong” for every message since this morning. He asks Alex to investigate ASAP because a promotion is running today and customers are complaining on Instagram.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate and restore the QuickFit Gyms chatbot",
+      "description": "Tom Becker (tom@quickfit-gyms.com) asks for immediate help: the website chatbot has shown “Something went wrong” for every message since the morning of October 12. QuickFit Gyms has a major promotion running today, and customers are complaining on Instagram. Diagnose the failure, restore service, and update Tom.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Tom,\n\nThanks for flagging this. I understand the chatbot is failing for every message during today's promo. I can start investigating [start time] and will update you [update time].\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Tom Becker at QuickFit Gyms reports that the website chatbot has returned “Something went wrong” for every message since this morning. He asks Alex to investigate ASAP because a promotion is running today and customers are complaining on Instagram.",
+    "category": "support",
+    "priority": "urgent",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate and restore the QuickFit Gyms chatbot",
+      "description": "Tom Becker (tom@quickfit-gyms.com) asks for immediate help: the website chatbot has shown “Something went wrong” for every message since the morning of October 12. QuickFit Gyms has a major promotion running today, and customers are complaining on Instagram. Diagnose the failure, restore service, and update Tom.",
+      "due_date": "2026-10-12"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Tom,\n\nThanks for flagging this. I understand the chatbot is failing for every message during today's promo. I can start investigating [start time] and will update you [update time].\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1216,
+    "cached_tokens": 1097,
+    "output_tokens": 260,
+    "latency_ms": 5905,
+    "cost_usd": 0.0029476999999999997
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "case": "other-ru-cold-partner",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Ekaterina Smirnova from a digital agency asks whether Alex is interested in taking subcontracted chatbot projects and discussing terms.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Ekaterina about subcontracting chatbot projects",
+      "description": "Ekaterina Smirnova (ek@digital-agency.ru) says her digital agency receives client requests for chatbots but lacks in-house expertise. Decide whether to take these projects as a subcontractor and reply about discussing collaboration terms.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Екатерина, добрый день!\n\nСпасибо за предложение! [Готов рассмотреть проекты на субподряд / Сейчас не беру проекты на субподряд]. Расскажите, пожалуйста, какие задачи обычно возникают у ваших клиентов и какой формат сотрудничества вы предлагаете."
+    }
+  },
+  "final": {
+    "summary": "Ekaterina Smirnova from a digital agency asks whether Alex is interested in taking subcontracted chatbot projects and discussing terms.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Ekaterina about subcontracting chatbot projects",
+      "description": "Ekaterina Smirnova (ek@digital-agency.ru) says her digital agency receives client requests for chatbots but lacks in-house expertise. Decide whether to take these projects as a subcontractor and reply about discussing collaboration terms.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Екатерина, добрый день!\n\nСпасибо за предложение! [Готов рассмотреть проекты на субподряд / Сейчас не беру проекты на субподряд]. Расскажите, пожалуйста, какие задачи обычно возникают у ваших клиентов и какой формат сотрудничества вы предлагаете."
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1227,
+    "cached_tokens": 1097,
+    "output_tokens": 188,
+    "latency_ms": 5271,
+    "cost_usd": 0.0022497
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "case": "meeting-en-cancel",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Ben Ortiz needs to cancel the Friday, October 16 workshop because his team is at a conference. He asks to consider replacement dates in early November.",
+    "category": "meeting",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Ben with replacement workshop dates",
+      "description": "Ben Ortiz (ben@ortizlabs.com) needs to cancel the Friday, October 16 workshop because his team is at a conference. Review availability and propose dates in early November.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Ben,\n\nThanks for letting me know. For early November, [proposed dates] would work for me. Would any of those suit your team?\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Ben Ortiz needs to cancel the Friday, October 16 workshop because his team is at a conference. He asks to consider replacement dates in early November.",
+    "category": "meeting",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Ben with replacement workshop dates",
+      "description": "Ben Ortiz (ben@ortizlabs.com) needs to cancel the Friday, October 16 workshop because his team is at a conference. Review availability and propose dates in early November.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Ben,\n\nThanks for letting me know. For early November, [proposed dates] would work for me. Would any of those suit your team?\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1372,
+    "cached_tokens": 1280,
+    "output_tokens": 198,
+    "latency_ms": 4701,
+    "cost_usd": 0.002292
+  }
+}

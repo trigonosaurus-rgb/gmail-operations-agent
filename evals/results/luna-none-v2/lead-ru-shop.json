@@ -1,0 +1,47 @@
+{
+  "case": "lead-ru-shop",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Dmitry Orlov wants a Telegram bot for his tea shop that answers delivery and order-status questions, with orders in MoySklad and about 300 orders per month. He asks for an estimate and when Alex could start; budget is 150,000–200,000 rubles.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare a quote and availability for the Telegram bot",
+      "description": "Reply to Dmitry Orlov about a Telegram bot for his tea shop that answers delivery and order-status questions using MoySklad order data. The shop has about 300 orders per month and a budget of 150,000–200,000 rubles; he asks for an estimated cost and start date.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Добрый день, Дмитрий!\n\nСпасибо за описание задачи и информацию о бюджете. Подготовлю оценку стоимости и сроков запуска и вернусь к вам. По началу работы: [укажите, когда сможете начать].\n\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Dmitry Orlov wants a Telegram bot for his tea shop that answers delivery and order-status questions, with orders in MoySklad and about 300 orders per month. He asks for an estimate and when Alex could start; budget is 150,000–200,000 rubles.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Prepare a quote and availability for the Telegram bot",
+      "description": "Reply to Dmitry Orlov about a Telegram bot for his tea shop that answers delivery and order-status questions using MoySklad order data. The shop has about 300 orders per month and a budget of 150,000–200,000 rubles; he asks for an estimated cost and start date.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Добрый день, Дмитрий!\n\nСпасибо за описание задачи и информацию о бюджете. Подготовлю оценку стоимости и сроков запуска и вернусь к вам. По началу работы: [укажите, когда сможете начать].\n\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1431,
+    "cached_tokens": 0,
+    "output_tokens": 233,
+    "latency_ms": 2996,
+    "cost_usd": 0.0002596
+  }
+}

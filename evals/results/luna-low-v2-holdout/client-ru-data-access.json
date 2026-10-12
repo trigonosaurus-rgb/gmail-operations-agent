@@ -1,0 +1,47 @@
+{
+  "case": "client-ru-data-access",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Sergey Lebedev says his programmer shared the warehouse API key in the team 1Password under “Contractors.” He asks Alex to confirm access and say when to expect the first integration version.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check API access and provide an integration timeline",
+      "description": "Sergey Lebedev asks Alex to confirm access to the warehouse API key, shared in the team 1Password under “Contractors,” and give an expected date for the first integration version.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Сергей, добрый день.\n\nСпасибо, проверю доступ к API. По срокам первой версии смогу сориентировать после проверки: [укажите ожидаемый срок].\n\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Sergey Lebedev says his programmer shared the warehouse API key in the team 1Password under “Contractors.” He asks Alex to confirm access and say when to expect the first integration version.",
+    "category": "client",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check API access and provide an integration timeline",
+      "description": "Sergey Lebedev asks Alex to confirm access to the warehouse API key, shared in the team 1Password under “Contractors,” and give an expected date for the first integration version.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Сергей, добрый день.\n\nСпасибо, проверю доступ к API. По срокам первой версии смогу сориентировать после проверки: [укажите ожидаемый срок].\n\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1415,
+    "cached_tokens": 1280,
+    "output_tokens": 327,
+    "latency_ms": 3988,
+    "cost_usd": 0.0001898
+  }
+}

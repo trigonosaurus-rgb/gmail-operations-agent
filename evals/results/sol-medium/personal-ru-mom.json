@@ -1,0 +1,47 @@
+{
+  "case": "personal-ru-mom",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Alex’s mother asks him to look up train tickets for October 25, as previously agreed.",
+    "category": "personal",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Look up train tickets for October 25",
+      "description": "Alex’s mother, Galina, asks him to check train tickets for October 25, as previously agreed. Find suitable options; the route is not specified in this email.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Мам, по билетам на 25-е: [подходящие поезда и цены]. Целую!"
+    }
+  },
+  "final": {
+    "summary": "Alex’s mother asks him to look up train tickets for October 25, as previously agreed.",
+    "category": "personal",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Look up train tickets for October 25",
+      "description": "Alex’s mother, Galina, asks him to check train tickets for October 25, as previously agreed. Find suitable options; the route is not specified in this email.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Мам, по билетам на 25-е: [подходящие поезда и цены]. Целую!"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1191,
+    "cached_tokens": 1097,
+    "output_tokens": 358,
+    "latency_ms": 6815,
+    "cost_usd": 0.0038777
+  }
+}

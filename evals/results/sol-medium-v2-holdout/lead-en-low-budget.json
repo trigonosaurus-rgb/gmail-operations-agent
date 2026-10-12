@@ -1,0 +1,47 @@
+{
+  "case": "lead-en-low-budget",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Priya Shah runs a one-person design studio and wants to automate copying client Typeform responses into Notion. Her budget is around $200.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Assess Priya's Typeform-to-Notion automation request",
+      "description": "Priya Shah (priya@shahdesigns.co) asks whether you can automate transferring client Typeform responses into Notion for her one-person design studio. Her budget is around $200. Ask about the form fields and destination Notion database, then assess feasibility and pricing.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Priya,\n\nThanks for reaching out. I can look into automating the Typeform-to-Notion transfer with your roughly $200 budget in mind. Could you share which form fields you copy and how they're organized in Notion?\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Priya Shah runs a one-person design studio and wants to automate copying client Typeform responses into Notion. Her budget is around $200.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Assess Priya's Typeform-to-Notion automation request",
+      "description": "Priya Shah (priya@shahdesigns.co) asks whether you can automate transferring client Typeform responses into Notion for her one-person design studio. Her budget is around $200. Ask about the form fields and destination Notion database, then assess feasibility and pricing.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Priya,\n\nThanks for reaching out. I can look into automating the Typeform-to-Notion transfer with your roughly $200 budget in mind. Could you share which form fields you copy and how they're organized in Notion?\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1398,
+    "cached_tokens": 1280,
+    "output_tokens": 242,
+    "latency_ms": 5230,
+    "cost_usd": 0.002784
+  }
+}

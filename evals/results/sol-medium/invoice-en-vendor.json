@@ -1,0 +1,41 @@
+{
+  "case": "invoice-en-vendor",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "CloudHost Billing requests payment of invoice INV-20817 for $48.00 for VPS Pro in October, due October 20, 2026. Payment is available through the dashboard, and the invoice PDF is attached.",
+    "category": "invoice",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Pay CloudHost invoice INV-20817",
+      "description": "Pay CloudHost's $48.00 invoice INV-20817 for VPS Pro (October) through your dashboard by October 20, 2026. The attached invoice is INV-20817.pdf.",
+      "due_date": "2026-10-20"
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "CloudHost Billing requests payment of invoice INV-20817 for $48.00 for VPS Pro in October, due October 20, 2026. Payment is available through the dashboard, and the invoice PDF is attached.",
+    "category": "invoice",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Pay CloudHost invoice INV-20817",
+      "description": "Pay CloudHost's $48.00 invoice INV-20817 for VPS Pro (October) through your dashboard by October 20, 2026. The attached invoice is INV-20817.pdf.",
+      "due_date": "2026-10-20"
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1229,
+    "cached_tokens": 1097,
+    "output_tokens": 209,
+    "latency_ms": 3891,
+    "cost_usd": 0.0024636999999999997
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "case": "newsletter-en-ai-weekly",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "AI Weekly sent a newsletter covering an open-weight coding model, evaluation workflows in CI, and a tutorial on building tool-using agents.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "AI Weekly sent a newsletter covering an open-weight coding model, evaluation workflows in CI, and a tutorial on building tool-using agents.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1402,
+    "cached_tokens": 1280,
+    "output_tokens": 84,
+    "latency_ms": 1706,
+    "cost_usd": 6.7e-05
+  }
+}

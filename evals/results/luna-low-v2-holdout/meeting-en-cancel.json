@@ -1,0 +1,47 @@
+{
+  "case": "meeting-en-cancel",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Ben Ortiz needs to cancel the Friday workshop because his team will be at a conference and asks to look at dates in early November.",
+    "category": "meeting",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reschedule Ben’s workshop",
+      "description": "Ben Ortiz needs to cancel the Friday workshop because his team will be at a conference. Find and propose dates in early November.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Ben,\n\nThanks for letting me know. I’ll look at dates in early November. [A date that works for me is ____].\n\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Ben Ortiz needs to cancel the Friday workshop because his team will be at a conference and asks to look at dates in early November.",
+    "category": "meeting",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reschedule Ben’s workshop",
+      "description": "Ben Ortiz needs to cancel the Friday workshop because his team will be at a conference. Find and propose dates in early November.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Ben,\n\nThanks for letting me know. I’ll look at dates in early November. [A date that works for me is ____].\n\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1372,
+    "cached_tokens": 1280,
+    "output_tokens": 139,
+    "latency_ms": 2485,
+    "cost_usd": 9.15e-05
+  }
+}

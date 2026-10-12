@@ -16,7 +16,7 @@ from tests.fakes import make_email, make_triage
 
 def test_prompt_has_a_version_and_all_placeholders_resolve() -> None:
     prompt = load_prompt("triage")
-    assert prompt.version == "triage-v1"
+    assert prompt.version == "triage-v2"
     text = prompt.render(owner_context="Freelancer", today="2026-10-12", working_language="English")
     assert "$" not in text.replace("$$", "")
     assert "untrusted data" in text
@@ -58,7 +58,7 @@ async def test_successful_triage_reports_usage_and_cost() -> None:
     provider, parse = provider_with(SimpleNamespace(output_parsed=make_triage(), usage=usage))
     outcome = await provider.triage(make_email())
 
-    assert outcome.usage.prompt_version == "triage-v1"
+    assert outcome.usage.prompt_version == "triage-v2"
     assert outcome.usage.cost_usd == pytest.approx((1500 * 0.10 + 300 * 0.50) / 1_000_000)
     kwargs = parse.call_args.kwargs
     assert kwargs["store"] is False

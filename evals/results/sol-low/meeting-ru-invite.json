@@ -1,0 +1,47 @@
+{
+  "case": "meeting-ru-invite",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Igor Nikolaev proposes a call to discuss project phase 2 on Wednesday, October 14, at 14:00 Moscow time. He asks Alex to confirm availability and will send a Zoom link.",
+    "category": "meeting",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Confirm availability for Igor's project call",
+      "description": "Reply to Igor Nikolaev at igor@stroytech.ru about availability for a call to discuss project phase 2 on Wednesday, October 14, 2026, at 14:00 Moscow time. Igor will send the Zoom link.",
+      "due_date": "2026-10-14"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Игорь, добрый день!\n\n[Подтвердить созвон в среду, 14 октября, в 14:00 по Москве или предложить другое время]."
+    }
+  },
+  "final": {
+    "summary": "Igor Nikolaev proposes a call to discuss project phase 2 on Wednesday, October 14, at 14:00 Moscow time. He asks Alex to confirm availability and will send a Zoom link.",
+    "category": "meeting",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Confirm availability for Igor's project call",
+      "description": "Reply to Igor Nikolaev at igor@stroytech.ru about availability for a call to discuss project phase 2 on Wednesday, October 14, 2026, at 14:00 Moscow time. Igor will send the Zoom link.",
+      "due_date": "2026-10-14"
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Игорь, добрый день!\n\n[Подтвердить созвон в среду, 14 октября, в 14:00 по Москве или предложить другое время]."
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1216,
+    "cached_tokens": 1097,
+    "output_tokens": 191,
+    "latency_ms": 4582,
+    "cost_usd": 0.0022576999999999996
+  }
+}

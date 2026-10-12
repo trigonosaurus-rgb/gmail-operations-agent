@@ -1,0 +1,47 @@
+{
+  "case": "other-en-recruiter",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Jessica Taylor at TalentBridge is recruiting for a remote, full-time Senior AI Engineer role at a Series B fintech, paying $160–190k. She asks whether Alex is open to a quick chat this week.",
+    "category": "other",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Decide whether to discuss the full-time AI Engineer role",
+      "description": "Reply to Jessica Taylor at jessica@talentbridge.io about interest in a remote, full-time Senior AI Engineer role at a Series B fintech with compensation of $160–190k. She found Alex through GitHub and requests a quick chat this week; provide availability if interested.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Jessica,\n\nThanks for reaching out. [Indicate whether you're interested in the role and, if so, suggest a time to chat this week.]\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Jessica Taylor at TalentBridge is recruiting for a remote, full-time Senior AI Engineer role at a Series B fintech, paying $160–190k. She asks whether Alex is open to a quick chat this week.",
+    "category": "other",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Decide whether to discuss the full-time AI Engineer role",
+      "description": "Reply to Jessica Taylor at jessica@talentbridge.io about interest in a remote, full-time Senior AI Engineer role at a Series B fintech with compensation of $160–190k. She found Alex through GitHub and requests a quick chat this week; provide availability if interested.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Jessica,\n\nThanks for reaching out. [Indicate whether you're interested in the role and, if so, suggest a time to chat this week.]\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1222,
+    "cached_tokens": 1097,
+    "output_tokens": 277,
+    "latency_ms": 5561,
+    "cost_usd": 0.0031297
+  }
+}

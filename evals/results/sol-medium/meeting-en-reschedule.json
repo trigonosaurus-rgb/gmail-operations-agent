@@ -1,0 +1,47 @@
+{
+  "case": "meeting-en-reschedule",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Anna Lee asks to move the October 13 call at 11:00 to Thursday, October 15, at the same time.",
+    "category": "meeting",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Confirm whether Anna's call can move to Thursday at 11:00",
+      "description": "Reply to Anna Lee at anna@acme.io about moving the October 13, 2026 call at 11:00 to October 15 at 11:00. Confirm availability or suggest an alternative.",
+      "due_date": "2026-10-13"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Anna,\n\nThanks for letting me know. [Confirm availability for Thursday at 11:00, or suggest an alternative time.]\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Anna Lee asks to move the October 13 call at 11:00 to Thursday, October 15, at the same time.",
+    "category": "meeting",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Confirm whether Anna's call can move to Thursday at 11:00",
+      "description": "Reply to Anna Lee at anna@acme.io about moving the October 13, 2026 call at 11:00 to October 15 at 11:00. Confirm availability or suggest an alternative.",
+      "due_date": "2026-10-13"
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Anna,\n\nThanks for letting me know. [Confirm availability for Thursday at 11:00, or suggest an alternative time.]\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1196,
+    "cached_tokens": 1097,
+    "output_tokens": 411,
+    "latency_ms": 8578,
+    "cost_usd": 0.0044177
+  }
+}

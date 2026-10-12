@@ -1,0 +1,41 @@
+{
+  "case": "other-ru-tax",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Russia’s Federal Tax Service reminds Alex that the third-quarter simplified taxation payment is due on October 28, 2026. The amount can be checked in the taxpayer’s personal account.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check and pay the third-quarter simplified taxation amount",
+      "description": "Russia’s Federal Tax Service asks Alex to pay the third-quarter simplified taxation payment by October 28, 2026. Check the amount in the taxpayer’s personal account and arrange payment by the deadline.",
+      "due_date": "2026-10-28"
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "Russia’s Federal Tax Service reminds Alex that the third-quarter simplified taxation payment is due on October 28, 2026. The amount can be checked in the taxpayer’s personal account.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Check and pay the third-quarter simplified taxation amount",
+      "description": "Russia’s Federal Tax Service asks Alex to pay the third-quarter simplified taxation payment by October 28, 2026. Check the amount in the taxpayer’s personal account and arrange payment by the deadline.",
+      "due_date": "2026-10-28"
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1228,
+    "cached_tokens": 1097,
+    "output_tokens": 237,
+    "latency_ms": 5628,
+    "cost_usd": 0.0027416999999999997
+  }
+}

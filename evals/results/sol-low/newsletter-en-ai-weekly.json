@@ -1,0 +1,33 @@
+{
+  "case": "newsletter-en-ai-weekly",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "AI Weekly shares stories about a new open-weight coding model, how three startups run evals in CI, and a tutorial on building agents with tool use.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "AI Weekly shares stories about a new open-weight coding model, how three startups run evals in CI, and a tutorial on building agents with tool use.",
+    "category": "newsletter",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1219,
+    "cached_tokens": 1097,
+    "output_tokens": 67,
+    "latency_ms": 2457,
+    "cost_usd": 0.0010237
+  }
+}

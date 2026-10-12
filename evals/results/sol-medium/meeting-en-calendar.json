@@ -1,0 +1,41 @@
+{
+  "case": "meeting-en-calendar",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Anna Lee invited Alex to a weekly sync on October 14, 2026, from 10:00 to 10:30 EEST via Google Meet.",
+    "category": "meeting",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "RSVP to Anna Lee's weekly sync invitation",
+      "description": "Decide whether to attend Anna Lee's weekly sync on Wednesday, October 14, 2026, from 10:00 to 10:30 EEST, and select Yes, Maybe or No in Google Calendar. Meeting link: https://meet.google.com/abc-defg-hij.",
+      "due_date": "2026-10-14"
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "Anna Lee invited Alex to a weekly sync on October 14, 2026, from 10:00 to 10:30 EEST via Google Meet.",
+    "category": "meeting",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "RSVP to Anna Lee's weekly sync invitation",
+      "description": "Decide whether to attend Anna Lee's weekly sync on Wednesday, October 14, 2026, from 10:00 to 10:30 EEST, and select Yes, Maybe or No in Google Calendar. Meeting link: https://meet.google.com/abc-defg-hij.",
+      "due_date": "2026-10-14"
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1240,
+    "cached_tokens": 1097,
+    "output_tokens": 152,
+    "latency_ms": 3519,
+    "cost_usd": 0.0019157
+  }
+}

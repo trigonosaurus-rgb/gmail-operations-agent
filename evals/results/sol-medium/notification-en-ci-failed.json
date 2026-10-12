@@ -1,0 +1,41 @@
+{
+  "case": "notification-en-ci-failed",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "GitHub reports that the CI workflow failed for acme/booking-bot on main at commit a1b2c3d. Three tests failed in tests/test_calendar.py.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the three failing calendar tests",
+      "description": "Review the failed GitHub CI run for acme/booking-bot on main, commit a1b2c3d, and determine what needs fixing. Three tests failed in tests/test_calendar.py; the run lasted 2m 13s.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "GitHub reports that the CI workflow failed for acme/booking-bot on main at commit a1b2c3d. Three tests failed in tests/test_calendar.py.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Investigate the three failing calendar tests",
+      "description": "Review the failed GitHub CI run for acme/booking-bot on main, commit a1b2c3d, and determine what needs fixing. Three tests failed in tests/test_calendar.py; the run lasted 2m 13s.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1224,
+    "cached_tokens": 1097,
+    "output_tokens": 197,
+    "latency_ms": 4743,
+    "cost_usd": 0.0023336999999999998
+  }
+}

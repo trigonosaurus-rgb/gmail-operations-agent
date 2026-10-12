@@ -1,0 +1,47 @@
+{
+  "case": "other-en-recruiter",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Jessica Taylor of TalentBridge is recruiting for a remote full-time Senior AI Engineer role at a Series B fintech, paying $160–190k. She asks whether Alex is open to a quick chat this week.",
+    "category": "lead",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Decide whether to schedule a recruiter chat",
+      "description": "Jessica Taylor of TalentBridge invited Alex to a quick chat this week about a remote full-time Senior AI Engineer role at a Series B fintech paying $160–190k. Decide whether to pursue it and, if so, reply with availability.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Jessica,\n\nThanks for reaching out. I’m [open to a quick chat this week / not looking for a full-time role at this time].\n\nBest,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Jessica Taylor of TalentBridge is recruiting for a remote full-time Senior AI Engineer role at a Series B fintech, paying $160–190k. She asks whether Alex is open to a quick chat this week.",
+    "category": "lead",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Decide whether to schedule a recruiter chat",
+      "description": "Jessica Taylor of TalentBridge invited Alex to a quick chat this week about a remote full-time Senior AI Engineer role at a Series B fintech paying $160–190k. Decide whether to pursue it and, if so, reply with availability.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "en",
+      "body": "Hi Jessica,\n\nThanks for reaching out. I’m [open to a quick chat this week / not looking for a full-time role at this time].\n\nBest,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1405,
+    "cached_tokens": 1280,
+    "output_tokens": 186,
+    "latency_ms": 2340,
+    "cost_usd": 0.0001183
+  }
+}

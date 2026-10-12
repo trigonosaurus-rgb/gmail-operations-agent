@@ -1,0 +1,41 @@
+{
+  "case": "invoice-ru-schet",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "ООО «Ромашка» sent invoice №418 for 45,000 RUB for October workspace rent, due by October 20, 2026.",
+    "category": "invoice",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Pay invoice №418",
+      "description": "Pay ООО «Ромашка» 45,000 RUB for October workspace rent. Invoice №418 is attached; payment is requested by 2026-10-20.",
+      "due_date": "2026-10-20"
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "ООО «Ромашка» sent invoice №418 for 45,000 RUB for October workspace rent, due by October 20, 2026.",
+    "category": "invoice",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Pay invoice №418",
+      "description": "Pay ООО «Ромашка» 45,000 RUB for October workspace rent. Invoice №418 is attached; payment is requested by 2026-10-20.",
+      "due_date": "2026-10-20"
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1230,
+    "cached_tokens": 1097,
+    "output_tokens": 250,
+    "latency_ms": 5474,
+    "cost_usd": 0.00014927
+  }
+}

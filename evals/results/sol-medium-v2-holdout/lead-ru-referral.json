@@ -1,0 +1,47 @@
+{
+  "case": "lead-ru-referral",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Marina Sokolova, managing partner of a law firm, was referred by Pavel Gusev and wants a Russian-language document-search assistant for about 5,000 contracts. She asks for a call on Thursday, October 15, or Friday, October 16, after 15:00.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Marina Sokolova about a discovery call",
+      "description": "Marina Sokolova (marina@sokolova-law.ru), managing partner of a law firm referred by Pavel Gusev, wants an assistant for searching about 5,000 contracts using questions in Russian. Reply with your availability for a call on Thursday, October 15, or Friday, October 16, after 15:00.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Марина, здравствуйте!\n\nСпасибо за обращение! Буду рад обсудить поиск по вашей базе из примерно 5 000 договоров на русском языке.\n\nДля созвона мне подходит [день и время после 15:00]. В каком часовом поясе вы указали время?\n\nС уважением,\nАлекс"
+    }
+  },
+  "final": {
+    "summary": "Marina Sokolova, managing partner of a law firm, was referred by Pavel Gusev and wants a Russian-language document-search assistant for about 5,000 contracts. She asks for a call on Thursday, October 15, or Friday, October 16, after 15:00.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply to Marina Sokolova about a discovery call",
+      "description": "Marina Sokolova (marina@sokolova-law.ru), managing partner of a law firm referred by Pavel Gusev, wants an assistant for searching about 5,000 contracts using questions in Russian. Reply with your availability for a call on Thursday, October 15, or Friday, October 16, after 15:00.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Марина, здравствуйте!\n\nСпасибо за обращение! Буду рад обсудить поиск по вашей базе из примерно 5 000 договоров на русском языке.\n\nДля созвона мне подходит [день и время после 15:00]. В каком часовом поясе вы указали время?\n\nС уважением,\nАлекс"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1437,
+    "cached_tokens": 1280,
+    "output_tokens": 501,
+    "latency_ms": 11204,
+    "cost_usd": 0.005452
+  }
+}

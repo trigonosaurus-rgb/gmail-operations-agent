@@ -1,0 +1,33 @@
+{
+  "case": "notification-ru-bank",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "The bank reports a ₽120,000 deposit from sole proprietor A. V. Smirnov for September under contract No. 12. The reported balance is ₽184,530.",
+    "category": "notification",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "final": {
+    "summary": "The bank reports a ₽120,000 deposit from sole proprietor A. V. Smirnov for September under contract No. 12. The reported balance is ₽184,530.",
+    "category": "notification",
+    "priority": "low",
+    "risk": "none",
+    "risk_reason": null,
+    "task": null,
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1397,
+    "cached_tokens": 1280,
+    "output_tokens": 73,
+    "latency_ms": 1691,
+    "cost_usd": 6.1e-05
+  }
+}

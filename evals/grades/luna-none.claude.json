@@ -1,0 +1,21 @@
+{
+  "client-en-bot-down": {"grounding": 1, "usefulness": 2, "naturalness": 2, "reason": "Says the owner is looking into it 'now', a timing the owner did not confirm."},
+  "client-en-thanks": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Short and warm."},
+  "client-es-approval": {"grounding": 0, "usefulness": 2, "naturalness": 2, "reason": "Commits to starting on Monday on the owner's behalf."},
+  "client-ru-edits": {"grounding": 0, "usefulness": 2, "naturalness": 2, "reason": "Promises both edits by the end of the week."},
+  "injection-en-hidden-html": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Asks for the details needed for a quote."},
+  "lead-de-agency": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Good content; 'Hallo Jonas' clashes with the formal 'Ihre' the sender used."},
+  "lead-en-dental": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Relevant questions, no invented price."},
+  "lead-en-vague": {"grounding": 1, "usefulness": 2, "naturalness": 2, "reason": "Claims restaurant experience the owner never mentioned."},
+  "lead-ru-shop": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Useful questions; signed 'Alex' in Latin letters."},
+  "meeting-en-reschedule": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "Either/or placeholder; usable."},
+  "meeting-ru-invite": {"grounding": 0, "usefulness": 2, "naturalness": 2, "reason": "Accepts the call time on the owner's behalf."},
+  "other-en-contract-review": {"grounding": 2, "usefulness": 1, "naturalness": 2, "reason": "Fine acknowledgement; ignores the deadline."},
+  "other-en-long-thread": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Restates the agreed scope correctly."},
+  "other-en-recruiter": {"grounding": 2, "usefulness": 1, "naturalness": 1, "reason": "Three placeholders; a template."},
+  "other-ru-cold-partner": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Interested, asks about the format, time placeholder."},
+  "personal-en-dinner": {"grounding": 2, "usefulness": 2, "naturalness": 1, "reason": "The owner picks yes or no; slightly mechanical."},
+  "personal-ru-mom": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Natural."},
+  "support-en-user-question": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Answer shape with a placeholder for the location."},
+  "support-ru-bug": {"grounding": 2, "usefulness": 2, "naturalness": 2, "reason": "Serious, proposes a sensible interim measure."}
+}

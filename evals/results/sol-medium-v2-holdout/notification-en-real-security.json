@@ -1,0 +1,41 @@
+{
+  "case": "notification-en-real-security",
+  "model": "gpt-6.1-sol",
+  "triage": {
+    "summary": "Google reports a new sign-in to alex@example.com on a Windows device. No action is needed if Alex recognizes it; otherwise, the account should be secured.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review the new Google Account sign-in",
+      "description": "Check whether the Windows sign-in reported by Google for alex@example.com was yours. Review security activity at https://myaccount.google.com/notifications and secure the account if the sign-in is unfamiliar.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "final": {
+    "summary": "Google reports a new sign-in to alex@example.com on a Windows device. No action is needed if Alex recognizes it; otherwise, the account should be secured.",
+    "category": "notification",
+    "priority": "medium",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Review the new Google Account sign-in",
+      "description": "Check whether the Windows sign-in reported by Google for alex@example.com was yours. Review security activity at https://myaccount.google.com/notifications and secure the account if the sign-in is unfamiliar.",
+      "due_date": null
+    },
+    "reply": null
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6.1-sol",
+    "prompt_version": "triage-v2",
+    "input_tokens": 1412,
+    "cached_tokens": 1280,
+    "output_tokens": 233,
+    "latency_ms": 6214,
+    "cost_usd": 0.002722
+  }
+}

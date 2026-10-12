@@ -1,0 +1,47 @@
+{
+  "case": "lead-ru-shop",
+  "model": "gpt-6-luna",
+  "triage": {
+    "summary": "Дмитрий Орлов from an online tea store wants a Telegram bot to answer delivery and order-status questions, with order data in МойСклад. They handle about 300 orders monthly, have a budget of 150,000–200,000 rubles, and ask about pricing and availability.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply with an estimate and availability",
+      "description": "Dmitry Orlov asks for pricing and start availability for a Telegram bot for his tea store. The bot should answer delivery and order-status questions using order data from МойСклад; the store handles about 300 orders per month and has a budget of 150,000–200,000 rubles.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Добрый день, Дмитрий!\n\nСпасибо за описание задачи. Чтобы оценить стоимость и сроки старта, подскажите, пожалуйста: как сейчас устроен доступ к данным заказов в МойСклад и какие именно вопросы о доставке должен обрабатывать бот? После этого смогу предложить оценку в рамках вашего бюджета и сориентировать по старту.\n\nС уважением,\nAlex"
+    }
+  },
+  "final": {
+    "summary": "Дмитрий Орлов from an online tea store wants a Telegram bot to answer delivery and order-status questions, with order data in МойСклад. They handle about 300 orders monthly, have a budget of 150,000–200,000 rubles, and ask about pricing and availability.",
+    "category": "lead",
+    "priority": "high",
+    "risk": "none",
+    "risk_reason": null,
+    "task": {
+      "title": "Reply with an estimate and availability",
+      "description": "Dmitry Orlov asks for pricing and start availability for a Telegram bot for his tea store. The bot should answer delivery and order-status questions using order data from МойСклад; the store handles about 300 orders per month and has a budget of 150,000–200,000 rubles.",
+      "due_date": null
+    },
+    "reply": {
+      "language": "ru",
+      "body": "Добрый день, Дмитрий!\n\nСпасибо за описание задачи. Чтобы оценить стоимость и сроки старта, подскажите, пожалуйста: как сейчас устроен доступ к данным заказов в МойСклад и какие именно вопросы о доставке должен обрабатывать бот? После этого смогу предложить оценку в рамках вашего бюджета и сориентировать по старту.\n\nС уважением,\nAlex"
+    }
+  },
+  "notes": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-6-luna",
+    "prompt_version": "triage-v1",
+    "input_tokens": 1248,
+    "cached_tokens": 0,
+    "output_tokens": 263,
+    "latency_ms": 3525,
+    "cost_usd": 0.0002563
+  }
+}
