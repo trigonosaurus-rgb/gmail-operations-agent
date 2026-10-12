@@ -28,7 +28,7 @@ export function Header({ onCompose }: { onCompose: () => void }) {
         <span className="flex size-6 items-center justify-center rounded-xs bg-primary text-primary-fg">
           <MailIcon className="size-4" strokeWidth={2} />
         </span>
-        <span className="max-sm:sr-only">Ops Agent</span>
+        <span className="max-lg:sr-only">Gmail Operations Agent</span>
       </Link>
 
       <nav aria-label="Main">
