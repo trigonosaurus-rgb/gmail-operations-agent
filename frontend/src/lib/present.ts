@@ -252,7 +252,8 @@ export interface Health {
   detail: string
 }
 
-const SERVICE: Record<string, string> = { gmail: 'Gmail', notion: 'Notion', sheets: 'Sheets', llm: 'Model', budget: 'Budget' }
+// Keys are BlockedError.service names from the backend.
+const SERVICE: Record<string, string> = { google: 'Google', notion: 'Notion', openai: 'OpenAI', budget: 'Budget' }
 
 export function health(status: StatusOut | undefined, live: LiveState): Health {
   if (live === 'offline') return { label: 'Offline', tone: 'danger', detail: 'Lost the connection to the agent. Reload the page.' }

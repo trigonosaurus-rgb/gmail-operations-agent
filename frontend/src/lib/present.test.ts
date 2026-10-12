@@ -92,6 +92,9 @@ describe('health', () => {
       label: 'Notion paused',
       tone: 'warn',
     })
+    expect(health(status({ blocked: { service: 'openai', reason: 'quota exhausted', until: null } }), 'live').label).toBe(
+      'OpenAI paused',
+    )
     expect(health(status(), 'live')).toMatchObject({ label: 'All connected', tone: 'ok' })
   })
 
