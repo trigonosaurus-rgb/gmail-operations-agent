@@ -50,7 +50,7 @@ from gmail_operations_agent.demo.service import (
 from gmail_operations_agent.domain import MessageState, Overrides
 from gmail_operations_agent.pipeline import InvalidTransitionError
 from gmail_operations_agent.runtime import Runtime
-from gmail_operations_agent.store import MessageRecord, utcnow
+from gmail_operations_agent.store import MessageRecord
 
 DEMO_COOKIE = "demo_session"
 
@@ -176,7 +176,8 @@ async def update_settings(body: SettingsIn, runtime: RuntimeDep, viewer: ViewerD
 async def stats(
     runtime: RuntimeDep, viewer: ViewerDep, hours: Annotated[int, Query(ge=1, le=720)] = 24
 ) -> StatsOut:
-    raw = runtime.store.stats(utcnow() - timedelta(hours=hours), viewer.owner)
+    # The store's clock, not the wall clock: tests run on a fake one.
+    raw = runtime.store.stats(runtime.store.now() - timedelta(hours=hours), viewer.owner)
     counts = {state.value: raw["by_state"].get(state.value, 0) for state in MessageState}
     counts["all"] = sum(raw["by_state"].values())
     return StatsOut(

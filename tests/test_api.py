@@ -11,7 +11,7 @@ import pytest
 from gmail_operations_agent.api.app import create_app
 from gmail_operations_agent.api.events import EventHub
 from gmail_operations_agent.config import Settings
-from gmail_operations_agent.domain import ActionKind, MessageState, Priority
+from gmail_operations_agent.domain import ActionKind, Category, MessageState, Priority
 from gmail_operations_agent.errors import PermanentError
 from gmail_operations_agent.integrations.base import MarkProcessedSink
 from gmail_operations_agent.pipeline import Pipeline, PipelineConfig
@@ -201,6 +201,26 @@ async def test_stats_counts_and_latency(api: Api, client: httpx.AsyncClient) -> 
     assert stats["llm"]["calls"] == 2
     assert stats["llm"]["cost_per_1k_usd"] == pytest.approx(0.2)
     assert stats["llm"]["latency_ms"]["p50"] == 5
+
+
+async def test_stats_cover_only_the_chosen_period(
+    api: Api, client: httpx.AsyncClient, clock: FakeClock
+) -> None:
+    """Every number on the page describes the same mail: what arrived in the period."""
+    api.llm.script = [make_triage(), make_triage(category=Category.INVOICE)]
+    await api.add("old")
+    clock.advance(48 * 3600)
+    await api.add("new")
+
+    day = (await client.get("/api/stats", params={"hours": 24})).json()
+    assert day["counts"]["all"] == 1
+    assert day["by_category"] == {"invoice": 1}
+    assert day["llm"]["calls"] == 1
+
+    week = (await client.get("/api/stats", params={"hours": 168})).json()
+    assert week["counts"]["all"] == 2
+    assert week["by_category"] == {"lead": 1, "invoice": 1}
+    assert week["llm"]["calls"] == 2
 
 
 async def test_status_reports_source_and_connections(client: httpx.AsyncClient) -> None:

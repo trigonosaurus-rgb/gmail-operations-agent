@@ -25,6 +25,10 @@ export function StatsPage() {
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
           <h1 className="text-[22px] font-semibold tracking-[-0.015em]">Stats</h1>
           <RangePicker hours={hours} />
+          <p className="basis-full text-[13px] text-muted-fg">
+            Mail that arrived in the last {RANGE_LABEL[hours]} and where it stands now. The inbox
+            tabs count everything, whenever it arrived.
+          </p>
         </div>
         {stats.isPending ? (
           <p className="text-muted-fg">Loading…</p>

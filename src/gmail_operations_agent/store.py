@@ -230,6 +230,9 @@ class Store:
             raise
         self._db.execute("COMMIT")
 
+    def now(self) -> datetime:
+        return self._clock()
+
     def _now(self) -> str:
         return _ts(self._clock())
 
@@ -300,10 +303,16 @@ class Store:
         params.append(limit)
         return [self._message(row) for row in self._db.execute(sql, params)]
 
-    def count_by_state(self, owner: str = "") -> dict[MessageState, int]:
-        rows = self._db.execute(
-            "SELECT state, COUNT(*) AS n FROM messages WHERE owner = ? GROUP BY state", (owner,)
-        )
+    def count_by_state(
+        self, owner: str = "", since: datetime | None = None
+    ) -> dict[MessageState, int]:
+        """By state; with `since`, only mail that arrived from then on."""
+        sql = "SELECT state, COUNT(*) AS n FROM messages WHERE owner = ?"
+        params: list[Any] = [owner]
+        if since:
+            sql += " AND created_at >= ?"
+            params.append(_ts(since))
+        rows = self._db.execute(sql + " GROUP BY state", params)
         counts = dict.fromkeys(MessageState, 0)
         for row in rows:
             counts[MessageState(row["state"])] = row["n"]
@@ -624,13 +633,15 @@ class Store:
     # --- stats -------------------------------------------------------------------------
 
     def stats(self, since: datetime, owner: str = "") -> dict[str, Any]:
-        by_state = {state.value: n for state, n in self.count_by_state(owner).items() if n}
+        """Mail that arrived since `since`, and the model calls made since then."""
+        by_state = {state.value: n for state, n in self.count_by_state(owner, since).items() if n}
         by_category = {
             row["category"]: row["n"]
             for row in self._db.execute(
                 "SELECT json_extract(triage_json, '$.category') AS category, COUNT(*) AS n"
-                " FROM messages WHERE owner = ? AND triage_json IS NOT NULL GROUP BY category",
-                (owner,),
+                " FROM messages WHERE owner = ? AND created_at >= ? AND triage_json IS NOT NULL"
+                " GROUP BY category",
+                (owner, _ts(since)),
             )
         }
         rows = self._db.execute(
