@@ -1,4 +1,6 @@
 # Monthly, one grouped pull request per ecosystem, so updates arrive as a few reviewable PRs.
+# Major versions of the runtime stack are upgraded on purpose, not by a bot: Node stays on the
+# current LTS line, Python on its minor release, TypeScript where openapi-typescript supports it.
 version: 2
 updates:
   - package-ecosystem: github-actions
@@ -9,6 +11,11 @@ updates:
     directory: /
     schedule: { interval: monthly }
     groups: { images: { patterns: ["*"] } }
+    ignore:
+      - dependency-name: node
+        update-types: ["version-update:semver-major"]
+      - dependency-name: python
+        update-types: ["version-update:semver-minor"]
   - package-ecosystem: uv
     directory: /
     schedule: { interval: monthly }
@@ -17,3 +24,8 @@ updates:
     directory: /frontend
     schedule: { interval: monthly }
     groups: { frontend: { patterns: ["*"] } }
+    ignore:
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
