@@ -1,0 +1,43 @@
+Content-Type: multipart/mixed; boundary="===============2976480539291551020=="
+MIME-Version: 1.0
+From: Bob <bob@client.com>
+To: owner@example.com
+Subject: =?utf-8?b?0J/RgNC40LLQtdGCIPCfkYs=?=
+Date: Mon, 12 Oct 2026 09:30:00 +0300
+Message-ID: <291372074@example.com>
+
+--===============2976480539291551020==
+Content-Type: multipart/alternative;
+ boundary="===============1888725511034414423=="
+MIME-Version: 1.0
+
+--===============1888725511034414423==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Please review the attached contract and the notes.
+--===============1888725511034414423==
+Content-Type: text/html; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+<p>Please review the attached contract.</p>
+--===============1888725511034414423==--
+
+--===============2976480539291551020==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="notes.txt"
+
+These notes are an attachment, not the body.
+--===============2976480539291551020==
+Content-Type: application/pdf
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="contract.pdf"
+
+JVBERi0xLjQgZmFrZQ==
+
+--===============2976480539291551020==--

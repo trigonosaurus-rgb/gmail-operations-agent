@@ -18,7 +18,7 @@ dependencies = [
 ]
 
 [project.scripts]
-gmail-agent = "gmail_operations_agent.main:main"
+gmail-agent = "gmail_operations_agent.cli:main"
 
 [dependency-groups]
 dev = [
@@ -50,10 +50,13 @@ select = [
     "LOG", "G",     # logging misuse (f-strings in log calls, etc.)
     "PT",           # pytest style
 ]
+# Cyrillic text is real test data here, not a lookalike-character trick.
+ignore = ["RUF001", "RUF002", "RUF003"]
 
 [tool.mypy]
 python_version = "3.12"
 strict = true
+plugins = ["pydantic.mypy"]
 packages = ["gmail_operations_agent"]
 mypy_path = "src"
 
@@ -65,3 +68,8 @@ ignore_missing_imports = true
 testpaths = ["tests"]
 asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "function"
+
+[[tool.mypy.overrides]]
+# google-auth ships without type hints for Credentials methods.
+module = ["gmail_operations_agent.integrations.google_auth"]
+disallow_untyped_calls = false

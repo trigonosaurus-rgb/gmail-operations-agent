@@ -1,0 +1,6 @@
+From: x@example.com
+To: owner@example.com
+Subject: odd
+Content-Type: text/plain; charset=x-unknown-charset
+
+Hello ÿþ world
