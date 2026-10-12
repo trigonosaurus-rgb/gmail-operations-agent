@@ -3,7 +3,7 @@
 # (synthetic inbox, no Google account); see docker-compose.yml.
 
 # --- 1. The UI: static files from Vite ------------------------------------------------
-FROM node:24-trixie-slim AS web
+FROM node:26-trixie-slim AS web
 WORKDIR /web
 COPY frontend/package.json frontend/package-lock.json ./
 RUN --mount=type=cache,target=/root/.npm npm ci --no-audit --no-fund
